@@ -273,7 +273,7 @@
 					return;
 				}
 
-				$settings = JSON::Decode($this->settings_string, true);
+				$settings = json_decode_data($this->settings_string, true);
 				if (empty($settings) || empty($settings['settings'])) {
 					throw new SettingsException(_('Error retrieving existing settings'));
 				}
@@ -348,7 +348,7 @@
 			// Filter out the unchanged default sysadmin settings
 			$settings = $this->filterOutSettings($this->settings, $this->getDefaultSysAdminSettings());
 
-			$settings = JSON::Encode(array( 'settings' => $settings ));
+			$settings = json_encode(array( 'settings' => $settings ));
 
 			// Check if the settings have been changed.
 			if ($this->settings_string !== $settings) {

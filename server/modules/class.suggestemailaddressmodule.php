@@ -40,7 +40,7 @@ class suggestEmailAddressModule extends Module
 				}
 
 				if($datastring !== "") {
-					$recipient_history = JSON::Decode($datastring, true);
+					$recipient_history = json_decode_data($datastring, true);
 				}
 			}
 
@@ -106,7 +106,7 @@ class suggestEmailAddressModule extends Module
 			$recipient_history['recipients'] = array_values($recipient_history['recipients']);
 			
 			// Write new recipient history to property
-			$l_sNewRecipientHistoryJSON = JSON::Encode($recipient_history);
+			$l_sNewRecipientHistoryJSON = json_encode($recipient_history);
 
 			$stream = mapi_openproperty($GLOBALS["mapisession"]->getDefaultMessageStore(), PR_EC_RECIPIENT_HISTORY_JSON, IID_IStream, 0, MAPI_CREATE | MAPI_MODIFY);
 			mapi_stream_setsize($stream, strlen($l_sNewRecipientHistoryJSON));

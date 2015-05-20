@@ -5,8 +5,6 @@
 	*/
 	// required to handle php errors
 	require_once('server/exceptions/class.ZarafaErrorException.php');
-	// required to send data in JSON
-	require_once('server/core/class.json.php');
 	// Include backwards compatibility
 	require_once('server/sys_get_temp_dir.php');
 
@@ -120,7 +118,7 @@
 					)
 				);
 
-				echo JSON::Encode($return);
+				echo json_encode($return);
 			} else if(isset($_POST['deleteattachment'])) { // Delete uploaded file
 				$num = sanitizePostValue('attach_num', false, NUMERIC_REGEX);
 
@@ -150,7 +148,7 @@
 					)
 				);
 
-				echo JSON::Encode($return);
+				echo json_encode($return);
 			} else if (isset($_POST['entryid'])) {	// Check for adding of embedded attachments
 				$attachid = $attachment_state->addEmbeddedAttachment($_REQUEST['dialog_attachments'], array(
 					'entryid' => sanitizePostValue('entryid', '', ID_REGEX),
@@ -183,7 +181,7 @@
 					)
 				);
 
-				echo JSON::Encode($return);
+				echo json_encode($return);
 			}
 		} else if($_GET && isset($_GET['attachment_id'])) { // this is to upload the file to server when the doc is send via OOo
 			$providedFile = sys_get_temp_dir() . DIRECTORY_SEPARATOR . $_GET['attachment_id'];
@@ -229,7 +227,7 @@
 				)
 			);
 
-			echo JSON::Encode($return);
+			echo json_encode($return);
 		}
 	}
 

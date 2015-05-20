@@ -33,7 +33,7 @@
 		{
 			try {
 				// decode JSON data
-				$data = JSON::Decode($json, true);
+				$data = json_decode_data($json, true);
 
 				// Reset the bus
 				$GLOBALS["bus"]->reset();
@@ -70,7 +70,7 @@
 				$GLOBALS["bus"]->notify(REQUEST_ENTRYID, REQUEST_END);
 
 				// Build the JSON and return it
-				return JSON::Encode(array("zarafa" => $GLOBALS["bus"]->getData()));
+				return json_encode(array("zarafa" => $GLOBALS["bus"]->getData()));
 
 			} catch (ZarafaException $e) {
 				if(!$e->isHandled) {
@@ -85,7 +85,7 @@
 						)
 					);
 
-					return JSON::Encode(array("zarafa" => $data));
+					return json_encode(array("zarafa" => $data));
 				}
 			} catch (ZarafaErrorException $e) {
 				if(!$e->isHandled) {
@@ -100,7 +100,7 @@
 						)
 					);
 
-					return JSON::Encode(array("zarafa" => $data));
+					return json_encode(array("zarafa" => $data));
 				}
 			} catch (Exception $e) {
 				// handle exceptions that are not handled by modules
@@ -117,7 +117,7 @@
 					)
 				);
 
-				return JSON::Encode(array("zarafa" => $data));
+				return json_encode(array("zarafa" => $data));
 			}
 		}
 	}

@@ -45,7 +45,6 @@
 	require("server/util.php");
 	include("server/gettext.php");
 
-	require("server/core/class.json.php");
 	require("server/core/constants.php");
 	require("server/core/class.conversion.php");
 	require("server/core/class.mapisession.php");
@@ -298,7 +297,7 @@
 					"freebusy_load_end_offset" => FREEBUSY_LOAD_END_OFFSET
 				)
 			);
-			echo JSON::Encode(array("zarafa" => $data));
+			echo json_encode(array("zarafa" => $data));
 		} else if ($_GET && array_key_exists("verify", $_GET)) {
 
 			$user = sanitizeGetValue('verify', '', USERNAME_REGEX);

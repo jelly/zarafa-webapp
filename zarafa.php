@@ -21,7 +21,6 @@
 
 	require("server/exceptions/class.ZarafaException.php");
 	require("server/exceptions/class.ZarafaErrorException.php");
-	require("server/core/class.json.php");
 	require("server/core/class.conversion.php");
 	require("server/core/class.mapisession.php");
 	require("server/core/class.entryid.php");
@@ -134,7 +133,7 @@
 				break;
 		}
 
-		echo JSON::Encode($pingTag);
+		echo json_encode($pingTag);
 	} else if ($GLOBALS["mapisession"]->isLoggedOn()) {
 		// Authenticated
 		// Execute request

@@ -255,7 +255,7 @@ class DownloadMessage
 				)
 			);
 		}
-		echo JSON::Encode($return);
+		echo json_encode($return);
 	}
 }
 

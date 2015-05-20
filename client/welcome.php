@@ -62,10 +62,10 @@ $version = trim(file_get_contents('version'));
 		?>
 
 		<script type="text/javascript">
-			settings = <?= JSON::Encode($GLOBALS["settings"]->getJSON()); ?>;
+			settings = <?= json_encode($GLOBALS["settings"]->getJSON()); ?>;
 		</script>
 		<script type="text/javascript">
-			languages = <?= JSON::Encode($GLOBALS["language"]->getJSON()); ?>;
+			languages = <?= json_encode($GLOBALS["language"]->getJSON()); ?>;
 		</script>
 
 		<script type="text/javascript">
