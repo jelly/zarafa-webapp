@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.2</version>
+		<name>extbox</name>
+		<title>Image attachments preview</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Default viewer for image attachments, this will open the image in a lightbox</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<info>
+				<name>lightbox</name>
+				<title>Lightbox</title>
+				<author>Sencha</author>
+				<authorURL>http://http://www.sencha.com/</authorURL>
+				<description>Library for rendering images in a lightbox</description>
+			</info>
+			<files>
+				<client>
+					<clientfile>lightbox/lightbox.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile>resources/css/lightbox.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+		<component>
+			<files>
+				<server>
+					<serverfile>php/plugin.extbox.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/extbox.js</clientfile>
+					<clientfile load="debug">js/extbox-debug.js</clientfile>
+					<clientfile load="source">js/ExtBoxPlugin.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+			</files>
+		</component>
+	</components>
+</plugin>

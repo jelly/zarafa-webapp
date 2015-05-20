@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.2</version>
+		<name>shellgame</name>
+		<title>Shell Game</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>A nice shellgame</description>
+	</info>
+	<components>
+		<component>
+			<files>
+				<client>
+					<clientfile load="release">js/shellgame.js</clientfile>
+					<clientfile load="debug">js/shellgame-debug.js</clientfile>
+					<clientfile load="source">js/ShellGamePanel.js</clientfile>
+					<clientfile load="source">js/ShellGamePlayFieldPanel.js</clientfile>
+					<clientfile load="source">js/ShellGameStates.js</clientfile>
+					<clientfile load="source">js/ShellGameWidget.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile>resources/css/shellgame.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

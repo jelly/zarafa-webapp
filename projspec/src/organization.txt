@@ -1,0 +1,32 @@
+# Project Organization
+
+Project Director
+
+* **Steve**
+
+Steering committee members
+
+* **Brian, Mark, Steve, Milo, Cies**
+
+Project Lead
+
+* **Andreas Gustafsson**
+
+Project Advisor's
+
+* **Steve**
+
+Project Team Members
+
+* **Delft**
+	* **Andreas** - (Project/Team Lead /Developer)
+	* **Simon** - (Technical Advisor/Developer)
+	* **Ivo** - (Developer/Framework)
+
+* **India**
+	* **Abhinav**		(Team Lead)
+	* **Anand** (Developer)
+	* **Saket** (Developer)
+	* **Diptesh** (Developer)
+
+

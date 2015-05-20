@@ -1,0 +1,28 @@
+digraph G {
+
+        fontsize = 8
+
+        node [
+                fontsize = 8
+                shape = "record"
+        ]
+
+        edge [
+                fontsize = 8
+        ]
+
+	Context [
+		label = "{Context|- id : Number\l|- getId() : Void\l- createComponent() : Void\l- enable(parameters : Object) : Void\l- disable() : Void\l}"
+	]
+	
+	MailContext [
+		label = "{MailContext|- id : Number\l|- getId() : Void\l- createComponent() : Void\l- enable(parameters : Object) : Void\l- disable() : Void\l}"
+	]
+        
+	edge [
+                arrowhead = "empty"
+        ]
+        
+	MailContext->Context
+}
+

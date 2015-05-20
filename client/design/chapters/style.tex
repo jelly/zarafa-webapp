@@ -1,0 +1,186 @@
+\chapter{Style guidelines}
+\label{section:style}
+
+\section{Object oriented design}
+
+The ExtJS toolkit was founded on a solid OO-inspired design, using classes and inheritance. The application
+is developed using the same style as ExtJS, so that our code integrates well with existing ExtJS components.
+
+To declare a new class, one usually starts with defining the constructor. It is customary, but not required, 
+to have a 'configuration' object as the first parameter. Configuration parameters are object/value pairs 
+that configure specific parts of an object's instantiation, avoiding large sparse parameter lists. The 
+constructor calls the constructor of its parent manually (as there is no way of doing this automatically). 
+Listing \ref{listing:declaringclass} shows an example of this process. 
+
+\begin{lstlisting}[caption={Declaring a new class}, label=listing:declaringclass]
+// Zarafa.ui.mail.PreviewPanel constructor
+Zarafa.ui.mail.PreviewPanel = function(config)
+{
+	// call the parent constructor
+	Zarafa.ui.mail.PreviewPanel.superclass.constructor.call(this, config);
+};
+
+// Zarafa.ui.mail.PreviewPanel extends Ext.Panel
+Ext.extend(Zarafa.ui.mail.PreviewPanel, Ext.Panel);
+\end{lstlisting}
+
+The call to {\tt Ext.extend()} expresses that {\tt Zarafa.ui.mail.PreviewPanel} extends (is a child class of) 
+{\tt Ext.Panel}. It is now possible to substitute an instance of the former for the latter. If the class 
+you're writing is not a child class of anything, simply extend from {\tt Object}.
+ExtJS offers a range of handy tools besides {\tt Ext.extend()} that help us write modular code.
+
+\section{Architectural style}
+
+\subsection{Namespaces}
+
+The ExtJS toolkit provides the {\tt Ext.namespace} function that declares a namespace. We place chunks of
+related functionality in namespaces and let the code tree reflect the namespace hierarchy. For example, classes
+in the {\tt Zarafa.ui.mail} namespace are defined in Javascript files that can be found in {\tt zarafa/ui/mail}.
+
+\subsection{Singletons}
+
+Static functions can be declared inside an \emph{singleton} object. A singleton, in OO design, is a class which
+only has a single instance. This can be easily simulated in Javascript. For example, consider Listing 
+\ref{listing:singleton}.
+
+\begin{lstlisting}[caption={Declaring a singleton.}, label=listing:singleton]
+/**
+ * @class Zarafa.comm.Mail
+ * 
+ * The Mail object is a singleton containing several convenience methods for working with email messages.
+ * 
+ * @singleton
+ */
+Zarafa.comm.Mail = 
+{
+	openMail : function(storeId, entryId, callBack, errorCallback)
+	{
+		// implementation goes here
+	}
+};
+\end{lstlisting}
+
+This creates a function {\tt openMail} in the {\tt Zarafa.comm.Mail} object, which can be called anywhere in the
+code as {\tt Zarafa.comm.Mail.openMail()}. By putting static functions in a singleton, we can group such
+functions and document them as a unit.
+
+\subsection{Enums}
+
+An enumeration, or \emph{enum} for short is an object that contains a set of constants. They can be 
+implemented as a JavaScript object.
+
+\begin{lstlisting}[caption={Declaring an enumeration}, label=listing:enum]
+/**
+ * @class Zarafa.comm.Appointment.BusyStatus
+ * 
+ * Enumerates the different busy status types. 
+ * 
+ * @singleton
+ */
+Zarafa.comm.Appointment.BusyStatus = 
+{
+	
+	// property documentation omitted for clarity
+	free : 0,
+	tentative : 1,
+	busy : 2,
+	outOfOffice : 3
+};
+\end{lstlisting}
+
+Listing \ref{listing:enum} shows the {\tt Zarafa.comm.Appointment.BusyStatus} enum, enumerating all possible
+values the 'busy status' value an appointment may take.  Enums should be used to avoid so called 'magic numbers'
+in code. 
+
+\section{Code style}
+
+To keep our sanity of ourselves and the people working on this project after us it's important to write code
+that is both clear, simple, and uniform in style. 
+
+\subsection{Naming}
+
+Copying the convention from ExtJS, namespaces are all in lowercaps except for the Z in 'Zarafa' 
+(ie {\tt Zarafa.ui.mail}). Classes are camelcase starting with uppercase ({\tt Zarafa.ui.mail.MailGridPanel})
+and variables, methods, and fields are camelcase starting with lowercase ({\tt Zarafa.comm.Mail.openMail()}).
+
+\subsection{Method length}
+
+Generally when methods span many lines it is possible to break up the function is maller pieces. This increases
+readability as the reader does not need to know exactly how each part of the function is implemented to understand
+the general idea. Break up functions of more than 30-50 lines or so should be broken up into smaller ones if 
+possible. 
+
+\section{Documentation}
+	
+I would like to stress that any piece of code that is not documented \emph{is not done}. Please don't close
+tickets on uncommented code. We use the {\tt ext-doc} documentation tool provided by the ExtJS people.
+
+This documentation tool allows documentation of Javascript code much like Javadoc or Doxygen. This section
+describes how to document your code.
+Since Javascript is a very dynamic language it's pretty much impossible to detect class, method, and field
+definitions, and the relationships between them. Therefore documenation is quite explicit and you have to
+declare classes, methods, and fields manually. This section briefly describes the most important aspects
+of documenting with ext-doc. Please refer to the ext-doc documentation wiki for more information.
+
+\subsection{Documenting classes}
+
+You declare a class using the {\tt @class} statement inside a {\tt /** */} multi-line comment. You can
+use {\tt @extends} to indicate that the class is a subclass of another class. After these two statements
+you can fill in a description of the class. Optionally you can use the {\tt @singleton} statement to declare 
+the class a singleton. 
+The constructor can be documented separately and is documented much like a method. Finally use {\tt @cfg}
+to declare configuration options for this class. Note that parameters and configuration options are typed.
+A full example is shown in Listing \ref{listing:classdoc}.
+
+\begin{lstlisting}[caption={Declaring a new class}, label=listing:classdoc]
+/**
+ * @class Zarafa.ui.ContextContainer
+ * @extends Ext.Container
+ * [ Description goes here ]
+ * @constructor
+ * @parameter config configuration object
+ * @cfg String name the name of the context container.
+ * @cfg Ext.Component defaultItem a default component to be shown if a context does 
+ * not provide a component for this ContextContainer. 
+ */
+Zarafa.ui.ContextContainer = function(config)
+{
+	Zarafa.ui.ContextContainer.superclass.constructor.call(this, config);
+};
+\end{lstlisting}
+
+\subsection{Documenting methods}
+
+Listing \ref{listing:methoddoc} shows how to document methods using the {\tt @method} tag. Parameters can be
+specified using {\tt @param} with a type, name, and description. If an argument is optional please make
+this explicit by using {\tt (optional)} as exemplified by the errorCallBack parameter in listing 
+\ref{listing:methoddoc}.
+
+\begin{lstlisting}[caption={Declaring a new class}, label=listing:methoddoc]
+Zarafa.comm.Mail = 
+{
+
+	/**
+	 * Opens a mail asynchronously.
+	 * 
+	 * @param {String} storeId a MAPI ID that corresponds to a MAPI store 
+	 * @param {String} entryId a MAPI ID that corresponds to an item in the given store
+	 * @param {Function} callback a function that will be called when the message has arrived 
+	 *	from the server  
+	 * @param {Function} errorCallback (optional) a function that will be called when an error 
+	 *	occurred retrieving the mail
+	 * @method openMail
+	 */
+	openMail : function(storeId, entryId, callBack, errorCallback)
+	{
+		// implementation
+	}
+	
+
+};
+\end{lstlisting}
+
+\subsection{Documenting insertion points}
+\label{section:docinsert}
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.1</version>
+		<name>example</name>
+		<title>exaple title</title>
+		<author>example author</author>
+		<authorURL>http://www.example.com</authorURL>
+		<description>example description</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile type="module" module="pluginexamplemodule">php/class.pluginexamplemodule.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/example.js</clientfile>
+					<clientfile load="debug">js/example-debug.js</clientfile>
+					<clientfile load="source">js/Example.js</clientfile>
+				</client>
+			</files>
+		</component>
+	</components>
+</plugin>

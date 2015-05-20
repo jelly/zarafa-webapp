@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>1.1</version>
+		<name>xmpp</name>
+		<title>XMPP plugin</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Implementing the XMPP based chat client for the Zarafa WebApp</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<info>
+				<name>jsjac</name>
+				<title>JSJaC</title>
+				<author>Stefan Strigler</author>
+				<authorURL>http://zeank.in-berlin.de/jsjac/</authorURL>
+				<description>JavaScript Jabber Client Library</description>
+			</info>
+			<files>
+				<client>
+					<clientfile load="release">jsjac/jsjac.js</clientfile>
+					<clientfile load="debug">jsjac/jsjac.uncompressed.js</clientfile>
+				</client>
+			</files>
+		</component>
+		<component>
+			<files>
+				<server>
+					<serverfile>php/plugin.xmpp.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/xmpp.js</clientfile>
+					<clientfile load="debug">js/xmpp-debug.js</clientfile>
+					<clientfile load="source">js/XmppChatManager.js</clientfile>
+					<clientfile load="source">js/XmppNotificationPlugin.js</clientfile>
+					<clientfile load="source">js/XmppPresence.js</clientfile>
+					<clientfile load="source">js/XmppRosterEntry.js</clientfile>
+					<clientfile load="source">js/XmppVCard.js</clientfile>
+					<clientfile load="source">js/XmppChat.js</clientfile>
+					<clientfile load="source">js/XmppChatMessage.js</clientfile>
+					<clientfile load="source">js/XmppPlugin.js</clientfile>
+					<clientfile load="source">js/XmppPreviewPanelPlugin.js</clientfile>
+					<clientfile load="source">js/XmppRosterManager.js</clientfile>
+					<clientfile load="source">js/XmppWidget.js</clientfile>
+					<clientfile load="source">js/data/XmppChatStore.js</clientfile>
+					<clientfile load="source">js/data/XmppRosterStore.js</clientfile>
+					<clientfile load="source">js/ui/XmppChatPanel.js</clientfile>
+					<clientfile load="source">js/ui/XmppChatTabPanel.js</clientfile>
+					<clientfile load="source">js/ui/XmppRosterPanel.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile>resources/css/xmpp.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

@@ -1,0 +1,17 @@
+digraph classdiagram {
+ratio = "auto";
+	node [ shape = "record" ]
+	"Container" [
+		label = "{Container|- plugins : Plugin[]\l|+ getPluginByName(name : String) : Plugin\l+ registerPlugin(plugin : Plugin) : Void\l+ populateInsertionPoint(insertionPoint : String) : Void\l}"
+	]
+	"Plugin" [
+		label = "{Plugin|- name : String\l|+ getName() : String\l+ registerInsertionPoint(match : Mixed, createFunction : Function, scope : Object) : Void\l}"
+	]
+	"Context" [
+		label = "{Context|- name : String\l|+ getName() : String\l+ registerInsertionPoint(match : Mixed, createFunction : Function, scope : Object) : Void\l+ createToolBar() : Ext.ToolBar\l+ createContentPanel() : Ext.Panel\l}"
+	]
+	edge [ arrowtail = "empty" arrowhead = "none" ]
+	"Plugin"->"Context"
+	edge [ arrowtail = "none" arrowhead = "none" ]
+	"Container" ->"Plugin" [ headlabel = "*"]
+}

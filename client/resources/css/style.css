@@ -1,0 +1,1759 @@
+/* Fix for IE9, without the z-index explicitely
+ * configured, IE9 sets it to 0 and shows odd
+ * behavior where a <div> element which is placed
+ * inside another <div> can still get a lower
+ * z-index value than the parent making it invisible.. */
+.x-panel-body {
+	z-index : 1;
+}
+
+.zarafa-navigation-button-icon, .folder-dialog-icon
+{
+	background-position: center center;
+	background-repeat:no-repeat;
+	overflow : hidden;
+	width : 36px;
+	height : 32px;
+	border : none;
+	vertical-align: middle;
+	margin : 0;
+	cursor : pointer ! important;
+}
+
+.zarafa-navigation-button-open
+{
+	height: 34px;
+	overflow : hidden;
+	background-image : url(../../extjs/resources/images/default/toolbar/bg.gif);
+
+	font-family:arial,tahoma,helvetica,sans-serif;
+	font-size:11px;
+	vertical-align: middle;
+	cursor : pointer ! important;
+}
+
+.zarafa-navigation-closedbuttonholder
+{
+	height: 34px;
+	padding-right : 2px;
+	overflow : hidden;
+	background-image : url(../../extjs/resources/images/default/toolbar/bg.gif);
+	vertical-align: middle;
+}
+
+.zarafa-navigation-button-open-over
+{
+	font-weight : bold;
+}
+
+.zarafa-grid-header {
+	font: 13px Arial,Tahoma,Helvetical,Sans-Serif !important;
+	margin-left: 5px;
+}
+
+body
+{
+	color: #000;
+	font-family: Arial,Tahoma,Helvetical,Sans-Serif !important;
+	font-size: 8pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.header_top
+{
+	/* background-image: url(../images/zarafa_top_background.gif) ! important; */
+	background-color: white;
+	border-bottom : 1px solid black;
+}
+
+.x-list-body {
+	background-color: white;
+}
+
+.emptytext {
+	text-align: center;
+}
+.x-grid3-header {
+	background: #dfe0df;
+	color: #393536;
+}
+.zarafa-grid-empty-cell .x-grid3-cell-inner
+{
+	text-decoration : none !important;
+}
+
+.zarafa-task-complete .x-grid3-cell-inner
+{
+	color : #888888;
+	text-decoration : line-through;
+}
+
+.zarafa-task-overdue .x-grid3-cell-inner
+{
+	color : #EC0000;
+}
+td.x-grid3-hd .x-grid3-hd-inner {
+	background-image: none !important;
+	background-color:#dfe0df !important;
+}
+td.x-grid3-hd{
+	border-left-color:#EBEAEB;
+	border-right-color:#D3D2D2;
+}
+td.x-grid3-hd.sort-desc, td.x-grid3-hd.sort-asc{
+	border-left-color:#EBEAEB !important;
+	border-right-color:#D3D2D2 !important;
+}
+td.sort-desc .x-grid3-hd-inner, td.sort-asc .x-grid3-hd-inner {
+	background-image:none !important;
+	background-color:#d3d2d2 !important;
+}
+td.x-grid3-hd-over, td.x-grid3-hd-over.sort-desc, td.x-grid3-hd-over.sort-asc {
+	border-left-color:#F2F2F2 !important;
+}
+td.x-grid3-hd-over .x-grid3-hd-inner
+,td.x-grid3-hd-over.sort-desc .x-grid3-hd-inner
+,td.x-grid3-hd-over.sort-asc .x-grid3-hd-inner {
+	background-image:none !important;
+	background-color:#ebeaeb !important;
+}
+.zarafa-note-iconview {
+	 background-color: white;
+}
+.zarafa-note-iconview-thumb {
+	 background-position:50% 10%;
+	 background-repeat:no-repeat;
+	 float:left;
+	 height:27px;
+	 margin:5px;
+	 overflow:hidden;
+	 padding-left:2px;
+	 padding-right:2px;
+	 padding-top:35px;
+	 text-align:center;
+	 width:70px;
+	 border:1px solid #fff;
+}
+
+.zarafa-note-iconview-over {
+	background-color:#EFEFFF;
+	border:1px solid #DDDDDD;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color:#0E62BB;
+}
+.zarafa-note-iconview-selected	{
+	 background-color:#CEE3F6;
+	 border:1px solid #7EACD6;
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 color:#0E62BB;
+}
+.zarafa-note-iconview-subject {
+	color: #000;
+}
+.stickynote_dialog_yellow {
+	background: #FF9 none repeat scroll 0 0 !important;
+}
+.stickynote_dialog_blue {
+	background: #DEF1FF none repeat scroll 0 0 !important;
+}
+.stickynote_dialog_green {
+	background: #CBF0BB none repeat scroll 0 0 !important;
+}
+.stickynote_dialog_pink {
+	background: #FFDBFB none repeat scroll 0 0 !important;
+}
+.stickynote_dialog_white {
+	background: #FFF none repeat scroll 0 0 !important;
+}
+
+.importance-combobox-item {
+	padding-left : 15px;
+	height : 18px;
+}
+
+.complete {
+	color : #888888;
+	text-decoration : line-through;
+}
+
+div.zarafa-contact-cardview-selected {
+	 border : 1px solid #666666;
+	 background-color : #F8D03F;
+}
+
+.zarafa-contact-cardview {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+.zarafa-card-body table {
+	border-collapse: collapse;
+}
+.zarafa-card-body table tr td.contact-card-label {
+	font-style: italic;
+	padding-right:3px;
+}
+.zarafa-contact-cardview-card {
+	border: 1px solid transparent;
+	padding : 5px;
+	width : 250px;
+	height : 150px;
+	float : left;
+	background-color : transparent;
+	}
+.zarafa-contact-cardview-card .x-panel {
+	border-radius:5px;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+	overflow:hidden;
+}
+.zarafa-contact-cardview-card .x-panel .x-panel-tl {
+	background-color:#f0f0f0 !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), color-stop(50%,#f0f0f0), to(#ededed)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #f0f0f0, #f0f0f0, #ededed) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #f0f0f0, #f0f0f0, #ededed) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #f0f0f0, #f0f0f0, #ededed) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #f0f0f0, #f0f0f0, #ededed) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #f0f0f0, #f0f0f0, #ededed) !important;
+
+}
+.zarafa-contact-cardview-contact-card {
+	width : 45px;
+	height : 125px;
+	float : left;
+}
+.zarafa-contact-cardview-card .x-panel-header-text {
+	font-size:1.1em;
+}
+.zarafa-contact-cardview-card-title
+{
+	padding:5px;
+}
+.zarafa-contact-cardview-distlist-card {
+	width : 80px;
+	height : 125px;
+	float : left;
+}
+
+.zarafa-tbar-loading {
+	background-image: url(../images/loading.gif) !important;
+	background-repeat: no-repeat	!important;
+	background-position: right;
+}
+
+.zarafa-hierarchy-header {
+	padding : 1px 3px 1px 10px;
+}
+.zarafa-context-navigation-item-body {
+	background-color:white;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+	margin: 0px 2px 2px 2px;
+}
+.x-panel-body {
+	background-color:#fff !important;
+}
+.zarafa-attachments-dialog-filelist {
+	background-color: #FFF;
+}
+.zarafa-text-center {
+	text-align : center;
+}
+
+.zarafa-hierarchy-node-unread-count span.zarafa-hierarchy-node-counter {
+	color: blue !important;
+}
+
+.zarafa-hierarchy-node-total-count span.zarafa-hierarchy-node-counter {
+	color: #008000 !important;
+}
+
+.zarafa-hierarchy-node-withcounter {
+	font-weight: bold !important;
+}
+
+.x-tree-drop-ok-append .x-dd-drop-icon {
+	background-image: url(../../extjs/resources/images/default/dd/drop-yes.gif);
+}
+
+.x-tree-drop-ok-append-add .x-dd-drop-icon {
+	background-image: url(../../extjs/resources/images/default/dd/drop-add.gif);
+}
+
+.x-tree-drop-ok-above .x-dd-drop-icon{
+	background-image: url(../../extjs/resources/images/default/tree/drop-over.gif);
+}
+
+.x-tree-drop-ok-above-add .x-dd-drop-icon{
+	background-image: url(../../extjs/resources/images/default/tree/drop-over.gif);
+}
+
+.x-tree-drop-ok-below .x-dd-drop-icon{
+	background-image: url(../../extjs/resources/images/default/tree/drop-under.gif);
+}
+
+.x-tree-drop-ok-below-add .x-dd-drop-icon{
+	background-image: url(../../extjs/resources/images/default/tree/drop-under.gif);
+}
+
+.x-tree-drop-ok-between .x-dd-drop-icon{
+	background-image: url(../../extjs/resources/images/default/tree/drop-between.gif);
+}
+
+.x-tree-drop-ok-between-add .x-dd-drop-icon{
+	background-image: url(../../extjs/resources/images/default/tree/drop-between.gif);
+}
+
+#loading-mask {
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 height: 100%;
+		 background: #fff;
+	 /** ExtJS uses 20001 as z-index for its loading mask, so we need to use values higher then this **/
+		 z-index: 20002;
+}
+
+#loading {
+		 position: absolute;
+		 top: 40%;
+		 left: 40%;
+		 z-index: 20003;
+}
+
+#loading span.loading {
+		 background: url(../../extjs/resources/images/default/tree/loading.gif) no-repeat left center;
+		 padding: 5px 35px;
+		 display: block;
+}
+
+#loading span.loading-error {
+	background: url(../../extjs/resources/images/default/window/icon-error.gif) no-repeat left center;
+	padding: 5px 35px;
+	display: block;
+}
+
+.zarafa-fieldset {
+	-moz-border-radius:5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding-top: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.zarafa-fieldset-second {
+	padding-left:10px;
+}
+
+.zarafa-link {
+	color: #0000BB;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+div.zarafa-folder-link, div.zarafa-user-link, div.zarafa-word-link {
+	text-decoration: underline;
+	padding: 4px 0px 0px 5px;
+	cursor:pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+.x-form-item .x-form-cb-label {
+	 top : 0px !important;
+}
+.x-form-field-wrap .x-form-trigger {
+	background-image: url(../images/button/trigger.png);
+}
+.x-form-field-wrap .x-form-search-trigger, .x-form-trigger.icon_search {
+	background-image: url(../icons/new/magnifier.png);
+	border-bottom:none !important;
+}
+.x-form-field-wrap .x-form-spinner-trigger {
+	background-image: url(../images/button/spinner.png);
+}
+.x-form-field-wrap .x-form-clear-trigger {
+	background-image: url(../images/button/clear.png);
+}
+.x-trigger-wrap-focus .x-form-trigger {
+	background-position: 0 0;
+	border-bottom:1px solid #d0d0d0;
+}
+
+.zarafa-mainpanel-toolbar {
+	background-color: transparent;
+	background-image: none;
+	border: 0px none;
+	padding: 0 0 0 10px;
+}
+
+.zarafa-mainpanel-toolbar-title {
+	font-size: 13px !important;
+}
+
+/**
+ * This CSS class is added to the body of main viewport,
+ * To separate the stacking context of mainviewport
+ * and the dialogs we need to forcefully specify
+ * z-index of viewport's body. So other stacking contexts
+ * will not interfere with viewport's stacking context.
+ * This z-index is only used to create separate stacking context
+ * for viewport, we can specify any z-index value
+ * which is < 9000 (Ext.WindowMgr.zseed)
+ *
+ * Dialogs are added directly below body element of the window,
+ * with absolute positions and every dialog have declared z-index
+ * so they have separate stacking context.
+ *
+ * Reference -> http://reference.sitepoint.com/css/z-index
+ */
+.x-border-layout-ct {
+	background-color:transparent;
+}
+.zarafa-panel-body
+{
+	z-index : 0;
+	background-color:#eaeaea;
+}
+
+.zarafa-window-header span {
+	display: block;
+	position: absolute;
+	right: 50px;
+}
+
+.zarafa-window-header .x-window-header-text {
+/*	height: 15px;*/
+	overflow: hidden;
+	left: 7px;
+	white-space: nowrap;
+}
+
+.zarafa-window-header .fade {
+	background: none;
+	display: block;
+	top: 7px;
+	width: 40px;
+}
+
+.zarafa-reminder-dialog-active-reminder-icon {
+	width: 24px;
+	height: 15px;
+	float: left;
+}
+
+.zarafa-reminder-dialog-active-reminder-subject
+{
+	font-weight: bold;
+}
+.zarafa-reminder-dialog-snooze, .zarafa-reminder-dialog-active-reminder
+{
+	padding:8px;
+}
+/* override buttons */
+.zarafa-maintoolbar .x-btn {
+	margin-right:10px;
+}
+.zarafa-context-mainpanel .x-btn, .zarafa-previewpanel-toolbar .x-btn, .zarafa-dialogtoolbar .x-btn {
+	margin-right:5px;
+}
+.x-html-editor-tb .x-btn-pressed .x-btn-small, .x-html-editor-tb .x-btn-pressed.x-btn-over .x-btn-small
+{
+	background: url(../images/button/background_small.png) center center no-repeat ;
+}
+
+.x-btn-over
+{
+	background-color:#E3E2E3;
+}
+.x-btn em
+{
+	display:block;
+	height:100%;
+}
+.x-tool-close
+{
+	background-image: url(../images/button/close_button.png);
+}
+.x-tool-close-over
+{
+	background-image: url(../images/button/close_button.png);
+	background-position: center;
+}
+
+.x-tool-minimize
+{
+    background-image: url(../images/button/minimize_button.png);
+    background-position: center;
+}
+
+.x-tool-minimize-over
+{
+    background-image: url(../images/button/minimize_button.png);
+    background-position: center;
+}
+
+.x-tool.x-tool-plus
+{
+	background-image: url(../images/button/plus.png);
+	background-position: center;
+}
+.x-tool.x-tool-gear
+{
+	background-image: url(../icons/new/cogwheel.png);
+	background-position: center;
+}
+.x-panel-header .x-tool-toggle
+{
+	background-image: url(../icons/new/toggle.png);
+	background-position: center;
+}
+.x-panel-collapsed .x-tool-toggle
+{
+	background-image: url(../icons/new/toggle_down.png);
+	background-position: center;
+}
+.x-tool.x-tool-toggle.x-tool-collapse-west, .x-tool.x-tool-expand-east
+{
+	background-image: url(../icons/new/collapse_west.png);
+	background-position: center;
+}
+.x-tool.x-tool-toggle.x-tool-collapse-east, .x-tool.x-tool-expand-west
+{
+	background-image: url(../icons/new/collapse_east.png);
+	background-position: center;
+}
+.x-tool.x-tool-help
+{
+	background-image: url(../icons/new/info.png);
+	background-position: center;
+}
+
+.x-btn em.x-btn-split, .x-btn em.x-btn-arrow
+{
+	background-image: url(../images/button/s-arrow-o.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-color:transparent;
+	padding-right:14px;
+}
+.x-btn-over .x-btn-large em.x-btn-split, .x-btn-over .x-btn-large em.x-btn-arrow
+{
+/*
+	background-image: url(../images/button/s-arrow-o.png);
+*/
+}
+/*
+.x-btn-over em.x-btn-split, .x-btn-over em.x-btn-arrow
+{
+	background-image: url(../images/button/s-arrow-o.gif);
+}
+*/
+.x-btn-click .x-btn-large em.x-btn-split, .x-btn-click .x-btn-large em.x-btn-arrow
+{
+	background-image: url(../images/button/s-arrow-c.png);
+}
+.x-btn .x-btn-large
+{
+	height:32px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border:1px solid transparent;
+}
+.x-btn-icon .x-btn-large .x-btn-text
+{
+	width:32px;
+}
+.x-btn-text-icon .x-btn-icon-small-left .x-btn-text
+{
+	background-position: 0 center;
+	height:20px;
+	padding-left:24px;
+}
+.x-btn .x-btn-large button
+{
+	width:32px;
+	height:32px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.x-btn .x-btn-small
+{
+	height:20px;
+	min-width:20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border:1px solid transparent;
+}
+.x-btn-icon .x-btn-small .x-btn-text
+{
+	width:20px;
+	height:20px;
+}
+.x-btn-noicon .x-btn-icon-small-left
+{
+	border-width:1px;
+	border-style:solid;
+	border-color:#aaaaaa;
+	border-radius:2px;
+}
+.x-btn-noicon .x-btn-small .x-btn-text {
+	height:20px;
+	padding: 0 5px;
+}
+.x-btn-icon {
+	border:none !important;
+}
+.x-btn-text-icon .x-btn-small .x-btn-text {
+	padding: 0 5px 2px 20px;
+}
+.x-btn-icon .x-btn-large {
+	border-width:1px;
+	border-style:solid;
+	border-color:#AEAEAE #999999 #999999 #AEAEAE;
+	border-radius:2px;
+	box-shadow: 0 0 1px #B5B5B5, 0 1px 1px white inset;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), color-stop(50%,#f6f6f6), to(#E6E6E6)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #f6f6f6, #f6f6f6, #e6e6e6) !important;
+
+}
+/* buttons with icons have an image as background */
+.x-btn-icon.x-btn-over .x-btn-large, .x-btn-icon.x-btn-over .x-btn-small
+{
+	border:1px solid #7A7A7A;
+	border-radius:2px;
+	box-shadow: 0 1px 1px white, 0 1px 1px white inset;
+}
+.x-btn-icon.x-btn-click.x-btn-over .x-btn-large
+{
+	background: url(../images/button/background_large.png) center left no-repeat !important;
+}
+
+.x-btn-icon.x-btn-click.x-btn-over .x-btn-small, .x-btn-icon.x-btn-pressed .x-btn-small
+{
+	background: url(../images/button/background_small.png) center left no-repeat ;
+}
+.x-btn-icon.x-btn-over {
+	border:none;
+	box-shadow:none;
+}
+.x-btn-noicon {
+	text-align:center;
+}
+.x-form-field .x-btn {
+	text-align:left;
+}
+.x-btn-noicon .x-btn-large .x-btn-text {
+	height:40px;
+}
+.x-btn-text-icon {
+	border-width:1px;
+	border-style:solid;
+	border-color:#AEAEAE #999999 #999999 #AEAEAE;
+	border-radius:2px;
+	box-shadow: 0 0 1px #B5B5B5, 0 1px 1px white inset;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), color-stop(50%,#f6f6f6), to(#E6E6E6)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #f6f6f6, #f6f6f6, #e6e6e6) !important;
+}
+.x-btn-over.x-btn-text-icon {
+	border:1px solid #7A7A7A;
+	border-radius:2px;
+	box-shadow: 0 1px 1px white, 0 1px 1px white inset;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), color-stop(50%,#EEEEEE), to(#E6E6E6)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #EEEEEE, #EEEEEE, #e6e6e6) !important;
+}
+.x-btn-over.x-btn-click.x-btn-text-icon, .x-btn-over.x-btn-click.x-btn-noicon {
+	border-radius:2px;
+	box-shadow: 0 1px 1px white, 0 1px 1px white inset;
+	background-color: #8a8a8a !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#C5C5C5), color-stop(50%,#C5C5C5), to(#A1A1A1)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #C5C5C5, #C5C5C5, #A1A1A1) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #C5C5C5, #C5C5C5, #A1A1A1) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #C5C5C5, #C5C5C5, #A1A1A1) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #C5C5C5, #C5C5C5, #A1A1A1) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #C5C5C5, #C5C5C5, #A1A1A1) !important;
+
+}
+/*
+ * Make a clear distinction between a normal button
+ * and a button which has the focus
+ */
+.x-btn-focus .x-btn-tl{
+	background-position: -6px 0;
+}
+
+.x-btn-focus .x-btn-tr{
+	background-position: -9px 0;
+}
+
+.x-btn-focus .x-btn-tc{
+	background-position: 0 -9px;
+}
+
+.x-btn-focus .x-btn-ml{
+	background-position: -6px -24px;
+}
+
+.x-btn-focus .x-btn-mr{
+	background-position: -9px -24px;
+}
+
+.x-btn-focus .x-btn-mc{
+	background-position: 0 -2168px;
+}
+
+.x-btn-focus .x-btn-bl{
+	background-position: -6px -3px;
+}
+
+.x-btn-focus .x-btn-br{
+	background-position: -9px -3px;
+}
+
+.x-btn-focus .x-btn-bc{
+	background-position: 0 -18px;
+}
+
+.x-panel-tbar-noheader .x-toolbar, .x-panel-mc .x-panel-tbar .x-toolbar {
+	background-image:none;
+	border-color:transparent;
+}
+.x-panel-tbar-noborder, .x-panel-tbar-noborder.x-panel-tbar-noheader
+{
+/*
+	border-width:0;
+*/
+}
+.x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+	border-color:transparent;
+}
+/**
+ * Theming options
+ */
+/* Style the whole background */
+body {
+	background-color: #F3F3F3 !important;
+}
+/** Style the BUTTON GROUPS **/
+/* Style buttons groups header */
+.x-btn-group{
+	padding:0;
+}
+/* button groups no longer have their own backgrounds */
+.x-btn-group-tr {
+/*	background-color: #d2d2d4 !important;*/
+/*	border-bottom: 1px solid white !important;*/
+}
+.x-btn-group-tl,
+.x-btn-group-tr,
+.x-btn-group-tc {
+	background-image: none !important;
+	/* remove background as it is present even without a title for the group*/
+	background-color:transparent;
+	padding:0;
+}
+.x-btn-group-header-text {
+	color: #424244;
+	text-transform: uppercase;
+	font-weight: bold !important;
+	font-family: Arial, Tahoma, Helvetical, Sans-Serif !important;
+}
+/* Style buttons groups body */
+.x-btn-group-mr {
+/*	background-color: #e6e6e7 !important;*/
+}
+.x-btn-group-ml,
+.x-btn-group-mr {
+	background-image: none !important;
+}
+.x-btn-group-mc {
+	padding:0;
+}
+/* Style buttons groups bottom */
+.x-btn-group-bl,
+.x-btn-group-br,
+.x-btn-group-bc {
+	background-image: none !important;
+}
+
+/* Top toolbars in main window and dialog and toolbar at the bottom. */
+.zarafa-maintoolbar,
+.zarafa-bottomtoolbar,
+.zarafa-dialogtoolbar {
+	background-image: none !important;
+	border-color: transparent !important;
+}
+.zarafa-maintoolbar {
+	background-color:transparent;
+	padding-top:10px;
+	padding-left:10px;
+	border-top: 1px solid white;
+	background: -moz-linear-gradient(top, rgba(222,222,222,1) 0%, rgba(222,222,222,0.2) 16%, rgba(222,222,222,0) 20%, rgba(228,228,228,0) 89%, rgba(229,229,229,0) 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(222,222,222,1)), color-stop(16%,rgba(222,222,222,0.2)), color-stop(20%,rgba(222,222,222,0)), color-stop(89%,rgba(228,228,228,0)), color-stop(100%,rgba(229,229,229,0))) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(222,222,222,1) 0%,rgba(222,222,222,0.2) 16%,rgba(222,222,222,0) 20%,rgba(228,228,228,0) 89%,rgba(229,229,229,0) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(222,222,222,1) 0%,rgba(222,222,222,0.2) 16%,rgba(222,222,222,0) 20%,rgba(228,228,228,0) 89%,rgba(229,229,229,0) 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(222,222,222,1) 0%,rgba(222,222,222,0.2) 16%,rgba(222,222,222,0) 20%,rgba(228,228,228,0) 89%,rgba(229,229,229,0) 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom, rgba(222,222,222,1) 0%,rgba(222,222,222,0.2) 16%,rgba(222,222,222,0) 20%,rgba(228,228,228,0) 89%,rgba(229,229,229,0) 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#00e5e5e5',GradientType=0 ) !important; /* IE6-9 */
+}
+.zarafa-bottomtoolbar.x-toolbar {
+	background-color : #DFE0DF !important;
+}
+.zarafa-maintoolbar.x-toolbar {
+	border-bottom-width : 0 !important;
+}
+/* separator */
+.x-toolbar .xtb-sep {
+	background-image: url(../images/grid/grid-split.gif);
+}
+/* HTML editor toolbar */
+.x-html-editor-tb .x-toolbar {
+	background-image:none;
+	background-color:#ebeaeb;
+	border-color:#d3d2d2;
+}
+/* html editor buttons are smaller than 'regular' buttons */
+.x-html-editor-tb .x-btn
+{
+	height:20px;
+	min-width:20px;
+	text-align:center;
+	vertical-align:middle;
+}
+.x-html-editor-tb a.x-menu-item img.x-menu-item-icon, .x-html-editor-tb .x-btn-icon .x-btn-text
+{
+	height:16px !important;
+	width:16px !important;
+}
+.x-html-editor-wrap {
+	border-color:#B5B8C8;
+}
+.x-tree-node .x-tree-node-over {
+	background-color: #f2f2f2;
+}
+.x-tree-root-ct {
+	background-color: #ffffff;
+}
+.x-tree-node-el * {
+	cursor : pointer;
+}
+.x-grid3-row {
+	background-color:#ffffff;
+}
+.x-grid3-row-over {
+	background-color:#efefef;
+}
+/* Selection in grid */
+.x-grid3-row-selected {
+	background-color: #f8d03f !important;
+	border-color: #d8ab0a;
+}
+.x-grid3-body .x-grid3-row-selected .x-grid3-td-numberer, .x-grid3-body .x-grid3-row-selected .x-grid3-td-checker, .x-grid3-body .x-grid3-row-selected .x-grid3-td-expander {
+	background-image:none;
+	background-color:#918f90;
+}
+/* Upper bar on a panel, contains the title */
+.x-panel-header {
+	padding:4px 3px 4px 8px;
+	background-image:none !important;
+	background-color:#E9E9E9;
+	color: #393536 !important;
+	font-weight: normal;
+	font-size: 13px;
+	font-family: Arial, Tahoma, Helvetical, Sans-Serif !important;
+	border-color:transparent;
+}
+.x-panel-footer {
+	background-color:#F4F4F4;
+}
+.x-panel-noborder .x-panel-header-noborder {
+	border-bottom: none !important;
+}
+.zarafa-widgetpanel
+{
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	border-top:1px solid white;
+}
+/* Body element of a panel */
+.x-panel-body {
+	border-color:#d3d2d2;
+	background-color:#F4F4F4 !important;
+}
+.x-panel-body {
+}
+.x-fieldset-body .x-column-inner {
+/*
+	padding:0 5px;
+*/
+}
+.x-panel-btns {
+	padding:5px;
+}
+.x-panel-tl, .x-panel-tc, .x-panel-tr {
+	background-image:none;
+	background-color:transparent;
+}
+.x-panel-tl {
+	border-bottom-color:transparent;
+	border-top:1px solid white;
+}
+.x-panel-ml, .x-panel-mc, .x-panel-mr {
+	background-image:none;
+	background-color:#EBEAEB;
+}
+.x-panel-bl, .x-panel-bc, .x-panel-br {
+	background-image:none;
+	background-color:#EBEAEB;
+}
+.x-panel.x-portlet {
+	box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+	margin-bottom: 10px;
+}
+
+/** Style the CONTEXT **/
+/* Header panel, specifically header of a context */
+.zarafa-context-header {
+	background-color: #DFE0DF !important;
+	margin-bottom:5px;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+}
+/* Toolbar within the header of the context */
+/*.zarafa-context-header .x-toolbar {*/
+/*	background-color: transparent !important;*/
+/*}*/
+
+
+/** Style the HIERARCHY **/
+.zarafa-navigationpanel-item {
+	background-color: #ebeaeb;
+}
+.zarafa-context-navigation-block {
+	margin:8px;
+}
+
+.zarafa-content-navigation-block > div {
+	background: #ff0000 !important;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+
+.x-panel-header.zarafa-hierarchy-header {
+	border-radius:5px 5px 0 0;
+	box-shadow: 0 0 2px rgba(0,0,0,0.4);
+	margin: 0px 2px;
+}
+.zarafa-navigation-buttons {
+	border-top: 1px solid white !important;
+}
+.zarafa-navigation-button-row {
+	background-color: #dddfe0 !important;
+	background-image: none !important;
+	border-bottom: 1px solid white !important;
+}
+/* Style the root node for each store */
+.zarafa-tree-ipm-subtree-node {
+	font-size: 10pt;
+	margin: 2px 0px;
+}
+.zarafa-tree-ipm-subtree-container {
+	padding: 4px 0px;
+	background: white;
+}
+/* Style the plus/minus symbols for the root folder */
+.zarafa-tree-root-node .x-tree-elbow,
+.zarafa-tree-root-node .x-tree-elbow-end {
+	background-image:url(../../extjs/resources/images/default/tree/s.gif);
+}
+.zarafa-tree-root-node .x-tree-elbow-plus,
+.zarafa-tree-root-node .x-tree-elbow-end-plus {
+	background-image:url(../../extjs/resources/images/default/tree/elbow-plus-nl.gif);
+}
+.zarafa-tree-root-node .x-tree-elbow-minus,
+.zarafa-tree-root-node .x-tree-elbow-end-minus {
+	background-image:url(../../extjs/resources/images/default/tree/elbow-minus-nl.gif);
+}
+
+/* Selection in tree */
+.x-tree-node > .x-tree-selected {
+	background-color: #F8D03F;
+}
+/* Remove the first dotted indent line */
+.x-tree-node-indent img:first-child {
+	/*
+	* Hide it like this so the next indent line is not
+	* moved to the left if we use "display: none;".
+	*/
+	visibility: hidden;
+ }
+ /* Style the bottombar of the HierarchyTreePanel */
+.zarafa-hierarchy-treepanel-bottombar.x-toolbar {
+	/* Relative positioning is used in combination with the bottom style
+	 * to always keep the shared folder object in view at the bottom.
+	 */
+	position: relative;	/* TODO: style the x-panel-bbar that this bar belongs to, to overflow: visible or something	*/
+	top: auto; /* Disable the top property otherwise you canot use the bottom property */
+
+	padding: 0px;
+	background-color: white !important;
+	background-image: none;
+	border-top: 1px solid #AEAEAE !important;
+}
+/* Remove the border from the button in the footer of the HierarchyTreePanel */
+.zarafa-hierarchy-treepanel-footer-opensharedfolder {
+	border-top:1px solid #AEAEAE;
+}
+.zarafa-hierarchy-treepanel-footer-opensharedfolder .x-btn-small {
+	border: 0px;
+	border-radius:0 0 5px 5px;
+}
+.zarafa-hierarchy-treepanel-tbar .x-toolbar {
+	background-color:white !important;
+}
+/** HACK to get the checkbox in the topbar of the hierarchy correctly aligned **/
+/** The Ext.ux.FieldLabeler sets the position to absolute for all IE browsers, but IE9 does not need that **/
+.ext-ie.ext-ie8 .zarafa-hierarchy-treepanel-tbar tr.x-toolbar-right-row div.x-form-element {
+	position: relative !important;
+}
+
+/** Style the SEARCHBAR **/
+.zarafa-searchbar .x-panel-header {
+	background-color: #e6e6e7 !important;
+	border-top: none;
+}
+.zarafa-searchbar .x-panel-body {
+	background-color: #e6e6e7 !important;
+}
+/** Style the CALENDAR **/
+/* Date picker */
+.x-date-picker .x-date-left,
+.x-date-picker .x-date-middle,
+.x-date-picker .x-date-right {
+	background: #ffffff;
+}
+.x-date-middle .x-btn {
+	border-color:#918f90;
+}
+/* rounded corners of date picker table */
+.x-date-picker .x-date-left {
+	border-top-left-radius:5px
+}
+.x-date-picker .x-date-right {
+	border-top-right-radius:5px
+}
+.x-date-picker {
+	background-color:#f4f4f4 !important;
+	padding:8px;
+	width:auto;
+	border-color:transparent;
+}
+/* center date picker inside container */
+.ext-webkit table.x-date-inner {
+	width:100%;
+}
+.x-date-picker table {
+	width:100%;
+	background-color:white;
+	border-radius:5px 5px 0 0;
+	box-shadow:0px 0px 2px rgba(0,0,0,0.4);
+}
+.x-date-picker > table tr {
+	border-style:none;
+}
+.x-date-middle .x-btn .x-btn-text {
+	color: #000;
+}
+.x-date-bottom {
+	background-image:none;
+	background-color: #EBEAEB;
+	border-top-color:#D3D2D2;
+}
+.x-date-inner th {
+	background-image:none !important;
+	background-color:transparent !important;
+	color:#393536;
+	border-bottom:none;
+}
+.x-date-inner thead {
+	background-color: #bdbcbc !important;
+	border-radius:5px 5px 0 0;
+}
+.x-date-weeknumber {
+	background-color: #EBEAEB !important;
+	border-color: #EBEAEB !important;
+}
+.x-date-weeknumber a{
+	text-align: center;
+}
+.x-date-inner a {
+	color: #393536;
+}
+.x-date-inner .x-date-selected a {
+	background-color: #F8D03F;
+	background-image: none;
+	border-color:#a7a5a6;
+	color:black;
+	border-radius:3px;
+}
+.x-date-inner a:hover, .x-date-inner .x-date-disabled a:hover {
+	background-color:#ebeaeb;
+	color:black;
+	border-radius:3px;
+}
+.x-date-inner .x-date-today a {
+	border-color:#d8ab0a;
+	border-width:1px;
+	border-radius:3px;
+}
+.x-date-inner .x-date-selected span{
+	font-weight:inherit;
+}
+.x-date-inner .x-date-busy span{
+	font-weight:bold;
+}
+
+.zarafa-panel {
+	box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+	border-top:1px solid white;
+}
+
+/** Style the widget panel **/
+.zarafa-widgetpanel, .zarafa-panel {
+	background-color: #f4f4f4;
+}
+.zarafa-body-tabbar .zarafa-widgetpanel, .zarafa-body-tabbar .zarafa-panel {
+	box-shadow : none;
+	border-top : none;
+}
+.zarafa-widget-item {
+	width:80px;
+	text-align:center;
+	display: block;
+	float:left;
+	margin:5px;
+	cursor:pointer;
+}
+.zarafa-widget-item .thumb-wrap {
+	display: block;
+	width:80px;
+	height:80px;
+	text-align:center;
+	vertical-align:middle;
+	position:relative;
+}
+.zarafa-widget-item > span {
+	height:2.75em;
+	display:block;
+	overflow:hidden;
+	padding-top:0.25em;
+}
+.zarafa-widgets-selectedwidget
+{
+	color : #7f7f7f;
+}
+.zarafa-widgets-hoverwidget
+{
+	color : #7f7f7f;
+	text-decoration : underline;
+}
+.zarafa-widget-item .thumb-wrap img {
+	display:block;
+	margin:auto;
+}
+/** Dialog window **/
+.x-window-tl .x-window-header {
+	font-size:15px;
+	font-weight:normal;
+	padding:4px 4px 6px 4px;
+}
+.x-window-header-text {
+	color:#393536 !important;
+}
+.x-window-tr, .x-window-tc {
+	background:none !important;
+}
+.x-window-tr {
+	background-image:none;
+}
+.x-window-tl {
+	background-color: #CCCCCC;
+	background-image: -webkit-gradient(linear, left top, right top, from(#cccccc), color-stop(50%,#D4D4D4), to(#cccccc)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(left, #cccccc, #d4d4d4, #cccccc) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(left, #cccccc, #d4d4d4, #cccccc) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(left, #cccccc, #d4d4d4, #cccccc) !important; /* IE10 */
+	background-image:			-o-linear-gradient(left, #cccccc, #d4d4d4, #cccccc) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to right, #cccccc, #d4d4d4, #cccccc) !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#cccccc', endColorStr='#d4d4d4', GradientType=0)";
+	border-left: 1px solid #c0c0c0;
+	border-top: 1px solid #E6E6E6;
+	border-right: 1px solid #c0c0c0;
+	border-bottom:none;
+	border-radius: 5px 5px 0 0;
+	}
+
+.x-window-ml, .x-window-mr, .x-window-mc {
+	background:#f4f4f4 !important;
+}
+.x-window-ml {
+	padding-left:0;
+}
+.x-window-mr {
+	padding-right:0;
+}
+.x-window-mc {
+	border:none !important;
+}
+.x-window-bl, .x-window-br, .x-window-bc {
+	background:#EBEAEB !important;
+}
+.x-form-text.x-zarafa-boxfield-input{
+	background-color:transparent;
+}
+
+.x-form-text {
+	border-color:#d3d2d2;
+	background-color:white;
+}
+.x-form-focus, textarea.x-form-focus, .x-trigger-wrap-focus	{
+	border-color:#918f90;
+}
+.x-layout-collapsed	{
+	background-color:#f0f0f0;
+	border:none;
+	box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+	border-top:1px solid white;
+}
+.x-panel-body.x-form {
+	padding:0;
+}
+/* right click context menu */
+.x-menu {
+	background-color: #F0F0F0;
+	background-image: url(../images/menu/menu.png);
+	background-position: 2px center;
+}
+.x-menu-floating {
+	border-color:#918f90;
+}
+.x-menu-nosep {
+	background-image:none;
+}
+/* context menu items */
+a.x-menu-item
+{
+	padding: 3px 21px 3px 29px;
+	line-height:20px;
+}
+li.x-menu-list-item{
+	border-width:1px;
+	border-color:transparent;
+	border-style:solid;
+	border-radius:4px;
+	background-image: none;
+}
+/* mouseover */
+li.x-menu-item-active{
+	background-image: none;
+	background-color: transparent;
+	border:1px solid #666666;
+	margin:0 1px;
+	padding:1px;
+	box-shadow:0 0 2px 1px #ffffff inset;
+}
+li.x-menu-item a.x-menu-item {
+	border:none;
+}
+.x-menu-item-icon {
+	height: 20px;
+	width: 20px;
+	background-repeat:no-repeat;
+}
+li.x-menu-item-active a.x-menu-item {
+	border:none;
+}
+li.x-menu-list-item.x-menu-sep-li {
+	border:none;
+	box-shadow:none;
+}
+/* loading mask */
+.x-mask-loading {
+	background-image: none;
+	background-color:#ebeaeb;
+	border-color:#d3d2d2;
+}
+.x-mask-loading div {
+	border-color:#d3d2d2;
+}
+.x-mask-error {
+	background-image: none;
+	background-color:#ebeaeb;
+	border-color:#d3d2d2;
+}
+.x-mask-error div {
+	cursor: default;
+	border-color:#d3d2d2;
+}
+
+.x-combo-list {
+	border-color:#918F90;
+}
+.x-combo-list .x-combo-selected {
+	border-color:#d3d2d2 !important;
+	background-color:#ebeaeb;
+}
+/* tabs */
+ul.x-tab-strip-top	{
+	background-image: none;
+	background-color:transparent;
+	border-bottom-color:#B0B0B0;
+}
+
+.x-tab-panel-header, .x-tab-panel-footer {
+	background-color:transparent;
+	border: none;
+	padding:0;
+}
+.x-tab-strip span.x-tab-strip-text {
+	color:#393536;
+}
+.x-tab-panel-body {
+	border-color:#CACACA #B0B0B0 #B0B0B0 #CACACA;
+	background-color:#F4F4F4;
+	padding:3px;
+}
+.x-tab-panel-body .zarafa-panel {
+	box-shadow:none;
+}
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {
+	width:15px;
+	height:15px;
+	background-image: url("../images/button/close_button.png");
+	margin-top:4px;
+}
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close, .x-tab-strip .x-tab-strip-closable a.x-tab-strip-close:hover {
+	background-image: url("../images/button/close_button.png");
+}
+
+.x-tab-strip-active span.x-tab-strip-text {
+	color:#393536;
+}
+.x-tab-strip-top .x-tab-right, .x-tab-strip-top .x-tab-left, .x-tab-strip-top .x-tab-strip-inner {
+	background-image:none;
+}
+.x-tab-strip-top .x-tab-strip-inner {
+	overflow:visible;
+}
+.x-tab-strip-top .x-tab-right {
+	background-color:#ebebea;
+	border-width:1px 1px 0 1px;
+	border-color:#918F90;
+	border-style:solid;
+	border-radius:3px 3px 0 0;
+}
+.x-tab-scroller-left {
+	background-image:url(../images/tabs/scroll-left.gif);
+	border-bottom-color: #B0B0B0;
+}
+.x-tab-scroller-right {
+	background-image:url(../images/tabs/scroll-right.gif);
+	border-bottom-color: #B0B0B0;
+}
+/* main content tabs */
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li {
+	margin : 0;
+	margin-right:2px;
+	box-shadow: 0 0 1px #B5B5B5, 0 1px 1px white inset;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li .x-tab-right {
+	border-color:#CACACA #B0B0B0 #B0B0B0 #CACACA;
+	background-color: #E8E8E8;
+	border-radius : 0;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li > .x-tab-right:hover {
+	background-color:#f3f3f3;
+	box-shadow: 0 1px 5px #E6E6E6 inset;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip .x-tab-strip-inner span.x-tab-strip-text.x-tab-strip-icon, .zarafa-body-tabbar > div > div > ul.x-tab-strip li.x-tab-with-icon .x-tab-strip-inner span.x-tab-strip-text {
+	padding-left: 21px;
+	background-position: 0 5px;
+	background-repeat: no-repeat;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip .x-tab-strip-inner span.x-tab-strip-text {
+	height : 15px;
+	padding-top : 8px;
+}
+.zarafa-body-tabbar ul.x-tab-strip li.x-tab-strip-active .x-tab-right, .zarafa-body-tabbar ul.x-tab-strip li.x-tab-strip-active .x-tab-right:hover{
+	background-color: #F4F4F4;
+	box-shadow: none;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip .x-tab-strip-active span.x-tab-strip-text {
+	font-weight: normal;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li.x-tab-strip-closable .x-tab-right {
+	padding-left:7px;
+}
+
+/* iconCls for dirty messages */
+.x-tab-strip-text.zarafa-tab-edited {
+	font-style : italic !important;
+}
+/* edge contains the '+' sign */
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li.x-tab-edge {
+	/* icon is 15px wide, so add 5px on each side */
+	width:25px;
+	box-shadow:none;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li {
+	display : inline-block;
+}
+.zarafa-body-tabbar > div > div > ul.x-tab-strip li.x-tab-edge .x-tab-add {
+	height:20px;
+	width:25px;
+	padding-top: 8px;
+	display:block;
+	background-image: url("../images/button/plus.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.zarafa-body-tabbar ul.x-tab-strip:first-child li.x-tab-edge .x-tab-strip-text:hover {
+	background-color:#dedede;
+}
+.zarafa-body-tabbar > div.x-tab-panel-header {
+	position : relative;
+}
+
+.x-fieldset {
+	padding:5px;
+}
+.x-fieldset legend {
+	color:#393536;
+}
+
+/* month picker */
+.x-date-mp-btns {
+	background-image:none;
+	background-color:#ebeaeb;
+}
+.x-date-mp-btns td {
+	border-top-color:#d3d2d2;
+}
+.x-date-mp td {
+	padding:0;
+}
+td.x-date-mp-month a, td.x-date-mp-year a	{
+	color:#918f90;
+	padding:4px;
+}
+td.x-date-mp-sel a {
+	background-image:none;
+	background-color:#d3d2d2;
+	border-color:#918f90;
+	color:#393536;
+}
+td.x-date-mp-month a:hover, td.x-date-mp-year a:hover {
+	background-color:#ebeaeb;
+	color:#393536;
+}
+.x-date-mp-btns button {
+	background-color: #393536;
+	border-color: #a7a5a6 #231f20 #231f20 #a7a5a6;
+	color: #FFFFFF;
+}
+/* mid separator for months | years */
+td.x-date-mp-sep {
+	border-color:#D3D2D2;
+}
+/* tooltip */
+.x-tip .x-tip-tc, .x-tip .x-tip-tl, .x-tip .x-tip-tr, .x-tip .x-tip-bc, .x-tip .x-tip-bl, .x-tip .x-tip-br, .x-tip .x-tip-ml, .x-tip .x-tip-mr {
+	background-image: url(../images/tip-sprite.gif);
+}
+.x-tip .x-tip-mc {
+	background-color: transparent;
+}
+/* class for the rect displayed while dialog is being dragged */
+.x-panel-ghost {
+		background-color:#f2f2f2;
+		border-color:transparent;
+}
+.x-panel-ghost ul {
+		border-color:#a7a5a6 !important;
+}
+.x-panel-ghost .x-window-tl {
+	border-color:transparent;
+}
+.zarafa-freebusy-datetime-toolbar .x-panel-body
+{
+	padding:5px;
+}
+.x-btn.zarafa-freebusy-suggestionrow
+{
+	text-align: center;
+	margin-bottom:1px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#AEAEAE #999999 #999999 #AEAEAE;
+	border-radius:2px;
+	box-shadow: 0 0 1px #B5B5B5, 0 1px 1px white inset;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), color-stop(50%,#f6f6f6), to(#E6E6E6)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #f6f6f6, #f6f6f6, #e6e6e6) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #f6f6f6, #f6f6f6, #e6e6e6) !important;
+
+}
+.x-btn.zarafa-freebusy-suggestionrow:hover
+{
+	border:1px solid #7A7A7A;
+	border-radius:2px;
+	box-shadow: 0 1px 1px white, 0 1px 1px white inset;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), color-stop(50%,#EEEEEE), to(#E6E6E6)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:		-moz-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* FF3.6 */
+	background-image:		 -ms-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* IE10 */
+	background-image:			-o-linear-gradient(top, #EEEEEE, #EEEEEE, #e6e6e6) !important; /* Opera 11.10+ */
+	background-image:				 linear-gradient(to bottom, #EEEEEE, #EEEEEE, #e6e6e6) !important;
+}
+.zarafa-freebusy-suggestionrow button
+{
+	width:100%;
+	height:100%;
+}
+.x-form-item
+{
+	margin-bottom:2px;
+}
+
+/** Main Tab Bar **/
+.zarafa-maintabbar {
+	/* OVERRIDE .x-toolbar styles, should be done in a generic way */
+	border:none !important;
+	padding: 0px;
+}
+.zarafa-maintabbar .x-btn-over, .zarafa-maintabbar .x-btn-over.x-btn-click.x-btn-text-icon, .zarafa-maintabbar .x-btn-over.x-btn-click.x-btn-noicon {
+	background: transparent !important;
+	box-shadow: none;
+	font-weight: bold !important;
+}
+
+.zarafa-maintabbar > .x-toolbar-ct {
+	background: url(../images/tabbackground.jpg);
+	padding:2px 2px 0;
+	color: #ffffff;
+	height: 28px;
+}
+.zarafa-maintab.x-btn-noicon {
+	text-align: center;
+	margin: 0 1px;
+	padding: 0px 4px 4px 4px;
+}
+.zarafa-maintab.x-btn-noicon .x-btn-small {
+	border:none !important;
+}
+.zarafa-maintab.x-btn-noicon.x-btn-over button.x-btn-text {
+	color: white;
+}
+
+.zarafa-maintab.x-btn-noicon button.x-btn-text {
+	font-size: 14px;
+	color: #c0c0c0;
+	font-family: Arial;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	display:inline-block;
+}
+
+.zarafa-maintabbar-maintab-active.x-btn-noicon button.x-btn-text {
+	color: white;
+	font-weight: bold;
+	border-bottom: 2px solid #F8D03F;
+	padding-top: 1px;
+}
+
+/**
+ * paging buttons
+ */
+.x-tbar-page-next {
+	background-image: url(../icons/new/triangle_right.png) !important;
+}
+.x-tbar-page-last {
+	background-image: url(../icons/new/triangle_right_stop.png) !important;
+}
+.x-tbar-page-prev {
+	background-image: url(../icons/new/triangle_left.png) !important;
+}
+.x-tbar-page-first {
+	background-image: url(../icons/new/triangle_left_stop.png) !important;
+}
+.x-item-disabled .x-tbar-page-prev {
+	background-image: url(../icons/new/triangle_left_outline.png) !important;
+}
+.x-item-disabled .x-tbar-page-first {
+	background-image: url(../icons/new/triangle_left_stop_outline.png) !important;
+}
+.x-item-disabled .x-tbar-page-next {
+	background-image: url(../icons/new/triangle_right_outline.png) !important;
+}
+.x-item-disabled .x-tbar-page-last {
+	background-image: url(../icons/new/triangle_right_stop_outline.png) !important;
+}
+/*
+ * datepicker paging
+ */
+.x-date-right a
+{
+	background-image: url(../icons/new/triangle_right.png) !important;
+}
+.x-date-left a
+{
+	background-image: url(../icons/new/triangle_left.png) !important;
+}
+
+/*
+ * month picker
+ */
+.x-date-mp-ybtn a.x-date-mp-next
+{
+	background-image: url(../icons/new/triangle_right.png) !important;
+	background-position: center;
+}
+.x-date-mp-ybtn a.x-date-mp-prev
+{
+	background-image: url(../icons/new/triangle_left.png) !important;
+	background-position: center;
+}
+.x-date-mp-ybtn a.x-date-mp-next:hover, .x-date-mp-ybtn a.x-date-mp-prev:hover {
+	background-position: center;
+}
+.sort-desc .x-grid3-sort-icon
+{
+	background-image: url(../images/grid/sort_desc.png);
+}
+.sort-asc .x-grid3-sort-icon
+{
+	background-image: url(../images/grid/sort_asc.png);
+}
+.x-grid3-hd-btn
+{
+	background-image: url(../images/grid/x-grid3-hd-btn.png);
+}
+.zarafa-main-header, .x-toolbar {
+	background-color: transparent !important;
+}
+.x-toolbar
+{
+	background-image: none;
+	border-color:#AEAEAE;
+}
+.zarafa-main-header {
+	padding: 7px 5px;
+}
+
+.x-panel-tl, .x-panel-header.zarafa-hierarchy-header {
+	background-color:#ffffff !important;
+}
+
+.zarafa-bottombar {
+/*
+	background-color: #0469B1;
+*/
+	background:transparent;
+}
+.zarafa-card-body {
+	background-color: white !important;
+	border:none;
+	font-weight:normal;
+}
+.zarafa-navigationpanel-item .x-table-layout {
+	table-layout: fixed;
+}
+
+.zarafa-context-navigation-item-body .x-panel-body {
+	overflow-x: hidden !important;
+}
+
+.zarafa-maintoolbar .x-toolbar-left {
+	background-image: url(../images/zlogo.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.zarafa-quotabar
+{
+	border: 1px solid;
+	overflow: hidden;
+	height: 15px;
+}
+
+/* Green part of quotabar */
+.zarafa-quotabar-normal
+{
+	background-color: #66FF66;
+	background-image: url(../images/quota_background_sprite.png);
+	height: 15px;
+	display: inline-block;
+}
+
+/* Yellow part of quotabar */
+.zarafa-quotabar-warn
+{
+	background-color: #EEE92B;
+	background-image: url(../images/quota_background_sprite.png);
+	background-position: 0 -20px;
+	height: 15px;
+	display: inline-block;
+}
+
+/* Orange part of quotabar */
+.zarafa-quotabar-soft
+{
+	background-color: #FFAA66;
+	background-image: url(../images/quota_background_sprite.png);
+	background-position: 0 -40px;
+	height: 15px;
+	display: inline-block;
+}
+
+/* Red part of quotabar */
+.zarafa-quotabar-hard
+{
+	background-color: #FF6666;
+	background-image: url(../images/quota_background_sprite.png);
+	background-position: 0 -60px;
+	height: 15px;
+	display: inline-block;
+}
+
+.zarafa-quota-string {
+	font-weight : bold;
+}
+
+/* Override ExtJS CSS to remove non-standard proprietary fonts */
+.x-box-mc {
+	font-family: "Tahoma","Helvetica","Arial",sans-serif;
+}
+
+/**
+ * Override Tiny mce toolbar css to give look and feel of webapp
+ */
+.mce-btn-small {
+	height : 20px !important;
+}

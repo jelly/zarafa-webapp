@@ -1,0 +1,627 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Files Plugin\n"
+"POT-Creation-Date: 2014-05-22 00:38+0100\n"
+"PO-Revision-Date: 2014-05-22 00:38+0100\n"
+"Last-Translator: Christoph Haas <c.haas@zarafa.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: dgettext:1c,2\n"
+"X-Poedit-Basepath: ..\\..\\..\\js\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: AttachFromFilesPlugin.js:52 data/Actions.js:66
+msgctxt "plugin_files"
+msgid "Add attachment from {0}"
+msgstr "從{0}新增檔案"
+
+#: AttachFromFilesPlugin.js:106 settings/SettingsFilesComponentsWidget.js:27
+msgctxt "plugin_files"
+msgid "Attach a file from {0}"
+msgstr "從{0} 新增檔案"
+
+#: FilesPlugin.js:81
+msgctxt "plugin_files"
+msgid "{0} Plugin"
+msgstr "{0} Plugin"
+
+#: SaveToFilesPlugin.js:39
+msgctxt "plugin_files"
+msgid "Add attachment to {0}"
+msgstr "新增檔案到{0}"
+
+#: SaveToFilesPlugin.js:65
+msgctxt "plugin_files"
+msgid "Please wait"
+msgstr "請稍待"
+
+#: SaveToFilesPlugin.js:66
+msgctxt "plugin_files"
+msgid "Loading attachment"
+msgstr "載入檔案中"
+
+#: SaveToFilesPlugin.js:67
+msgctxt "plugin_files"
+msgid "Initializing"
+msgstr "初始化中"
+
+#: SaveToFilesPlugin.js:167 settings/SettingsFilesComponentsWidget.js:34
+msgctxt "plugin_files"
+msgid "Save received attachments to {0}"
+msgstr "儲存檔案到{0}"
+
+#: context/FilesContext.js:217 dialogs/FilesUploadContentPanel.js:29
+#: ui/UploadButton.js:47
+msgctxt "plugin_files"
+msgid "Upload file"
+msgstr "上傳檔案"
+
+#: context/FilesContext.js:235 context/FilesContext.js:267
+#: context/FilesContext.js:269
+msgctxt "plugin_files"
+msgid "Send file"
+msgstr "傳送檔案"
+
+#: context/FilesContext.js:270
+msgctxt "plugin_files"
+msgid "Create a new email message with some files attached."
+msgstr "使用某些檔案建立新的郵件"
+
+#: context/FilesContext.js:320 context/FilesContext.js:322
+msgctxt "plugin_files"
+msgid "No preview"
+msgstr "沒有預覽"
+
+#: context/FilesContext.js:329 context/FilesContext.js:331
+msgctxt "plugin_files"
+msgid "Right preview"
+msgstr "右邊預覽"
+
+#: context/FilesContext.js:338 context/FilesContext.js:340
+msgctxt "plugin_files"
+msgid "Bottom preview"
+msgstr "底部預覽"
+
+#: context/FilesContextModel.js:109 context/FilesContextModel.js:113
+#: ui/FilesMainPanel.js:92
+msgctxt "plugin_files"
+msgid "Files"
+msgstr "檔案"
+
+#: data/Actions.js:193
+msgctxt "plugin_files"
+msgid "Folder name"
+msgstr "資料夾名稱"
+
+#: data/Actions.js:193 dialogs/SaveToFilesTreePanel.js:150
+msgctxt "plugin_files"
+msgid "Please enter a foldername"
+msgstr "請輸入資料夾名稱"
+
+#: data/Actions.js:199 data/Actions.js:224 data/Actions.js:278
+#: data/Actions.js:305 data/Actions.js:318 data/Actions.js:360
+#: dialogs/AttachFromFilesTreePanel.js:88
+#: dialogs/AttachFromFilesTreePanel.js:102
+#: dialogs/AttachFromFilesTreePanel.js:123 dialogs/SaveToFilesTreePanel.js:92
+#: dialogs/SaveToFilesTreePanel.js:114 dialogs/SaveToFilesTreePanel.js:144
+#: dialogs/SaveToFilesTreePanel.js:169 ui/FilesFileGridContextMenu.js:277
+#: ui/FilesPreviewPanelToolbarButtons.js:64
+#: ui/FilesPreviewPanelToolbarButtons.js:84
+msgctxt "plugin_files"
+msgid "Warning"
+msgstr "等待中"
+
+#: data/Actions.js:200
+msgctxt "plugin_files"
+msgid "Incorrect foldername"
+msgstr "不正確的資料夾名稱"
+
+#: data/Actions.js:249
+msgctxt "plugin_files"
+msgid "Moving"
+msgstr "搬移中"
+
+#: data/Actions.js:249
+msgctxt "plugin_files"
+msgid "Moving the selected records!"
+msgstr "搬移選擇的紀錄"
+
+#: data/Actions.js:267 data/DirectoryLoader.js:92 data/ResponseHandler.js:116
+#: data/ResponseHandler.js:123 dialogs/FilesUploadContentPanel.js:162
+#: ui/UploadPanel.js:92
+msgctxt "plugin_files"
+msgid "Error"
+msgstr "錯誤"
+
+#: data/Actions.js:296 ui/FilesFileGridContextMenu.js:122
+#: ui/FilesPreviewPanelToolbarButtons.js:46
+#: ui/FilesPreviewPanelToolbarButtons.js:47
+msgctxt "plugin_files"
+msgid "Rename"
+msgstr "重新命名"
+
+#: data/Actions.js:296
+msgctxt "plugin_files"
+msgid "Please enter a new name"
+msgstr "請輸入新的名稱"
+
+#: data/Actions.js:306
+msgctxt "plugin_files"
+msgid "Incorrect filename"
+msgstr "不正確的檔名"
+
+#: data/DirectoryLoader.js:33
+msgctxt "plugin_files"
+msgid "Loading failed"
+msgstr "載入失敗"
+
+#: data/Helper.js:201
+msgctxt "plugin_files"
+msgid "l d/m/Y G:i"
+msgstr "l d/m/Y G:i"
+
+#: data/Helper.js:201
+msgctxt "plugin_files"
+msgid "Never"
+msgstr "從不"
+
+#: data/Helper.js:216 data/Version.js:75
+msgctxt "plugin_files"
+msgid "Unknown"
+msgstr "未知"
+
+#: dialogs/AttachFromFilesContentPanel.js:26
+#: dialogs/SaveToFilesContentPanel.js:21
+msgctxt "plugin_files"
+msgid "{0} Attachment"
+msgstr "{0} 檔案"
+
+#: dialogs/AttachFromFilesTreePanel.js:57
+#: dialogs/AttachFromFilesTreePanel.js:59
+msgctxt "plugin_files"
+msgid "Add attachment"
+msgstr "新增檔案"
+
+#: dialogs/AttachFromFilesTreePanel.js:60
+msgctxt "plugin_files"
+msgid "Add selected attachment from files to email attachment."
+msgstr "從files新增選擇的檔案到郵件附件"
+
+#: dialogs/AttachFromFilesTreePanel.js:89
+msgctxt "plugin_files"
+msgid "The file {0} is too large!"
+msgstr "{0}此檔案太大"
+
+#: dialogs/AttachFromFilesTreePanel.js:89
+msgctxt "plugin_files"
+msgid "max"
+msgstr "最大"
+
+#: dialogs/AttachFromFilesTreePanel.js:103
+msgctxt "plugin_files"
+msgid "You have to choose at least one file!"
+msgstr "您至少需要選擇一個檔案"
+
+#: dialogs/FilesUploadContentPanel.js:61
+msgctxt "plugin_files"
+msgid "Select a file"
+msgstr "選擇一個檔案"
+
+#: dialogs/FilesUploadContentPanel.js:90
+msgctxt "plugin_files"
+msgid "Select upload folder"
+msgstr "選擇上傳的資料夾"
+
+#: dialogs/FilesUploadContentPanel.js:124 ui/UploadPanel.js:55
+msgctxt "plugin_files"
+msgid "Upload"
+msgstr "上傳"
+
+#: dialogs/FilesUploadContentPanel.js:126
+msgctxt "plugin_files"
+msgid "Store selected file"
+msgstr "儲存選擇的檔案"
+
+#: dialogs/FilesUploadContentPanel.js:135
+#: dialogs/FilesUploadContentPanel.js:137 ui/UploadPanel.js:61
+msgctxt "plugin_files"
+msgid "Cancel"
+msgstr "取消"
+
+#: dialogs/FilesUploadContentPanel.js:138
+msgctxt "plugin_files"
+msgid "Close this window"
+msgstr "關閉此視窗"
+
+#: dialogs/FilesUploadContentPanel.js:155 ui/UploadPanel.js:85
+msgctxt "plugin_files"
+msgid "Uploading files"
+msgstr "上傳檔案中"
+
+#: dialogs/SaveToFilesTreePanel.js:64 dialogs/SaveToFilesTreePanel.js:66
+msgctxt "plugin_files"
+msgid "New folder"
+msgstr "新資料夾"
+
+#: dialogs/SaveToFilesTreePanel.js:67
+#, fuzzy
+msgctxt "plugin_files"
+msgid "Create a new folder"
+msgstr "建立新資料夾在"
+
+#: dialogs/SaveToFilesTreePanel.js:74
+msgctxt "plugin_files"
+msgid "Save"
+msgstr "儲存"
+
+#: dialogs/SaveToFilesTreePanel.js:76
+msgctxt "plugin_files"
+msgid "Store attachment"
+msgstr "儲存檔案"
+
+#: dialogs/SaveToFilesTreePanel.js:77
+msgctxt "plugin_files"
+msgid "Store attachment to the selected {0} folder."
+msgstr "儲存檔案到 {0} 選擇的資料夾"
+
+#: dialogs/SaveToFilesTreePanel.js:93 dialogs/SaveToFilesTreePanel.js:145
+msgctxt "plugin_files"
+msgid "You have to choose a folder!"
+msgstr "您必須選擇一個資料夾"
+
+#: dialogs/SaveToFilesTreePanel.js:130
+msgctxt "plugin_files"
+msgid "Uploaded"
+msgstr "上傳完成"
+
+#: dialogs/SaveToFilesTreePanel.js:130
+msgctxt "plugin_files"
+msgid "Attachment successfully stored to {0}"
+msgstr "檔案已成功上傳到 {0}"
+
+#: dialogs/SaveToFilesTreePanel.js:132
+msgctxt "plugin_files"
+msgid "Upload Failed"
+msgstr "上傳失敗"
+
+#: dialogs/SaveToFilesTreePanel.js:132
+msgctxt "plugin_files"
+msgid "Attachment could not be stored in {0}! Error:"
+msgstr "檔案無法儲存到 {0} 錯誤："
+
+#: dialogs/SaveToFilesTreePanel.js:150
+msgctxt "plugin_files"
+msgid "Folder Name"
+msgstr "資料夾名稱"
+
+#: dialogs/SaveToFilesTreePanel.js:185
+msgctxt "plugin_files"
+msgid "Created"
+msgstr "建立"
+
+#: dialogs/SaveToFilesTreePanel.js:185
+msgctxt "plugin_files"
+msgid "Directory created!"
+msgstr "目錄已建立"
+
+#: dialogs/SaveToFilesTreePanel.js:188
+msgctxt "plugin_files"
+msgid "Creation failed"
+msgstr "建立失敗"
+
+#: dialogs/SaveToFilesTreePanel.js:188
+msgctxt "plugin_files"
+msgid "Directory not created!"
+msgstr "目錄沒有建立"
+
+#: dialogs/ShowFilesFileContentPanel.js:23 ui/FilesFileInfo.js:92
+msgctxt "plugin_files"
+msgid "File information"
+msgstr "檔案資訊"
+
+#: settings/SettingsFilesComponentsWidget.js:21
+msgctxt "plugin_files"
+msgid "Enable/Disable {0} components"
+msgstr "開啟/關閉 {0} 元件"
+
+#: settings/SettingsFilesComponentsWidget.js:41
+msgctxt "plugin_files"
+msgid "Enable file browser"
+msgstr "開啟檔案瀏覽"
+
+#: settings/SettingsFilesVersionWidget.js:20
+msgctxt "plugin_files"
+msgid "Version information"
+msgstr "版本資訊"
+
+#: settings/SettingsFilesVersionWidget.js:24
+msgctxt "plugin_files"
+msgid "Files Backend"
+msgstr ""
+
+#: settings/SettingsFilesVersionWidget.js:30
+msgctxt "plugin_files"
+msgid "Plugin"
+msgstr "Plugin"
+
+#: settings/SettingsFilesWidget.js:25
+msgid "Webdav"
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:28
+msgid "FTP"
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:34
+msgctxt "plugin_files"
+msgid "General {0} settings"
+msgstr "{0} 一般設定"
+
+#: settings/SettingsFilesWidget.js:40
+msgctxt "plugin_files"
+msgid "Server address"
+msgstr "主機位置"
+
+#: settings/SettingsFilesWidget.js:48
+msgctxt "plugin_files"
+msgid "Server port"
+msgstr "主機port"
+
+#: settings/SettingsFilesWidget.js:56
+msgctxt "plugin_files"
+msgid "Server SSL port"
+msgstr "主機SSL port"
+
+#: settings/SettingsFilesWidget.js:64
+msgctxt "plugin_files"
+msgid "Path to {0}"
+msgstr "{0} 路徑"
+
+#: settings/SettingsFilesWidget.js:69
+msgctxt "plugin_files"
+msgid "No trailing slashes!"
+msgstr "無斜線!"
+
+#: settings/SettingsFilesWidget.js:79
+msgctxt "plugin_files"
+msgid "Use Zarafa credentials for authentication"
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:90
+msgctxt "plugin_files"
+msgid "Username"
+msgstr "使用者名稱"
+
+#: settings/SettingsFilesWidget.js:99
+msgctxt "plugin_files"
+msgid "Password"
+msgstr "使用者密碼"
+
+#: settings/SettingsFilesWidget.js:107
+msgctxt "plugin_files"
+msgid "Use SSL connections"
+msgstr "使用SSL加密"
+
+#: settings/SettingsFilesWidget.js:118
+msgctxt "plugin_files"
+msgid "Backend to use"
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:233
+msgctxt "plugin_files"
+msgid "Session updated!"
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:233
+msgctxt "plugin_files"
+msgid "Settings applied successfully."
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:235
+msgctxt "plugin_files"
+msgid "Session update failed!"
+msgstr ""
+
+#: settings/SettingsFilesWidget.js:235
+msgctxt "plugin_files"
+msgid "Session update failed, please log in again."
+msgstr ""
+
+#: ui/FilesFileGrid.js:96
+msgctxt "plugin_files"
+msgid "Loading files"
+msgstr "載入檔案中"
+
+#: ui/FilesFileGridColumnModel.js:67 ui/FilesFileGridColumnModel.js:120
+msgctxt "plugin_files"
+msgid "Sort by: Type"
+msgstr "依類型排序"
+
+#: ui/FilesFileGridColumnModel.js:74
+msgctxt "plugin_files"
+msgid "Sort by: ID"
+msgstr "依ID排序"
+
+#: ui/FilesFileGridColumnModel.js:81
+msgctxt "plugin_files"
+msgid "Sort by: Path"
+msgstr "依路徑排序"
+
+#: ui/FilesFileGridColumnModel.js:84 ui/FilesFileGridColumnModel.js:123
+#: ui/FilesFileInfo.js:100
+msgctxt "plugin_files"
+msgid "Filename"
+msgstr "檔案名稱"
+
+#: ui/FilesFileGridColumnModel.js:87 ui/FilesFileGridColumnModel.js:126
+msgctxt "plugin_files"
+msgid "Sort by: Filename"
+msgstr "依檔案名稱排序"
+
+#: ui/FilesFileGridColumnModel.js:90 ui/FilesFileGridColumnModel.js:129
+#: ui/FilesFileInfo.js:114
+msgctxt "plugin_files"
+msgid "Last modified"
+msgstr "最後修改"
+
+#: ui/FilesFileGridColumnModel.js:94 ui/FilesFileGridColumnModel.js:133
+msgctxt "plugin_files"
+msgid "Sort by: Last modified"
+msgstr "依最後修改排序"
+
+#: ui/FilesFileGridColumnModel.js:97
+msgctxt "plugin_files"
+msgid "Size"
+msgstr "大小"
+
+#: ui/FilesFileGridColumnModel.js:101
+msgctxt "plugin_files"
+msgid "Sort by: Size"
+msgstr "依大小排序"
+
+#: ui/FilesFileGridContextMenu.js:112
+msgctxt "plugin_files"
+msgid "Open"
+msgstr "開啟"
+
+#: ui/FilesFileGridContextMenu.js:132
+msgctxt "plugin_files"
+msgid "Attach to mail"
+msgstr "增加到郵件"
+
+#: ui/FilesFileGridContextMenu.js:153 ui/FilesPreviewPanelToolbarButtons.js:37
+#: ui/FilesPreviewPanelToolbarButtons.js:38
+msgctxt "plugin_files"
+msgid "Delete"
+msgstr "刪除"
+
+#: ui/FilesFileGridContextMenu.js:163
+msgctxt "plugin_files"
+msgid "Info"
+msgstr "資訊"
+
+#: ui/FilesFileGridContextMenu.js:201
+#: ui/FilesPreviewPanelToolbarButtons.js:100
+msgctxt "plugin_files"
+msgid "Confirm deletion"
+msgstr "確認刪除"
+
+#: ui/FilesFileGridContextMenu.js:201
+#: ui/FilesPreviewPanelToolbarButtons.js:100
+msgctxt "plugin_files"
+msgid "Are you sure?"
+msgstr "您確認嗎？"
+
+#: ui/FilesFileGridContextMenu.js:259
+msgctxt "plugin_files"
+msgid "Attaching"
+msgstr "增加附件中"
+
+#: ui/FilesFileGridContextMenu.js:259
+msgctxt "plugin_files"
+msgid "Creating email... Please wait!"
+msgstr "建立郵件中....請稍待"
+
+#: ui/FilesFileInfo.js:107
+msgctxt "plugin_files"
+msgid "Filesize"
+msgstr "檔案大小"
+
+#: ui/FilesFileInfo.js:121
+msgctxt "plugin_files"
+msgid "Type"
+msgstr "類型"
+
+#: ui/FilesFileInfo.js:151
+msgctxt "plugin_files"
+msgid "File preview"
+msgstr "預覽檔案"
+
+#: ui/FilesFileInfo.js:201
+msgctxt "plugin_files"
+msgid "Sorry - no preview for this PDF file!"
+msgstr "對不起 - 無法預覽此PDF檔案"
+
+#: ui/FilesFileInfo.js:236 ui/FilesFileInfo.js:265
+msgctxt "plugin_files"
+msgid "JW FLV Player is not installed/available."
+msgstr "沒有安裝/存在JW FLV Player"
+
+#: ui/FilesFileInfo.js:308
+msgctxt "plugin_files"
+msgid "File ({0})"
+msgstr "檔案 ({0})"
+
+#: ui/FilesFileInfo.js:308
+msgctxt "plugin_files"
+msgid "Folder"
+msgstr "資料夾"
+
+#: ui/FilesPreviewPanelToolbarButtons.js:65
+msgctxt "plugin_files"
+msgid "You can only rename one file!"
+msgstr "您只能重新命名一個檔案"
+
+#: ui/FilesPreviewPanelToolbarButtons.js:85
+msgctxt "plugin_files"
+msgid "You can only delete one file!"
+msgstr "您只能刪除一個檔案"
+
+#: ui/FilesToolbar.js:26
+msgctxt "plugin_files"
+msgid "Create something new"
+msgstr "建立新的東西"
+
+#: ui/FilesToolbar.js:28
+msgctxt "plugin_files"
+msgid "New"
+msgstr "新增"
+
+#: ui/FilesToolbar.js:29
+msgctxt "plugin_files"
+msgid "Upload file / Create folder"
+msgstr "上傳檔案 / 建立資料夾"
+
+#: ui/FilesToolbar.js:38 ui/FilesToolbar.js:39
+msgctxt "plugin_files"
+msgid "Clear cache"
+msgstr "清除快取"
+
+#: ui/UploadButton.js:55
+msgctxt "plugin_files"
+msgid "Create folder"
+msgstr "建立資料夾"
+
+#: ui/UploadPanel.js:35
+msgctxt "plugin_files"
+msgid "Select file"
+msgstr "選擇檔案"
+
+#~ msgctxt "plugin_files"
+#~ msgid "Upload file to the selected {0} folder"
+#~ msgstr "上傳檔案到選擇 {0} 的資料夾"
+
+#~ msgid "Browse"
+#~ msgstr "瀏覽"
+
+#~ msgid "The file"
+#~ msgstr "Die Datei"
+
+#~ msgid "Enable/Disable"
+#~ msgstr "Aktivieren/Deaktivieren von"
+
+#~ msgid "components"
+#~ msgstr "Komponenten"
+
+#~ msgid "General"
+#~ msgstr "Allgemeine"
+
+#~ msgid "settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Sorry"
+#~ msgstr "Entschuldigung, es gibt keine Vorschau für diese Datei!"

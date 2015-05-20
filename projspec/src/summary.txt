@@ -1,0 +1,11 @@
+# Summary
+
+The WA7 project is feature and requirement wise going to be a huge UI project. 
+The scope, deliverables and organization of the project will be defined in this document.
+The project will make use of agile project/requirement/task management system to achieve its goals.
+A risk analysis work-shop will be conducted and the results presented in this document.
+
+
+
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <treeTemplate tpl="diagram.xsl" targetFile="diagram.js"/>
+    <classTemplate tpl="tpl/class.xsl" targetDir="output"/>
+    <source targetDir="source" wrapper="source-wrap.html"/>
+    <resources>
+    </resources>
+    <!--
+    <treeTemplate tpl="tpl/tree.xsl" targetFile="output/tree.js"/>
+    -->
+</template>

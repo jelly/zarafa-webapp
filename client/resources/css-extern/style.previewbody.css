@@ -1,0 +1,6 @@
+/**
+ * Make the blockquote element not use the default right margin of 40px
+ */
+blockquote {
+	margin-right: 0px;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>1.3</version>
+		<name>spreed</name>
+		<title>Zarafa Spreed Integration</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Zarafa Spreed Integration, allows you to set-up a conference call from within emails, contact groups, or single contact cards.</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile>php/plugin.spreed.php</serverfile>
+					<serverfile type="module" module="spreedmodule">php/class.spreedmodule.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/spreed.js</clientfile>
+					<clientfile load="debug">js/spreed-debug.js</clientfile>
+					<clientfile load="source">js/SpreedPlugin.js</clientfile>
+					<clientfile load="source">js/dialogs/EditSpreedParticipantContentPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/SpreedParticipantBox.js</clientfile>
+					<clientfile load="source">js/dialogs/SpreedParticipantContextMenu.js</clientfile>
+					<clientfile load="source">js/dialogs/SpreedParticipantField.js</clientfile>
+					<clientfile load="source">js/dialogs/SpreedSetupContentPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/SpreedSetupPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/SpreedToolBar.js</clientfile>
+					<clientfile load="source">js/data/SpreedAttachmentRecord.js</clientfile>
+					<clientfile load="source">js/data/SpreedAttachmentStore.js</clientfile>
+					<clientfile load="source">js/data/SpreedJsonAttachmentWriter.js</clientfile>
+					<clientfile load="source">js/data/SpreedJsonParticipantWriter.js</clientfile>
+					<clientfile load="source">js/data/SpreedLanguages.js</clientfile>
+					<clientfile load="source">js/data/SpreedParticipantRecord.js</clientfile>
+					<clientfile load="source">js/data/SpreedParticipantStore.js</clientfile>
+					<clientfile load="source">js/data/SpreedRecord.js</clientfile>
+					<clientfile load="source">js/data/SpreedStore.js</clientfile>
+					<clientfile load="source">js/data/SpreedTimezones.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/spreed.css</resourcefile>
+					<resourcefile load="source">resources/css/plugin.spreedstyles.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

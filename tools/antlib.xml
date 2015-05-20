@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<antlib>
+	<!-- Define the 'jsconcat' task -->
+	<taskdef name="jsconcat" classname="com.zarafa.jsconcat.JsConcatTask" onerror="report" />		<!-- report error and continue execution -->
+
+	<!-- Define the 'imagegen' task -->
+	<taskdef name="imagegen" classname="com.zarafa.imagegen.ImageGenTask" onerror="report" />
+	
+	<!-- Define the 'ext-doc' task -->
+	<taskdef name="ext-doc" classname="com.zarafa.extdoc.ExtDocTask" onerror="report" />
+</antlib>

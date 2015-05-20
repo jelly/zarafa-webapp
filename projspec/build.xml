@@ -1,0 +1,51 @@
+<project name="manual" default="all">
+
+	<tstamp><format property="date" pattern="dd/MM/yyyy hh:mm"/></tstamp>
+
+	<property name="inputs" value="frontpage.txt summary.txt overview.txt scope.txt approach.txt risks.txt organization.txt featureoverview.txt technicaloverview.txt estimatedcost.txt"/>
+
+	<property name="build" value="build"/>
+	<property name="src" value="src"/>
+
+	<target name="all">
+		<mkdir dir="${build}"/>
+		
+		<!-- Concatenate source files -->
+		<concat destfile="${build}/doc.txt">
+			<filelist dir="${src}" files="${inputs}"/>
+		</concat>
+		
+		<!-- Run pandoc -->
+		<exec executable="pandoc" output="${build}/md.xml" failonerror="true">
+			<arg line="-f markdown"/>
+			<arg line="-t html"/>
+			<arg line="-p"/>
+			<arg line="${build}/doc.txt"/>
+		</exec>
+
+		<!-- Surround the markdown output with a <doc> tag -->
+		<concat destfile="${build}/doc.xml">&lt;doc&gt;</concat>
+		<concat destfile="${build}/doc.xml" append="true"><fileset file="${build}/md.xml"/></concat>
+		<concat destfile="${build}/doc.xml" append="true">&lt;/doc&gt;</concat>
+		
+		<!-- XSLT -->
+		<xslt in="${build}/doc.xml" out="${build}/doc2.xml" style="${src}/stylesheet.xml">
+			<param name="date" expression="${date}"/>
+		</xslt>
+		
+		<!-- Prince -->
+		<exec executable="prince" failonerror="true">
+			<arg line="${build}/doc2.xml"/>
+			<arg line="-s ${src}/doc.css"/>
+			<arg line="-o projectspecificationWA7.pdf"/>
+		</exec>
+
+	</target>
+	
+	<target name="clean">
+		<delete dir="build"/>
+		<delete file="projectspecificationWA7.pdf"/>
+	</target>
+	
+
+</project>

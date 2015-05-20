@@ -1,0 +1,64 @@
+.zarafa-notifier-dropdown-item,
+.zarafa-notifier-eventdropdown-item
+{
+	background-color : #f4f4f4;
+	text-align : left;
+	width: 300px;
+	padding : 10px 10px 10px 44px;
+	box-shadow : 0 1px 1px white;
+	border-width : 0 1px 1px 1px;
+	border-style : solid;
+	border-color : #ccc;
+}
+.zarafa-notifier-popup-item
+{
+	background-color : #f4f4f4;
+	text-align : left;
+	width: 300px;
+	padding : 10px 10px 10px 44px;
+	box-shadow : 0 1px 1px white;
+	border-width : 1px 0 0 1px;
+	border-style : solid;
+	border-color : #ccc;
+}
+
+.zarafa-notifier-dropdown-item-title,
+.zarafa-notifier-eventdropdown-item-title,
+.zarafa-notifier-popup-item-title
+{
+	font-weight : bold;
+	font-size : 1.3em;
+}
+.zarafa-notifier-container
+{
+	position : absolute;
+	z-index : 1000000000;
+	width : 356px;
+}
+
+.zarafa-slide-notifier-error {
+	background-image : url('../icons/notifications/error.png');
+	background-repeat : no-repeat;
+	background-position : 10px center;
+	background-color : #f4eaea;
+}
+
+.zarafa-slide-notifier-warning {
+	background-image : url('../icons/notifications/warning.png');
+	background-repeat : no-repeat;
+	background-position : 10px center;
+	background-color : #f4eac0;
+}
+
+.zarafa-slide-notifier-info {
+	background-image : url('../icons/notifications/info.png');
+	background-repeat : no-repeat;
+	background-position : 10px center;
+	background-color : #eaf4ea;
+}
+
+/* Create a normal formatted list in the Missing Default Folder notifier */
+.zarafa-slide-notifier-error-hierarchy-defaultfolder ul {
+	list-style: disc;
+	padding-left: 40px;
+}

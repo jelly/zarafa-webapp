@@ -1,0 +1,453 @@
+.zarafa-calendar-body
+{
+	background-color : #ffffff;
+}
+
+.zarafa-calendar-scrollable
+{
+	position: absolute;
+    overflow-y : scroll;
+    overflow-x : hidden;
+}
+
+.zarafa-calendar-header
+{
+	position: absolute;
+}
+
+.zarafa-calendar-headerLine
+{
+	overflow: hidden;
+	position: absolute;
+    background-color : #adaead;
+}
+
+
+.zarafa-calendar-bottomarea
+{
+	position: absolute;
+    /* background-color : #e0e0e0; */
+}
+
+
+.zarafa-calendar-outline
+{
+	position: absolute;
+    border : 3px solid #7f7f7f;
+}
+
+.zarafa-calendar-container
+{
+	position: absolute;
+}
+
+.zarafa-calendar-border-left
+{
+	position: absolute;
+	overflow: hidden;
+	border-left: 1px solid;
+}
+
+.zarafa-calendar-border-right
+{
+	position: absolute;
+	overflow: hidden;
+	border-right: 1px solid;
+}
+
+.zarafa-calendar-border-top
+{
+	position: absolute;
+	overflow: hidden;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-top: 1px solid;
+}
+
+.zarafa-calendar-border-bottom
+{
+	position: absolute;
+	overflow: hidden;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.zarafa-calendar-textedit-body,
+.zarafa-calendar-textedit-header
+{
+	border: 1px solid #000000;
+	position : absolute;
+	z-index : 999;
+}
+
+/* ? */
+.zarafa-calendar-appointment-boxview-allday
+{
+	border : 1px solid #000000;
+	font-weight: bold;
+}
+
+/* ? */
+.zarafa-calendar-appointment-boxview-appointment
+{
+
+}
+
+/* ? */
+.zarafa-calendar-appointment-body-fullday
+{
+    font-weight : bold;
+	text-align: center;
+}
+
+
+.zarafa-calendar-dragproxy-time
+{
+	overflow : hidden;
+	position : absolute;
+	color : #000000;
+	font-weight : bold;
+	font-size : 11px;
+    font-family: tahoma, arial, verdana, sans-serif;
+}
+
+.zarafa-calendar-dragproxy-header
+{
+	color : #ffffff;
+	
+	overflow : hidden;
+	position : absolute;
+	display : none;
+	cursor : move ! important;
+	z-index : 999;
+	
+	opacity:.5;
+	-moz-opacity:.5;
+	filter:alpha(opacity=50);
+	background-color : #9f9faf;
+}
+
+.zarafa-calendar-dragproxy-outside
+{
+	overflow : hidden;
+	display : none;
+	position : absolute;
+	cursor : move;
+	z-index : 999;
+	padding : 4px;
+	
+	font-weight : bold;
+	font-size : 11px;
+    font-family: tahoma,arial,verdana,sans-serif;
+    padding : 4px;
+    
+	border : 1px solid #a0a0a0;
+	color : #000000;
+	background-color : #e7e7e7;
+	
+}
+
+.zarafa-calendar-dragproxy
+{
+	/* border : 1px dashed black; */
+	
+	padding : 2px;
+	
+	opacity:.5;
+	-moz-opacity:.5;
+	filter:alpha(opacity=50);
+	
+	/* background-color : #9f9faf; */
+	background-color : #7f7f7f;
+	
+	overflow: hidden;
+	position: absolute;
+}
+
+.zarafa-calendar-dragproxy-single
+{
+	border: 1px solid #3f3f3f;
+}
+
+.zarafa-calendar-dragproxy-first
+{
+	border-top: 1px solid #3f3f3f;
+	border-left: 1px solid #3f3f3f;
+	border-right: 1px solid #3f3f3f;
+}
+
+.zarafa-calendar-dragproxy-middle
+{
+	border-left: 1px solid #3f3f3f;
+	border-right: 1px solid #3f3f3f;
+}
+
+.zarafa-calendar-dragproxy-last
+{
+	border-bottom: 1px solid #3f3f3f;
+	border-left: 1px solid #3f3f3f;
+	border-right: 1px solid #3f3f3f;
+}
+
+.zarafa-calendar-droppoint
+{
+	overflow: hidden;
+	position: absolute;
+	border: 1px dashed black;
+}
+
+
+.zarafa-calendar-verticalline
+{
+	position: absolute;
+	overfow: hidden;
+	background-color: black;
+}
+
+
+.zarafa-calendar-column
+{
+	position: absolute;
+}
+
+
+.header_top
+{
+	/* background-image: url(../images/zarafa_top_background.gif) ! important; */
+	background-color: #ffffff;
+	border-bottom : 1px solid black;
+}
+
+.appointment_read
+{
+}
+
+.appointment_unread
+{
+	font-weight : bold;
+}
+
+
+
+/**
+ * Calendar common (HTML & Canvas)
+ */
+.zarafa-calendar-selection
+{
+	overflow : hidden;
+	position : absolute;
+	cursor : move;
+	z-index : 999;
+	
+	opacity:.5;
+	-moz-opacity:.5;
+	filter:alpha(opacity=50);
+	background-color : #0f0f0f;
+}
+
+.zarafa-calendar-selection-dragging
+{
+	color : #000000;
+	background-color : #7f7f7f;
+}
+
+
+/*
+ * Calendar timestrip (HTML & Canvas)
+ */
+.zarafa-calendar-timestrip
+{
+	position: absolute;
+	background-color : #9fbf00;
+	background-color: #f7f3f7;
+	overflow : hidden;
+	border-left: 1px solid black;
+}
+
+.zarafa-calendar-timestrip-element
+{
+    font-size: 14px;
+    font-family: tahoma,arial,verdana,sans-serif;
+	position: absolute;
+	color: #393839;
+	text-align:right;
+}
+
+.zarafa-calendar-timestrip-element div
+{
+	padding-top:4px;
+	padding-right:6px;
+}
+
+.zarafa-calendar-timestrip-line
+{
+	overflow: hidden;
+	position: absolute;
+	background-color: #adaead;
+}
+
+.zarafa-calendar-timestrip-header
+{
+    font-size: 11px;
+    font-family: tahoma,arial,verdana,sans-serif;
+	position: absolute;
+	color: black;
+	vertical-align: bottom;
+	padding-left: 2px;
+	overflow: hidden;
+}
+
+/*
+ * Calendar Tabs (HTML & Canvas)
+ */
+.zarafa-calendar-tabarea
+{
+	position: absolute;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab div
+{
+	position : absolute;
+	overflow : hidden;
+	height : 23px;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-selected div
+{
+	height: 24px;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-background .zarafa-calendar-tab-leftside,
+.zarafa-calendar-tabarea .zarafa-calendar-tab-background .zarafa-calendar-tab-rightside
+{
+	width: 32px;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-contents
+{
+	padding-left: 8px;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-contents .zarafa-calendar-tab-title
+{
+	position : absolute;
+	overflow : hidden;
+	padding-top : 8px;
+	cursor : pointer;
+	font-size : 10px;
+	font-family: tahoma,arial,verdana,sans-serif;
+	margin-left: 4px;
+	white-space:nowrap;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-selected .zarafa-calendar-tab-title
+{
+	font-weight:bold;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-icon
+{
+	position : absolute;
+	overflow : hidden;
+	cursor : pointer;
+	width : 16px;
+	height: 16px;
+	margin: 3px 0px 0px 4px;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-icon-close
+{
+	background-image: url(../icons/cross.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-icon-merge
+{
+	background-image: url(../icons/arrow-left.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-tab-icon-separate
+{
+	background-image: url(../icons/arrow-right.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*
+ * Canvas Calendar
+ */
+.zarafa-canvas
+{
+	position : absolute;
+}
+
+/*
+ * Appointment Dialog (HTML & Canvas)
+ */
+.zarafa-calendar-appointment-label-none
+{
+	background-color: transparent;
+}
+
+.zarafa-calendar-appointment-label-important
+{
+	background-color: #E98784;
+}
+
+.zarafa-calendar-appointment-label-work
+{
+	background-color: #8CA9D9;
+}
+
+.zarafa-calendar-appointment-label-personal
+{
+	background-color: #C0D98C;
+}
+
+.zarafa-calendar-appointment-label-holiday
+{
+	background-color: #DFCB47;
+}
+
+.zarafa-calendar-appointment-label-required
+{
+	background-color: #D9C18C;
+}
+
+.zarafa-calendar-appointment-label-travel-required
+{
+	background-color: #8CC6D9;
+}
+
+.zarafa-calendar-appointment-label-prepare-required
+{
+	background-color: #8C8CD9;
+}
+
+.zarafa-calendar-appointment-label-birthday
+{
+	background-color: #C48CD9;
+}
+
+.zarafa-calendar-appointment-label-special-date
+{
+	background-color: #D9928C;
+}
+
+.zarafa-calendar-appointment-label-phone-interview
+{
+	background-color: #9BD98C;
+}
+
+.zarafa-calendar-appointment-extrainfo
+{
+	background-color: #D2E0F0; 
+	border-color: #15428B;
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px 5px 2px 5px;
+}

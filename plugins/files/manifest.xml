@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.1</version>
+		<name>files</name>
+		<title>Files Integration</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Integrate Files into Zarafa Webapp</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<translations>
+		<translationsdir>languages</translationsdir>
+	</translations>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile type="module" module="filesmodule">php/class.filesmodule.php</serverfile>
+					<serverfile type="module" module="filesbrowsermodule">php/class.filesbrowsermodule.php</serverfile>
+					<serverfile>php/plugin.files.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">php/jsloader.php?debug=false</clientfile>
+					<clientfile load="debug">php/jsloader.php?debug=true</clientfile>
+					
+					<clientfile load="source">js/ABOUT.js</clientfile>
+					<clientfile load="source">js/data/ResponseHandler.js</clientfile>
+					<clientfile load="source">js/data/DirectoryLoader.js</clientfile>
+					<clientfile load="source">js/data/Version.js</clientfile>
+					<clientfile load="source">js/data/Dynamics.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFilesComponentsWidget.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFilesWidget.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFilesVersionWidget.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFilesQuotaWidget.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFilesResetSettingsWidget.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFilesCategory.js</clientfile>
+					<clientfile load="source">js/dialogs/AttachFromFilesTreePanel.js</clientfile>
+					<clientfile load="source">js/dialogs/AttachFromFilesContentPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/SaveToFilesTreePanel.js</clientfile>
+					<clientfile load="source">js/dialogs/SaveToFilesContentPanel.js</clientfile>
+					<clientfile load="source">js/AttachFromFilesPlugin.js</clientfile>
+					<clientfile load="source">js/SaveToFilesPlugin.js</clientfile>
+					<!-- Context includes -->
+					<clientfile load="source">js/data/Helper.js</clientfile>
+					<clientfile load="source">js/data/ComponentBox.js</clientfile>
+					<clientfile load="source">js/data/DataModes.js</clientfile>
+					<clientfile load="source">js/data/FileTypes.js</clientfile>
+					<clientfile load="source">js/data/ViewModes.js</clientfile>
+					<clientfile load="source">js/data/Views.js</clientfile>
+					<clientfile load="source">js/data/Actions.js</clientfile>
+					<clientfile load="source">js/data/FilesRecord.js</clientfile>
+					<clientfile load="source">js/data/FilesStore.js</clientfile>
+					<clientfile load="source">js/dialogs/ShowFilesFileContentPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/FilesUploadContentPanel.js</clientfile>
+					<clientfile load="source">js/ui/UploadButton.js</clientfile>
+					<clientfile load="source">js/ui/UploadPanel.js</clientfile>
+					<clientfile load="source">js/ui/NavigatorTreePanel.js</clientfile>
+					<clientfile load="source">js/ui/FilesViewPanel.js</clientfile>
+					<clientfile load="source">js/ui/FilesFileInfo.js</clientfile>
+					<clientfile load="source">js/ui/FilesPreviewPanelToolbarButtons.js</clientfile>
+					<clientfile load="source">js/ui/FilesToolbar.js</clientfile>
+					<clientfile load="source">js/ui/FilesPreviewPanel.js</clientfile>
+					<clientfile load="source">js/ui/FilesFileGridColumnModel.js</clientfile>
+					<clientfile load="source">js/ui/FilesFileGridContextMenu.js</clientfile>
+					<clientfile load="source">js/ui/FilesFileGrid.js</clientfile>
+					<clientfile load="source">js/ui/FilesIconView.js</clientfile>
+					<clientfile load="source">js/ui/FilesMainPanel.js</clientfile>
+					<clientfile load="source">js/ui/ExtTreepanelOverrides.js</clientfile>
+					<clientfile load="source">js/ui/QuotaBar.js</clientfile>
+					<clientfile load="source">js/context/FilesContextModel.js</clientfile>
+					<clientfile load="source">js/context/FilesContext.js</clientfile>
+					<!-- Main Loader -->
+					<clientfile load="source">js/FilesPlugin.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/files-min.css</resourcefile>
+					<resourcefile load="debug">resources/css/files.css</resourcefile>
+					
+					<resourcefile load="source">resources/css/files-main.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

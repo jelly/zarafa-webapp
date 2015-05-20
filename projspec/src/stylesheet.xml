@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<xsl:param name="date"></xsl:param>
+	
+	<xsl:output method="xml" omit-xml-declaration="yes"/>
+
+	<xsl:template name="gen-ref">
+		<xsl:choose>
+			<xsl:when test="name(.) = &quot;h1&quot;">
+				<xsl:value-of select="count(preceding-sibling::h1) + 1"/>
+			</xsl:when>
+			<xsl:when test="name(.) = &quot;h2&quot;">
+				<xsl:for-each select="preceding-sibling::h1[position()=1]"><xsl:call-template name="gen-ref"/></xsl:for-each>.<xsl:value-of select="count(preceding-sibling::h2) - count(preceding-sibling::h1[position()=1]/preceding-sibling::h2) + 1"/>
+			</xsl:when>
+			<xsl:when test="name(.) = &quot;h3&quot;">
+				<xsl:for-each select="preceding-sibling::h2[position()=1]"><xsl:call-template name="gen-ref"/></xsl:for-each>.<xsl:value-of select="count(preceding-sibling::h3) - count(preceding-sibling::h2[position()=1]/preceding-sibling::h3) + 1"/>
+			</xsl:when>
+			<xsl:when test="name(.) = &quot;h4&quot;">
+				<xsl:for-each select="preceding-sibling::h3[position()=1]"><xsl:call-template name="gen-ref"/></xsl:for-each>.<xsl:value-of select="count(preceding-sibling::h4) - count(preceding-sibling::h3[position()=1]/preceding-sibling::h4) + 1"/>
+			</xsl:when>
+			<xsl:when test="name(.) = &quot;figure&quot;">
+				<xsl:value-of select="count(preceding-sibling::h1)"/>.<xsl:value-of select="count(preceding-sibling::figure) - count(preceding-sibling::h1[position()=1]/preceding-sibling::figure) + 1"/>
+			</xsl:when>
+			<xsl:when test="name(.) = &quot;subfigure&quot;">
+				<xsl:value-of select="count(../preceding-sibling::h1)"/>.<xsl:value-of select="count(../preceding-sibling::figure) - count(../preceding-sibling::h1[position()=1]/preceding-sibling::figure) + 1"/><xsl:number format="a" value="count(preceding-sibling::subfigure) +1"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="@*|node()">
+		<xsl:copy>
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template> 	
+	
+	<xsl:template match="doc">
+
+		<xsl:copy>
+			<xsl:for-each select="titlepage">
+				<xsl:copy>
+					<xsl:apply-templates select="@*|node()"/>
+				</xsl:copy>
+			</xsl:for-each>
+			
+			<xsl:for-each select="toc">
+				<xsl:copy>
+					<xsl:for-each select="/doc/h1|/doc/h2|/doc/h3|/doc/h4">
+						<xsl:choose>
+							<xsl:when test="name(.) = &quot;h1&quot;">
+								<chapter>
+									<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+									<xsl:attribute name="refid">#<xsl:value-of select="@id"/></xsl:attribute>
+									<xsl:value-of select="."/>
+								</chapter>
+							</xsl:when>
+							<xsl:when test="name(.) = &quot;h2&quot;">
+								<section>
+									<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+									<xsl:attribute name="refid">#<xsl:value-of select="@id"/></xsl:attribute>
+									<xsl:value-of select="."/>
+								</section>
+							</xsl:when>
+							<xsl:when test="name(.) = &quot;h3&quot;">
+								<subsection>
+									<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+									<xsl:attribute name="refid">#<xsl:value-of select="@id"/></xsl:attribute>
+									<xsl:value-of select="."/>
+								</subsection>
+							</xsl:when>
+							<xsl:when test="name(.) = &quot;h4&quot;">
+								<subsubsection>
+									<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+									<xsl:attribute name="refid">#<xsl:value-of select="@id"/></xsl:attribute>
+									<xsl:value-of select="."/>
+								</subsubsection>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:for-each>		
+				</xsl:copy>
+			</xsl:for-each>
+
+			<body>
+				<xsl:apply-templates select="@*|node()"/>
+			</body>
+		</xsl:copy>
+	</xsl:template> 	
+
+	<xsl:template match="toc|titlepage"/>
+	
+	<!-- Replace h1,h2,h3,h4 with chapter,subsection,subsubsection,subsubsubsection -->
+
+	<xsl:template match="h1">
+		<chapter>
+			<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+			<xsl:value-of select="."/>
+		</chapter>
+	</xsl:template>
+	
+	<xsl:template match="h2">
+		<section>
+			<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+			<xsl:value-of select="."/>
+		</section>
+	</xsl:template>
+	
+	<xsl:template match="h3">
+		<subsection>
+			<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+			<xsl:value-of select="."/>
+		</subsection>
+	</xsl:template>
+	
+	<xsl:template match="h4">
+		<subsubsection>
+			<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+			<xsl:value-of select="."/>
+		</subsubsection>
+	</xsl:template>
+
+	<xsl:template match="figure">
+		<xsl:copy>
+			<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template>
+
+	<xsl:template match="subfigure">
+		<xsl:copy>
+			<xsl:attribute name="ref"><xsl:call-template name="gen-ref"/></xsl:attribute>
+			<xsl:attribute name="shortref"><xsl:number format="a" value="count(preceding-sibling::subfigure)+1"/></xsl:attribute>
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template>
+
+	<xsl:template match="a[@href]">
+		<xsl:copy>
+			<xsl:variable name="test" select="@href"/>
+			<xsl:for-each select="//*[@id=$test]"><xsl:call-template name="gen-ref"/></xsl:for-each>
+			<xsl:if test="count(//*[@id=$test]) = 0">
+				<xsl:apply-templates select="@*|node()"/>
+			</xsl:if>
+		</xsl:copy>
+	</xsl:template>
+
+	<xsl:template match="a[@href='$date']"><xsl:value-of select="$date"/></xsl:template>
+
+</xsl:stylesheet>

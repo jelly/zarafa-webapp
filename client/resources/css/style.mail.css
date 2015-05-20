@@ -1,0 +1,77 @@
+/* Mail icons */
+.icon_mail_flag
+{
+	background-image: url(../icons/icon_flag.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_flag_purple
+{
+	background-image: url(../icons/icon_flag_purple.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_flag_orange
+{
+	background-image: url(../icons/icon_flag_orange.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_flag_green
+{
+	background-image: url(../icons/icon_flag_green.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_flag_yellow
+{
+	background-image: url(../icons/icon_flag_yellow.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_flag_blue
+{
+	background-image: url(../icons/icon_flag_blue.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_flag_red
+{
+	background-image: url(../icons/icon_flag_red.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_completed
+{
+	background-image: url(../icons/icon_flag_complete.gif) ! important;
+	background-repeat: no-repeat;
+}
+
+A.zarafa_attachment, A.zarafa_attachment:link, A.zarafa_attachment:active, A.zarafa_attachment:visited
+{
+	color:#003DB2;
+	text-decoration:none;
+} 
+
+.grid_compact_left {
+	padding-left: 28px;
+}
+
+.grid_compact {
+	width: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #777777;
+}
+
+.mail_unread div
+{
+	font-weight : bold;
+}

@@ -1,0 +1,21 @@
+# Project Overview
+
+## Background
+During the inspection to conduct a refactor of the existing WebAccess front-end it was found not to be flexible enough to support future needs even if a refactoring of the code base was done.
+The ExtJS java script framework was evaluated and found suitable for the task at hand. Integration work toward the current PHP backend was done and a thin zarafa specific framework was developed on top of the ExtJS in order to prove that the technical solution would work.
+
+## Business value
+The 'new WebAccess' will allow Zarafa's customers and partners to make custom extensions and custom integrations. The plugin/context model used will facilitate Zarafa to be able to combine special features of the WebAccess as offerings to the customer. 
+
+
+
+
+
+
+
+
+
+
+
+
+

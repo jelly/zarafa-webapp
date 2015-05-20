@@ -1,0 +1,613 @@
+.icon_files {
+	background-image:url(../icons/files_icon.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_files_category {
+	background-image:url(../icons/files_icon_category.png) !important;
+}
+.x-btn .x-btn-large .icon_files_category{
+	background-image:url(../icons/files_icon_category_large.png) !important;
+}
+.icon_cache {
+	background-image:url(../icons/icon_refresh.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_info {
+	background-image:url(../icons/icon_info_small.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_rename {
+	background-image:url(../icons/icon_rename.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_viewswitch {
+	background-image:url(../icons/icon_viewswitch.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_up {
+	background-image:url(../icons/icon_up.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+span.error_files {
+	color: #CC3333 !important;
+}
+
+.files_type_hidden {
+	display: none;
+}
+
+.files_image {
+	height:50px;
+	width:40px;
+}
+
+/* extjs overwrite */
+/* used in fieldsets */
+.x-tool.x-tool-toggle {
+	background-image: url(../icons/icon_toggle.png);
+	background-position: center;
+}
+
+/* icon view */
+.zarafa-files-iconview {
+	 background-color: white;
+}
+.zarafa-files-iconview-container {
+	float:left;
+	word-wrap: break-word;
+	height: 95px;
+	margin:5px;
+	overflow:hidden;
+	padding-left:2px;
+	padding-right:2px;
+	padding-top:2px;
+	text-align:center;
+	width:70px;
+	border:2px solid #fff;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+.zarafa-files-iconview-thumb {
+	background-position:50% 10%;
+	background-repeat:no-repeat;
+	height:62px;
+	width:62px;
+	border:2px solid #fff;
+}
+
+.zarafa-files-iconview-over {
+	background-color:#EFEFFF;
+	border:2px solid #DDDDDD;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color:#0E62BB;
+}
+.zarafa-files-iconview-selected	{
+	background-color:#CEE3F6;
+	border:2px solid #7EACD6;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color:#0E62BB;
+}
+.zarafa-files-iconview-subject {
+	color: #000;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+
+.zarafa-files-listview-icon {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* file type icons 48px */
+.files48icon_folder {
+	background-image: url(../icons/iconview/48px/folder.png);
+}
+
+.files48icon_blank {
+	background-image: url(../icons/iconview/48px/_blank.png);
+}
+
+.files48icon_aac {
+	background-image: url(../icons/iconview/48px/aac.png);
+}
+
+.files48icon_ai {
+	background-image: url(../icons/iconview/48px/ai.png);
+}
+
+.files48icon_aiff {
+	background-image: url(../icons/iconview/48px/aiff.png);
+}
+
+.files48icon_avi {
+	background-image: url(../icons/iconview/48px/avi.png);
+}
+
+.files48icon_bmp {
+	background-image: url(../icons/iconview/48px/bmp.png);
+}
+
+.files48icon_c {
+	background-image: url(../icons/iconview/48px/c.png);
+}
+
+.files48icon_cpp {
+	background-image: url(../icons/iconview/48px/cpp.png);
+}
+
+.files48icon_css {
+	background-image: url(../icons/iconview/48px/css.png);
+}
+
+.files48icon_dat {
+	background-image: url(../icons/iconview/48px/dat.png);
+}
+
+.files48icon_dmg {
+	background-image: url(../icons/iconview/48px/dmg.png);
+}
+
+.files48icon_doc, .files48icon_docx {
+	background-image: url(../icons/iconview/48px/doc.png);
+}
+
+.files48icon_dotx {
+	background-image: url(../icons/iconview/48px/dotx.png);
+}
+
+.files48icon_dwg {
+	background-image: url(../icons/iconview/48px/dwg.png);
+}
+
+.files48icon_dxf {
+	background-image: url(../icons/iconview/48px/dxf.png);
+}
+
+.files48icon_eps {
+	background-image: url(../icons/iconview/48px/eps.png);
+}
+
+.files48icon_exe {
+	background-image: url(../icons/iconview/48px/exe.png);
+}
+
+.files48icon_flv {
+	background-image: url(../icons/iconview/48px/flv.png);
+}
+
+.files48icon_gif {
+	background-image: url(../icons/iconview/48px/gif.png);
+}
+
+.files48icon_h {
+	background-image: url(../icons/iconview/48px/h.png);
+}
+
+.files48icon_hpp {
+	background-image: url(../icons/iconview/48px/hpp.png);
+}
+
+.files48icon_html{
+	background-image: url(../icons/iconview/48px/html.png);
+}
+
+.files48icon_ics {
+	background-image: url(../icons/iconview/48px/ics.png);
+}
+
+.files48icon_iso {
+	background-image: url(../icons/iconview/48px/iso.png);
+}
+
+.files48icon_java {
+	background-image: url(../icons/iconview/48px/java.png);
+}
+
+.files48icon_jpg {
+	background-image: url(../icons/iconview/48px/jpg.png);
+}
+
+.files48icon_js {
+	background-image: url(../icons/iconview/48px/js.png);
+}
+
+.files48icon_key {
+	background-image: url(../icons/iconview/48px/key.png);
+}
+
+.files48icon_less {
+	background-image: url(../icons/iconview/48px/less.png);
+}
+
+.files48icon_mid {
+	background-image: url(../icons/iconview/48px/mid.png);
+}
+
+.files48icon_mp3 {
+	background-image: url(../icons/iconview/48px/mp3.png);
+}
+
+.files48icon_mp4 {
+	background-image: url(../icons/iconview/48px/mp4.png);
+}
+
+.files48icon_mpg {
+	background-image: url(../icons/iconview/48px/mpg.png);
+}
+
+.files48icon_odf {
+	background-image: url(../icons/iconview/48px/odf.png);
+}
+
+.files48icon_ods {
+	background-image: url(../icons/iconview/48px/ods.png);
+}
+
+.files48icon_odt {
+	background-image: url(../icons/iconview/48px/odt.png);
+}
+
+.files48icon_otp {
+	background-image: url(../icons/iconview/48px/otp.png);
+}
+
+.files48icon_ots {
+	background-image: url(../icons/iconview/48px/ots.png);
+}
+
+.files48icon_ott {
+	background-image: url(../icons/iconview/48px/ott.png);
+}
+
+.files48icon_pdf {
+	background-image: url(../icons/iconview/48px/pdf.png);
+}
+
+.files48icon_php {
+	background-image: url(../icons/iconview/48px/php.png);
+}
+
+.files48icon_png {
+	background-image: url(../icons/iconview/48px/png.png);
+}
+
+.files48icon_ppt {
+	background-image: url(../icons/iconview/48px/ppt.png);
+}
+
+.files48icon_psd {
+	background-image: url(../icons/iconview/48px/psd.png);
+}
+
+.files48icon_py {
+	background-image: url(../icons/iconview/48px/py.png);
+}
+
+.files48icon_qt {
+	background-image: url(../icons/iconview/48px/qt.png);
+}
+
+.files48icon_rar {
+	background-image: url(../icons/iconview/48px/rar.png);
+}
+
+.files48icon_rb {
+	background-image: url(../icons/iconview/48px/rb.png);
+}
+
+.files48icon_rtf {
+	background-image: url(../icons/iconview/48px/rtf.png);
+}
+
+.files48icon_sass {
+	background-image: url(../icons/iconview/48px/sass.png);
+}
+
+.files48icon_scss {
+	background-image: url(../icons/iconview/48px/scss.png);
+}
+
+.files48icon_sql {
+	background-image: url(../icons/iconview/48px/sql.png);
+}
+
+.files48icon_tga {
+	background-image: url(../icons/iconview/48px/tga.png);
+}
+
+.files48icon_tgz, .files48icon_gz {
+	background-image: url(../icons/iconview/48px/tgz.png);
+}
+
+.files48icon_tiff {
+	background-image: url(../icons/iconview/48px/tiff.png);
+}
+
+.files48icon_txt {
+	background-image: url(../icons/iconview/48px/txt.png);
+}
+
+.files48icon_wav {
+	background-image: url(../icons/iconview/48px/wav.png);
+}
+
+.files48icon_xls {
+	background-image: url(../icons/iconview/48px/xls.png);
+}
+
+.files48icon_xlsx {
+	background-image: url(../icons/iconview/48px/xlsx.png);
+}
+
+.files48icon_xml {
+	background-image: url(../icons/iconview/48px/xml.png);
+}
+
+.files48icon_yml {
+	background-image: url(../icons/iconview/48px/yml.png);
+}
+
+.files48icon_zip {
+	background-image: url(../icons/iconview/48px/zip.png);
+}
+
+/* file type icons 16px */
+.files16icon_folder {
+	background-image: url(../icons/iconview/16px/folder.png);
+}
+
+.files16icon_blank {
+	background-image: url(../icons/iconview/16px/_blank.png);
+}
+
+.files16icon_aac {
+	background-image: url(../icons/iconview/16px/aac.png);
+}
+
+.files16icon_ai {
+	background-image: url(../icons/iconview/16px/ai.png);
+}
+
+.files16icon_aiff {
+	background-image: url(../icons/iconview/16px/aiff.png);
+}
+
+.files16icon_avi {
+	background-image: url(../icons/iconview/16px/avi.png);
+}
+
+.files16icon_bmp {
+	background-image: url(../icons/iconview/16px/bmp.png);
+}
+
+.files16icon_c {
+	background-image: url(../icons/iconview/16px/c.png);
+}
+
+.files16icon_cpp {
+	background-image: url(../icons/iconview/16px/cpp.png);
+}
+
+.files16icon_css {
+	background-image: url(../icons/iconview/16px/css.png);
+}
+
+.files16icon_dat {
+	background-image: url(../icons/iconview/16px/dat.png);
+}
+
+.files16icon_dmg {
+	background-image: url(../icons/iconview/16px/dmg.png);
+}
+
+.files16icon_doc, .files16icon_docx {
+	background-image: url(../icons/iconview/16px/doc.png);
+}
+
+.files16icon_dotx {
+	background-image: url(../icons/iconview/16px/dotx.png);
+}
+
+.files16icon_dwg {
+	background-image: url(../icons/iconview/16px/dwg.png);
+}
+
+.files16icon_dxf {
+	background-image: url(../icons/iconview/16px/dxf.png);
+}
+
+.files16icon_eps {
+	background-image: url(../icons/iconview/16px/eps.png);
+}
+
+.files16icon_exe {
+	background-image: url(../icons/iconview/16px/exe.png);
+}
+
+.files16icon_flv {
+	background-image: url(../icons/iconview/16px/flv.png);
+}
+
+.files16icon_gif {
+	background-image: url(../icons/iconview/16px/gif.png);
+}
+
+.files16icon_h {
+	background-image: url(../icons/iconview/16px/h.png);
+}
+
+.files16icon_hpp {
+	background-image: url(../icons/iconview/16px/hpp.png);
+}
+
+.files16icon_html{
+	background-image: url(../icons/iconview/16px/html.png);
+}
+
+.files16icon_ics {
+	background-image: url(../icons/iconview/16px/ics.png);
+}
+
+.files16icon_iso {
+	background-image: url(../icons/iconview/16px/iso.png);
+}
+
+.files16icon_java {
+	background-image: url(../icons/iconview/16px/java.png);
+}
+
+.files16icon_jpg {
+	background-image: url(../icons/iconview/16px/jpg.png);
+}
+
+.files16icon_js {
+	background-image: url(../icons/iconview/16px/js.png);
+}
+
+.files16icon_key {
+	background-image: url(../icons/iconview/16px/key.png);
+}
+
+.files16icon_less {
+	background-image: url(../icons/iconview/16px/less.png);
+}
+
+.files16icon_mid {
+	background-image: url(../icons/iconview/16px/mid.png);
+}
+
+.files16icon_mp3 {
+	background-image: url(../icons/iconview/16px/mp3.png);
+}
+
+.files16icon_mp4 {
+	background-image: url(../icons/iconview/16px/mp4.png);
+}
+
+.files16icon_mpg {
+	background-image: url(../icons/iconview/16px/mpg.png);
+}
+
+.files16icon_odf {
+	background-image: url(../icons/iconview/16px/odf.png);
+}
+
+.files16icon_ods {
+	background-image: url(../icons/iconview/16px/ods.png);
+}
+
+.files16icon_odt {
+	background-image: url(../icons/iconview/16px/odt.png);
+}
+
+.files16icon_otp {
+	background-image: url(../icons/iconview/16px/otp.png);
+}
+
+.files16icon_ots {
+	background-image: url(../icons/iconview/16px/ots.png);
+}
+
+.files16icon_ott {
+	background-image: url(../icons/iconview/16px/ott.png);
+}
+
+.files16icon_pdf {
+	background-image: url(../icons/iconview/16px/pdf.png);
+}
+
+.files16icon_php {
+	background-image: url(../icons/iconview/16px/php.png);
+}
+
+.files16icon_png {
+	background-image: url(../icons/iconview/16px/png.png);
+}
+
+.files16icon_ppt {
+	background-image: url(../icons/iconview/16px/ppt.png);
+}
+
+.files16icon_psd {
+	background-image: url(../icons/iconview/16px/psd.png);
+}
+
+.files16icon_py {
+	background-image: url(../icons/iconview/16px/py.png);
+}
+
+.files16icon_qt {
+	background-image: url(../icons/iconview/16px/qt.png);
+}
+
+.files16icon_rar {
+	background-image: url(../icons/iconview/16px/rar.png);
+}
+
+.files16icon_rb {
+	background-image: url(../icons/iconview/16px/rb.png);
+}
+
+.files16icon_rtf {
+	background-image: url(../icons/iconview/16px/rtf.png);
+}
+
+.files16icon_sass {
+	background-image: url(../icons/iconview/16px/sass.png);
+}
+
+.files16icon_scss {
+	background-image: url(../icons/iconview/16px/scss.png);
+}
+
+.files16icon_sql {
+	background-image: url(../icons/iconview/16px/sql.png);
+}
+
+.files16icon_tga {
+	background-image: url(../icons/iconview/16px/tga.png);
+}
+
+.files16icon_tgz, .files16icon_gz {
+	background-image: url(../icons/iconview/16px/tgz.png);
+}
+
+.files16icon_tiff {
+	background-image: url(../icons/iconview/16px/tiff.png);
+}
+
+.files16icon_txt {
+	background-image: url(../icons/iconview/16px/txt.png);
+}
+
+.files16icon_wav {
+	background-image: url(../icons/iconview/16px/wav.png);
+}
+
+.files16icon_xls {
+	background-image: url(../icons/iconview/16px/xls.png);
+}
+
+.files16icon_xlsx {
+	background-image: url(../icons/iconview/16px/xlsx.png);
+}
+
+.files16icon_xml {
+	background-image: url(../icons/iconview/16px/xml.png);
+}
+
+.files16icon_yml {
+	background-image: url(../icons/iconview/16px/yml.png);
+}
+
+.files16icon_zip {
+	background-image: url(../icons/iconview/16px/zip.png);
+}

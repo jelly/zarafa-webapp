@@ -1,0 +1,154 @@
+
+.x-zarafa-boxfield-item {
+	position: relative;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	o-border-radius: 4px;
+	khtml-border-radius: 4px;
+	border: 1px solid #d3d2d2;
+	background-color: #ebeaeb;
+	padding: 1px 5px 1px 5px;
+}
+
+.x-zarafa-boxfield-item-hover {
+	cursor: pointer;
+	background-color: #d3d2d2;
+}
+
+.x-zarafa-boxfield-item-focus {
+	background-color: #3e91f3;
+	color: #FFF;
+}
+
+.x-zarafa-boxfield-item-close {
+	margin-left: 2px;
+	cursor: pointer;
+	height: 12px;
+	width: 8px;
+	/* The close.png contains multiple icons, here we dislay the top one */
+	background: url(../images/boxfield/close.png) no-repeat scroll left 0px;
+	display: block;
+	float: left;
+	position: relative;
+	top: -1px;
+}
+/* Hovering above the close button when focussed and when not-focussed  */
+.x-zarafa-boxfield-item-focus .x-zarafa-boxfield-item-close.x-zarafa-boxfield-item-close-hover, 
+.x-zarafa-boxfield-item-close-hover {
+	/* On hovering over the close icon we display the second icon */
+	background-position: left -12px;
+}
+.x-zarafa-boxfield-item-focus .x-zarafa-boxfield-item-close {
+	/* When item is focussed we display the last icon as close icon */
+	background-position: left -24px;
+}
+
+.x-zarafa-boxfield li {
+	float: left;
+	margin: 1px 1px 1px 1px;
+	line-height: 12px;
+}
+
+.x-zarafa-boxfield li.x-zarafa-boxfield-input-item {
+	padding: 0;
+}
+.x-zarafa-boxfield li input.x-zarafa-boxfield-input {
+	height: 12px;
+}
+.x-zarafa-boxfield li input.x-zarafa-boxfield-input-noborder {
+	border: 0px;
+	/* ExtJS adds a gradient as background, here we remove it */
+	background-image: none;
+}
+.x-zarafa-boxfield li input.x-trigger-noedit {
+	cursor: auto ! important;
+	visibility: hidden;
+	width: 0px;
+}
+
+.x-zarafa-boxfield-item-icon {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	height: 12px;
+	width: 12px;
+}
+
+.x-zarafa-boxfield-item-text {
+	float: left;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+/** RECIPIENT FIELD **/
+/* Hide the icon for recipients by default */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item .x-zarafa-boxfield-item-icon {
+	display: none;
+}
+
+/* Display the icon when the recipient box is resolved */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-resolved .x-zarafa-boxfield-item-icon, 
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-ambiguous .x-zarafa-boxfield-item-icon, 
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-invalid .x-zarafa-boxfield-item-icon {
+	display: block;
+}
+
+/* Display the icon when the recipient box is ambiguous */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-ambiguous .x-zarafa-boxfield-item-icon {
+	background-image: url(../icons/icon_addressbook.gif) ! important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* Make the background a different color when selected if the recipient is ambiguous */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-ambiguous {
+	background-color: #f8bf76;
+	border-color: #d19c47;
+}
+
+/* Make the background a different color when selected if the recipient is pending */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-ambiguous.x-zarafa-boxfield-item-focus {
+	background-color: #3e91f3;
+	color: #FFF;
+}
+
+/* Display the icon when the recipient box is pending */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-pending {
+	background-color: #ffffff;
+}
+/* Make the background a different color when selected if the recipient is pending */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-pending.x-zarafa-boxfield-item-focus {
+	background-color: #3e91f3;
+	color: #FFF;
+}
+
+/* Display the icon when the recipient box is invalid */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-invalid .x-zarafa-boxfield-item-icon {
+	background-image: url(../icons/icon_flag_red.gif) ! important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-invalid {
+	background-color: #F3D6D6;
+	border-color: #D7B7B7;
+}
+/* Make the background a different color when selected if the recipient is pending */
+.x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item-invalid.x-zarafa-boxfield-item-focus {
+	background-color: #3e91f3;
+	color: #FFF;
+}
+
+/** ATTACHMENTS FIELD **/
+.x-zarafa-boxfield-item.x-zarafa-boxfield-attachment-item-uploaded {
+}
+
+.x-zarafa-boxfield-item.x-zarafa-boxfield-attachment-item-uploading {
+	background-color: #f8bf76;
+	border-color: #d19c47;
+}
+
+.x-zarafa-boxfield-item.x-zarafa-boxfield-attachment-item-invalid {
+	background-color: #F3D6D6;
+	border-color: #D7B7B7;
+}

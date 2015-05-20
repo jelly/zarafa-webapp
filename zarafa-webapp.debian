@@ -1,0 +1,172 @@
+#!/bin/sh
+set -x
+
+getXMLTag() {
+  cat plugins/$1/manifest.xml | sed -ne 's/^[ \t]*//;s_<'"$2"'>\(.*\)</'"$2"'>_\1_p;s/[ \t]*$//' | tr -d '\r' | head -1
+}
+
+mkdir $1/debian
+
+m4 -DREVISION=${SVN_REVISION} -DWAVERSION=`cat version` -DDATE="`date -R`" > $1/debian/changelog << 'EOF'
+zarafa-webapp (1:WAVERSION-REVISION) lenny; urgency=low
+
+  * Current release
+
+ -- Zarafa Development Team <development@zarafa.com>  DATE
+
+zarafa-webapp (1:1.0-1) lenny; urgency=low
+
+  * Initial release
+
+ -- Zarafa Development Team <development@zarafa.com>  Mon, 06 Feb 2012 17:41:37 +0100
+EOF
+
+cat > $1/debian/compat <<EOF
+7
+EOF
+
+SEPARATE_PLUGINLIST="contactfax dropboxattachment facebook gmaps pimfolder salesforce spreed sugarcrm twidget"
+INCLUDE_PLUGINLIST=`find plugins/ -mindepth 1 -maxdepth 1 -type d ! -name .svn | sed -e s_plugins/__ | grep -Evw "$(echo $SEPARATE_PLUGINLIST | tr \  \|)" | sort | tr \\\n \ `
+export SEPARATE_PLUGINLIST INCLUDE_PLUGINLIST
+SPL=`echo $SEPARATE_PLUGINLIST | tr ' ' ,`
+
+# required: see Makefile for define
+m4 -DZARAFA_VERSION_REQUIRED=${REQUIRED} -DREVISION=${SVN_REVISION} -DSPL=${SPL} > $1/debian/control << 'EOF'
+Source: zarafa-webapp
+Section: non-free/mail
+Priority: optional
+Maintainer: Zarafa Development Team <development@zarafa.com>
+Build-Depends: debhelper (>= 7.0.0)
+Standards-Version: 3.7.3
+
+define(`SEPARATE_PLUGINLIST',`SPL')
+define(`PACKAGE',`dnl
+Package: zarafa-webapp-$1
+Architecture: all
+Section: web
+Depends: ${misc:Depends}, zarafa-webapp (>= ${binary:Version})
+Description: Zarafa Webapp $1 plugin
+ $1 plugin for zarafa-webapp
+')
+define(`PACKAGES',`ifelse($1,`',,`PACKAGE($1)
+PACKAGES(shift($@))')')
+
+Package: zarafa-webapp
+Architecture: all
+Section: web
+Depends: ${misc:Depends}, php5-mapi (>= ZARAFA_VERSION_REQUIRED), zarafa-contacts (>= ZARAFA_VERSION_REQUIRED), php-gettext
+Description: New and improved WebApp for the Zarafa Collaboration Platform
+ Provides a web-client written in PHP that uses JSON and Ext JS
+ to allow users to make full use of the Zarafa Collaboration Platform
+ through a modern web browser.
+
+PACKAGES(SEPARATE_PLUGINLIST)
+EOF
+
+cat > $1/debian/zarafa-webapp.install << 'EOF'
+etc/zarafa/webapp/config.php
+etc/apache2/sites-available/zarafa-webapp.conf
+usr/share/zarafa-webapp
+var/lib/zarafa-webapp/tmp
+EOF
+for package in $INCLUDE_PLUGINLIST; do
+	if [ -r plugins/$package/config.php ]; then echo "etc/zarafa/webapp/config-$package.php" >> $1/debian/zarafa-webapp.install; fi
+done
+
+for package in $SEPARATE_PLUGINLIST; do
+	cat > $1/debian/zarafa-webapp-$package.install << EOF
+usr/share/zarafa-webapp/plugins/$package/
+EOF
+	if [ -r plugins/$package/config.php ]; then echo "etc/zarafa/webapp/config-$package.php" >> $1/debian/zarafa-webapp-$package.install; fi
+	pversion=`getXMLTag $package version`
+	cat > $1/debian/zarafa-webapp-$package.changelog << EOF
+zarafa-webapp ($pversion-${SVN_REVISION}) lenny; urgency=low
+
+  * Current release
+
+ -- Zarafa Development Team <development@zarafa.com>  `date -R`
+EOF
+done
+
+cat > $1/debian/zarafa-webapp.postinst << 'EOF'
+#!/bin/sh
+
+set -e
+
+# randomise PASSWORD_KEY and PASSWORD_IV at first installation
+if [ -f /etc/zarafa/webapp/config.php ]; then
+  sed -e "s/\(define('PASSWORD_KEY','\)a75356b0d1b81b7\(');\)/\1$(openssl rand -hex 16)\2/" \
+      -e "s/\(define('PASSWORD_IV','\)b3f5a483\(');\)/\1$(openssl rand -hex 8)\2/" \
+      -i /etc/zarafa/webapp/config.php
+fi
+
+# enable zarafa-webapp for apache
+if [ -x "`which a2ensite`" ]; then
+  # no error, file may have been renamed
+  a2ensite zarafa-webapp || true
+fi
+
+#DEBHELPER#
+
+exit 0
+EOF
+
+cat > $1/debian/zarafa-webapp.prerm << 'EOF'
+#!/bin/sh
+
+set -e
+
+# disable zarafa-webapp for apache
+if [ -x "`which a2dissite`" ]; then
+  # no error, file may have been renamed
+  a2dissite zarafa-webapp || true
+fi
+
+#DEBHELPER#
+
+exit 0
+EOF
+
+cat > $1/debian/rules << 'EOF'
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+INSTDIR=$(CURDIR)/debian/tmp
+%:
+	dh $@
+override_dh_auto_install:
+	install -d -m 755 $(INSTDIR)/usr/share/zarafa-webapp
+	install -d -m 755 $(INSTDIR)/etc/apache2/sites-available
+	install -d -m 755 $(INSTDIR)/etc/zarafa/webapp
+	# user/group 33 is always www-data
+	install -d -m 755 -o 33 -g 33 $(INSTDIR)/var/lib/zarafa-webapp/tmp
+
+	cp -a deploy/* deploy/.htaccess $(INSTDIR)/usr/share/zarafa-webapp
+	rm -rf $(INSTDIR)/usr/share/zarafa-webapp/debian $(INSTDIR)/zarafa-webapp.spec
+
+	mv $(INSTDIR)/usr/share/zarafa-webapp/config.php.dist $(INSTDIR)/etc/zarafa/webapp/config.php
+	ln -sf /etc/zarafa/webapp/config.php $(INSTDIR)/usr/share/zarafa-webapp/config.php
+
+	rm $(INSTDIR)/usr/share/zarafa-webapp/debug.php.dist
+	find $(INSTDIR)/usr/share/zarafa-webapp -name \*debug\* -print0 | xargs -0 rm
+
+	mv $(INSTDIR)/usr/share/zarafa-webapp/zarafa-webapp.conf $(INSTDIR)/etc/apache2/sites-available/
+
+# move plugin configs
+	for plugin_config in $(INSTDIR)/usr/share/zarafa-webapp/plugins/*/config.php; do \
+	  plugin=`echo $${plugin_config} | sed -e 's_.*/plugins/\([^/]*\)/config.php_\1_'`; \
+	  mv $${plugin_config} $(INSTDIR)/etc/zarafa/webapp/config-$${plugin}.php; \
+	  ln -sf /etc/zarafa/webapp/config-$${plugin}.php $${plugin_config}; \
+	done
+
+override_dh_install:
+	dh_install
+	# remove separate plugins from zarafa-webapp package
+	for plugin in $$SEPARATE_PLUGINLIST; do rm -rf $(INSTDIR)/../zarafa-webapp/usr/share/zarafa-webapp/plugins/$$plugin; done
+
+override_dh_fixperms:
+	dh_fixperms -Xvar/lib/zarafa-webapp/tmp
+EOF
+
+mv $1/AGPL-3 $1/debian/copyright
+
+cd $1 && dpkg-buildpackage -b -us -uc

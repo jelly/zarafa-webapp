@@ -1,0 +1,227 @@
+.x-freebusy-timeline-container {
+	/* Background to grey to fill the empty space to the right of the header (above the right scrollbar) */
+	background-color: #E0E0E0;
+}
+
+.x-freebusy-legenda {
+	background-color: transparent;
+	border-top:1px solid #ccc;
+}
+
+.x-freebusy-legenda div .x-form-item-label {
+	padding-left: 3px;
+}
+
+.x-freebusy-timeline-container .x-freebusy-header {
+	overflow: hidden;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	/* Set the background to white so the space between different days is white and not grey */
+	background-color: #FFF;
+}
+.x-freebusy-timeline-container .x-freebusy-header-body {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.x-freebusy-timeline-container .x-freebusy-body {
+	position: absolute;
+	overflow: scroll;
+	width: 100%;
+	/* Set the background to white so the space between different days is white and not grey */
+	background-color: #FFF;
+}
+
+.x-freebusy-timeline-container .x-freebusy-header .x-freebusy-sumblockcontainer, 
+.x-freebusy-timeline-container .x-freebusy-body .x-freebusy-selectorcontainer, 
+.x-freebusy-timeline-container .x-freebusy-body .x-freebusy-blockcontainer, 
+.x-freebusy-timeline-container .x-freebusy-body .x-freebusy-background {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.x-freebusy-timeline-container div.x-freebusy-timeline-day {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+}
+.x-freebusy-legenda .x-form-display-field {
+	padding-left:3px;
+}
+/**
+ * Using the border-spacing property in combination with the background-color to create borders. Hide the real borders.
+ */
+.x-freebusy-timeline-container div.x-freebusy-timeline-day table {
+	height: 100%;
+	border-collapse: separate;
+	border-spacing:1px 0px;
+	border-width: 0px;
+	border-color: #FFF;
+}
+.x-freebusy-timeline-container div.x-freebusy-timeline-day table.x-freebusy-timeline-day-header {
+	background-color: #FFF;
+}
+.x-freebusy-timeline-container div.x-freebusy-timeline-day table.x-freebusy-timeline-day-sum, 
+.x-freebusy-timeline-container div.x-freebusy-timeline-day table.x-freebusy-timeline-day-body {
+	background-color: #AAA;
+}
+
+/* Current day can be marked */
+.x-freebusy-timeline-container div.x-freebusy-timeline-day-current table.x-freebusy-timeline-day-header tr.x-freebusy-timeline-day td {
+	background-image: url(../images/freebusy/currentday_header.png);
+}
+
+/* No border is needed in the timeline-hour rows. */
+.x-freebusy-timeline-container div.x-freebusy-timeline-day table tr.x-freebusy-timeline-hour td {
+	border-width: 0px;
+}
+.x-freebusy-timeline-container .x-freebusy-header div.x-freebusy-timeline-day table.x-freebusy-timeline-day-sum {
+	border-spacing:1px 1px;
+}
+
+/* Set font for header tables */
+.x-freebusy-timeline-container .x-freebusy-header div.x-freebusy-timeline-day table td {
+	background-color: #FFF;
+	font-family: Arial;
+	font-size: 8pt;
+}
+.x-freebusy-timeline-container .x-freebusy-header div.x-freebusy-timeline-day table tr.x-freebusy-timeline-day td {
+	font-weight: bold;
+}
+/* Set background for all cells */
+.x-freebusy-timeline-container div.x-freebusy-timeline-day table td {
+	background-color: #FFF;
+}
+
+.x-freebusy-timeline-container div.x-freebusy-blockcontainer .x-freebusy-timeline-block {
+	position: absolute;
+	height: 10px;
+}
+.x-freebusy-timeline-container div.x-freebusy-sumblockcontainer .x-freebusy-timeline-sumblock {
+	position: absolute;
+	height: 8px;
+	top: 1px;
+}
+.x-freebusy-timeline-container .x-freebusy-timeline-block-free {
+	background-color: #EEE;
+}
+.x-freebusy-timeline-container .x-freebusy-timeline-block-tentative {
+	background-image: url(../images/freebusy/block_tentative.png);
+	background-color: #6969C6;
+}
+.x-freebusy-timeline-container .x-freebusy-timeline-block-busy {
+	background-color: #6969C6;
+}
+.x-freebusy-timeline-container .x-freebusy-timeline-block-outofoffice {
+	background-color: #800080;
+}
+.x-freebusy-timeline-container .x-freebusy-timeline-block-blur {
+	background-image: url(../images/dashed_background_reverse.gif);
+	background-color: #AAA;
+}
+
+/* Set row lines for hour cells in body of timeline */
+.x-freebusy-timeline-container div.x-freebusy-background tr.x-freebusy-timeline-hour td {
+	background-image: url(../images/freebusy/rowbg.gif);
+}
+
+/** Selector **/
+.x-freebusy-timeline-container .x-freebusy-selectorcontainer .x-freebusy-selector {
+	position: absolute;
+	border-left: 3px solid #8CBC76;
+	border-right: 3px solid #E17575;
+	height: 100%;
+	background-image: url(../images/freebusy/selectorbg.png);
+}
+
+/*** Userlist ***/
+.x-freebusy-userlist .x-panel-header {
+	/* Make a separator to clearly distinguish the recipients below from the header when scrolling */
+	border-bottom: 1px solid white !important;
+}
+
+/* Overwrite .ext-gecko .x-form-text from extjs css to limit the top padding for some browsers, 
+otherwise the input field at the bottom would only be partially visible when the list can scroll */
+.ext-gecko .x-form-text.x-zarafa-boxfield {
+	padding-top: 1px;
+}
+
+.x-freebusy-userlist-container {
+	background-color: #E0E0E0;
+	border-right: 1px solid #AAAAAA;
+	padding: 0px;
+	border-width: 0px;
+}
+
+.x-freebusy-userlist-container .x-freebusy-header {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #AAAAAA;
+	background-color: #FFF;
+}
+.x-freebusy-userlist-container .x-freebusy-body {
+	overflow: hidden;
+}
+.x-freebusy-userlist-container .x-freebusy-body .x-freebusy-body-rowcontainer {
+	background-image : url(../images/freebusy/rowbg.gif);
+}
+
+.x-freebusy-userlist-container .x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item .x-zarafa-boxfield-item-icon {
+	display: block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 0 none;
+	height: 18px;
+	padding: 0;
+	vertical-align: top;
+	width: 16px;
+	margin-right: 2px;
+	float: left;
+}
+.x-freebusy-userlist-container .x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item .x-zarafa-boxfield-item-text {
+	float: left;
+	margin-top: 2px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	width: 160px;
+}
+
+.x-freebusy-userlist-container .x-zarafa-boxfield-item.x-zarafa-boxfield-recipient-item .x-freebusy-userrow-remove {
+	margin-left: 2px;
+	cursor: pointer;
+	height: 20px;
+	width: 16px;
+	/* The close.png contains multiple icons, here we dislay the top one */
+	background: url(../icons/cross.png) no-repeat scroll left 1px;
+	display: block;
+	float: left;
+	position: relative;
+}
+
+/* Following set of icons are used in the userlist as well as in the contextmenu */
+.x-freebusy-userlist-recipienttype-originator {
+	background-image: url(../icons/icon_meetingrequest_organizer.gif);
+	background-repeat: no-repeat;
+}
+.x-freebusy-userlist-recipienttype-required {
+	background-image: url(../icons/icon_meetingrequest_requiredattendee.gif);
+	background-repeat: no-repeat;
+}
+.x-freebusy-userlist-recipienttype-optional {
+	background-image: url(../icons/icon_meetingrequest_optionalattendee.gif);
+	background-repeat: no-repeat;
+}
+.x-freebusy-userlist-recipienttype-resource {
+	background-image: url(../icons/icon_meetingrequest_resource.gif);
+	background-repeat: no-repeat;
+}
+
+.zarafa-freebusy-suggestionrow-empty {
+	text-align: center;
+}

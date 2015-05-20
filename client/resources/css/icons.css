@@ -1,0 +1,1374 @@
+.icon_createToolbarMenu
+{
+	background-image: url(../icons/create.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_createEmailMessage
+{
+	background-image: url(../icons_large/new/new_email.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_createEmailMessage
+{
+	background-image: url(../icons/new/new_email.png) ! important;
+}
+.icon_replyEmail
+{
+	background-image: url(../icons/new/reply.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_replyAllEmail
+{
+	background-image: url(../icons/new/reply_all.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_forwardEmail,
+.icon_forwardNote
+{
+	background-image: url(../icons/new/forward.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_sendEmail
+{
+	background-image: url(../icons/new/mail_send.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_send_email_to_recipient
+{
+	background-image: url(../icons/new/new_email.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_edit_recipient
+{
+	background-image: url(../icons/new/edit_recipient.png) !important;
+}
+
+.icon_recipient_details
+{
+	background-image : url(../icons/new/contact.png) !important;
+}
+
+.icon_attachment_preview
+{
+	background-image: url(../icons/new/preview.png) !important;
+}
+
+.icon_attachment_download
+{
+	background-image: url(../icons/new/download.png) !important;
+}
+
+.icon_attachment
+{
+	background-image: url(../icons/new/paperclip.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_embedded_attachment
+{
+	background-image: url(../icons/new/embed_attachment.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_attachment_box
+{
+	background-image: url(../icons/new/paperclip_box.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_embedded_attachment_box
+{
+	background-image: url(../icons/new/embed_attachment_box.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_saveEmail
+{
+	background-image: url(../icons/new/floppy.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_addAttachment
+{
+	background-image: url(../icons/email_attach.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_addSignature
+{
+	background-image: url(../icons/new/signature.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_checkNames
+{
+	background-image: url(../icons/new/checknames.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_showbcc
+{
+	background-image: url(../icons/icon_showbcc.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_showfrom
+{
+	background-image: url(../icons/icon_showfrom.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_setHighPriority
+{
+	background-image: url(../icons/icon_priority_high.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_setLowPriority
+{
+	background-image: url(../icons/icon_priority_low.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_setReadReceipt
+{
+	background-image: url(../icons/icon_read_receipt.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_openMessageOptions
+{
+	background-image: url(../icons/new/cogwheel.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_create_appointment
+{
+	background-image: url(../icons_large/new/new_appointment.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_create_appointment
+{
+	background-image: url(../icons/new/new_appointment.png) ! important;
+}
+.icon_invite_attendees
+{
+	background-image: url(../icons/new/invite_attendees.png)!important;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.icon_create_meeting_request
+{
+	background-image: url(../icons/new/new_meeting_request.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_create_meeting_request
+{
+	background-image: url(../icons/new/new_meeting_request.png) ! important;
+}
+
+.icon_cancel_meeting_request
+{
+	background-image: url(../icons/new/calendar_appt_cancelled.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_accept_meeting_request
+{
+	background-image: url(../icons/new/accept_appointment.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_accept_proposal
+{
+	background-image: url(../icons/new/accept_proposal.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_decline_meeting_request
+{
+	background-image: url(../icons/new/decline_appointment.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_tentative_meeting_request
+{
+	background-image: url(../icons/new/tentative_appointment.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_newtime_meeting_request
+{
+	background-image: url(../icons/new/propose_new_time.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_view_all_meeting_request
+{
+	background-image: url(../icons/new/view_all_proposals.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_notcurrent_meeting_request,
+.icon_no_response_required
+{
+	background-image: url(../icons/icon_not_current.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_remove_from_calendar
+{
+	background-image: url(../icons/new/calendar_appt_cancelled.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_calender
+{
+	background-image: url(../icons/new/calendar_blue.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_createFolder
+{
+	background-image: url(../icons_large/new/folder_create.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_createFolder
+{
+	background-image: url(../icons/new/new_folder.png) ! important;
+}
+.x-menu .icon_createFolderColor
+{
+	background-image: url(../icons/new/folder_create.png) ! important;
+}
+
+.icon_createContact
+{
+	background-image: url(../icons_large/new/new_contact.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_createContact
+{
+	background-image: url(../icons/new/new_contact.png) ! important;
+}
+
+.icon_createDistributionList
+{
+	background-image: url(../icons/new/new_distlist.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_createTask
+{
+	background-image: url(../icons_large/new/new_task.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_createTask
+{
+	background-image: url(../icons/new/new_task.png) ! important;
+}
+
+.icon_create_taskrequest
+{
+	background-image: url(../icons/icon_assign_task.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_taskrequest
+{
+	background-image: url(../icons/icon_assign_task.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_taskrequest_accepted
+{
+	background-image: url(../icons/icon_taskrequest_accepted.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_taskrequest_decline
+{
+	background-image: url(../icons/icon_cancel_asign_task.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_taskrequest_assignercopy
+{
+	background-image: url(../icons/icon_asign_task.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_taskrequest_assigneecopy
+{
+	background-image: url(../icons/icon_taskrequest_assignee.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_createNote
+{
+	background-image: url(../icons/new/note_menu.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-btn .x-btn-large .icon_createNote
+{
+	background-image: url(../icons_large/new/note_menu.png) ! important;
+}
+.icon_search
+{
+	background-image: url(../icons/new/magnifier.png) ! important;
+	background-repeat: no-repeat ! important;
+	background-position: 0 center ! important;
+}
+
+.icon_advanced_find
+{
+	background-image: url(../icons/folder_find.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_change_picture
+{
+	background-image: url(../icons/new/chang_picture.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_delete
+{
+	background-image: url(../icons_large/new/trash_action.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu-list-item .icon_delete
+{
+	background-image: url(../icons/new/trash_action.png) !important;
+	background-position: center;
+}
+.x-btn-small .icon_delete
+{
+	background-image: url(../icons/new/trash_action.png) ! important;
+}
+.icon_categories
+{
+	background-image: url(../icons/new/categories.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_private
+{
+	background-image: url(../icons/icon_private.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_junk
+{
+	background-image: url(../icons/new/folder_junk.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_copy
+{
+	background-image: url(../icons/new/copy_email.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.x-menu .icon_print, .x-btn-small .icon_print
+{
+	background-image: url(../icons/new/print_email.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.contact_photo_box
+{
+	border:1px solid #B6B6B4;
+	padding : 2px;
+	cursor : pointer;
+	width : 94px;
+	height : 94px;
+}
+
+.default_contact_photo
+{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../images/contact/default_contact_profile.png);
+}
+
+.contact_photo_box:hover
+{
+	border:1px solid #F2BB66;
+}
+
+.icon_print
+{
+	background-image: url(../icons_large/new/print_email.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_addressbook
+{
+	background-image: url(../icons_large/new/addressbook.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_restore
+{
+	background-image: url(../icons/icon_restore.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_saveaseml
+{
+	background-image: url(../icons/new/save_as_eml.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_rules
+{
+	background-image: url(../icons/icon_rules.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_sendAndReceive
+{
+	background-image: url(../icons/icon_send_receive.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_store
+{
+	background-image: url(../icons/icon_store.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_appointment,
+.icon_folder_default_calendar,
+.icon_folder_shared_calendar
+{
+	background-image: url(../icons/new/calendar.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder
+{
+	background-image: url(../icons/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_task,
+.icon_folder_default_task,
+.icon_folder_shared_task
+{
+	background-image: url(../icons/new/tasks.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_contact,
+.icon_folder_default_contact,
+.icon_folder_shared_contact
+{
+	background-image: url(../icons/new/contact_color.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_stickynote,
+.icon_folder_default_note,
+.icon_folder_shared_note
+{
+	background-image: url(../icons/new/note_yellow.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_note	/* This is not for StickyNote folders, but for normal message folders. */
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_shared_store,
+.icon_folder_public_store,
+.icon_folder_shared_undefined
+{
+	background-image: url(../icons/new/folder_public.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_rss
+{
+	background-image: url(../icons/new/rss.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_inbox,
+.icon_folder_shared_inbox
+{
+	background-image: url(../icons/new/folder_mail.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_outbox
+{
+	background-image: url(../icons/new/folder_outbox.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_drafts
+{
+	background-image: url(../icons/new/drafts.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_junk
+{
+	background-image: url(../icons/new/folder_junk.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_journal
+{
+	background-image: url(../icons/new/journal.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_wastebasket
+{
+	background-image: url(../icons/new/trash.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_sent
+{
+	background-image: url(../icons/new/folder_sent.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_folder
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_publicfolders
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_favorites
+{
+	background-image: url(../icons/new/folder_favs.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_syncissues
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_conflicts
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_localfailures
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_default_serverfailures
+{
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_store_large
+{
+	background-image: url(../icons_large/icon_store.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_calendar_large
+{
+	background-image: url(../icons_large/calendar.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_appointment_large
+{
+	background-image: url(../icons_large/calendar.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_task_large
+{
+	background-image: url(../icons_large/task.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_contact_large
+{
+	background-image: url(../icons_large/vcard.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_note_large
+{
+	background-image: url(../icons_large/note.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_stickynote_large
+{
+	background-image: url(../icons_large/note.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_mail_large
+{
+	background-image: url(../icons_large/icon_mailfolder.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_inbox_large
+{
+	background-image: url(../icons_large/folder_mail.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_outbox_large
+{
+	background-image: url(../icons_large/folder_go.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_drafts_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_junk_large
+{
+	background-image: url(../icons_large/icon_junk.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_journal_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_wastebasket_large
+{
+	background-image: url(../icons_large/folder_delete.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_sent_large
+{
+	background-image: url(../icons_large/folder_go.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_folder_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_publicfolders_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_favorites_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_syncissues_large
+{
+	background-image: url(../icons_large/icon_mailfolder.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_conflicts_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_localfailures_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_serverfailures_large
+{
+	background-image: url(../icons_large/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/** mail preview icons **/
+.icon_previewpanel_off
+{
+	background-image: url(../icons_large/new/no_preview.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_previewpanel_off
+{
+	background-image: url(../icons/new/no_preview.png) ! important;
+}
+.icon_previewpanel_right
+{
+	background-image: url(../icons_large/new/right_preview.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_previewpanel_right
+{
+	background-image: url(../icons/new/right_preview.png) ! important;
+}
+.icon_previewpanel_bottom
+{
+	background-image: url(../icons_large/new/bottom_preview.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .icon_previewpanel_bottom
+{
+	background-image: url(../icons/new/bottom_preview.png) ! important;
+}
+/** contact preview icons **/
+.contact_list_view
+{
+	background-image: url(../icons_large/new/contact_list_view.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .contact_list_view
+{
+	background-image: url(../icons/new/contact_list_view.png) !important;
+}
+.contact_card_view
+{
+	background-image: url(../icons_large/new/contact_card_view.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.x-menu .contact_card_view
+{
+	background-image: url(../icons/new/contact_card_view.png) !important;
+}
+/** task list icons **/
+.task_list_view
+{
+	background-image: url(../icons/new/contact_list_view.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.task_active_view
+{
+	background-image: url(../icons/new/task_active.png) !important;
+}
+.task_simple_view
+{
+	background-image: url(../icons/new/task_simple.png) !important;
+}
+.task_overdue_view
+{
+	background-image: url(../icons/new/task_overdue.png) !important;
+}
+.task_completed_view
+{
+	background-image: url(../icons/new/task_completed.png) !important;
+}
+.task_seven_days
+{
+	background-image: url(../icons/new/task_seven_days.png) !important;
+}
+/** note list icons **/
+.note_icon_view
+{
+	background-image: url(../icons/new/note_icon_view.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.note_list_view
+{
+	background-image: url(../icons/new/contact_list_view.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/** calendar **/
+.icon-calendar-day
+{
+	background-image: url(../icons/calendar_day.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-workweek
+{
+	background-image: url(../icons/calendar_view_week.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-week
+{
+	background-image: url(../icons/calendar_view_week.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-month
+{
+	background-image: url(../icons/calendar_view_month.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-create
+{
+	background-image: url(../icons/calendar_add.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-delete
+{
+	background-image: url(../icons/calendar_delete.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-edit
+{
+	background-image: url(../icons/calendar_edit.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-zoom
+{
+	background-image: url(../icons/date_magnify.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-today
+{
+	background-image: url(../icons/new/calendar_today.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.zarafa-maintoolbar .icon-calendar-today
+{
+	background-image: url(../icons_large/new/calendar_today.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-day
+{
+	background-image: url(../icons/new/calendar_view_day.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-workweek
+{
+	background-image: url(../icons/new/calendar_view_workweek.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-week
+{
+	background-image: url(../icons/new/calendar_view_week.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-month
+{
+	background-image: url(../icons/new/calendar_view_month.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon-calendar-grid
+{
+	background-image: url(../icons/new/contact_list_view.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-maintoolbar .icon-calendar-day
+{
+	background-image: url(../icons_large/new/calendar_view_day.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-maintoolbar .icon-calendar-workweek
+{
+	background-image: url(../icons_large/new/calendar_view_workweek.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-maintoolbar .icon-calendar-week
+{
+	background-image: url(../icons_large/new/calendar_view_week.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-maintoolbar .icon-calendar-month
+{
+	background-image: url(../icons_large/new/calendar_view_month.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-maintoolbar .icon-calendar-grid
+{
+	background-image: url(../icons_large/new/contact_list_view.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_calendar_zoom_large
+{
+	background-image: url(../icons_large/date_magnify.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_item_add
+{
+	background-image: url(../icons/add.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.zarafa-logoutbutton
+{
+	background-image: url(../icons/door_in.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_busystatus
+{
+	background-image: url(../icons/busystatus.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_busystatus_free
+{
+	background-image: url(../icons/busystatus_free.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_busystatus_tentative
+{
+	background-image: url(../icons/busystatus_tentative.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_busystatus_busy
+{
+	background-image: url(../icons/busystatus_busy.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_busystatus_outofoffice
+{
+	background-image: url(../icons/busystatus_outofoffice.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_busystatus_unknown
+{
+	background-image: url(../icons/busystatus_unknown.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-calendar-zoom
+{
+	background-image: none ! important;
+}
+
+.icon-calendar-zoom-selected
+{
+	background-image: url(../icons/icon_complete.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_importance
+{
+	background-image: url(../icons/importance.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_importance_nonurgent
+{
+	background-image: url(../icons/icon_priority_low.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_importance_urgent
+{
+	background-image: url(../icons/icon_priority_high.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_index
+{
+	background-image: url(../icons/icon_index.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.importance_combobox
+{
+	padding-left: 15px;
+	height: 15px;
+}
+
+.icon_complete
+{
+	background-image: url(../icons/icon_complete.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_save
+{
+	background-image: url(../icons/new/floppy.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_recurring
+{
+	background-image: url(../icons/icon_recurring.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_recurrence
+{
+	background-image: url(../icons/icon_recurrence.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_reminder
+{
+	background-image: url(../icons/icon_reminder.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_allday
+{
+	background-image: url(../icons/icon_complete.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_task_complete
+{
+	background-image: url(../icons/icon_task_complete.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_note_blue
+{
+	background-image: url(../icons/new/note_blue.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_note_green
+{
+	background-image: url(../icons/new/note_green.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_note_pink
+{
+	background-image: url(../icons/new/note_pink.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_note_yellow
+{
+	background-image: url(../icons/new/note_yellow.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_note_white
+{
+	background-image: url(../icons/new/note_white.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.notelargeicon_yellow {
+	background-image: url(../icons/new/note_yellow_large.png);
+}
+.notelargeicon_green {
+	background-image: url(../icons/new/note_green_large.png);
+}
+.notelargeicon_blue {
+	background-image: url(../icons/new/note_blue_large.png);
+}
+.notelargeicon_pink {
+	background-image: url(../icons/new/note_pink_large.png);
+}
+.notelargeicon_white {
+	background-image: url(../icons/new/note_white_large.png);
+}
+.icon_open {
+	background-image: url(../icons/new/folder.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_blue {
+	background-image: url(../icons/icon_flag_blue.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_green {
+	background-image: url(../icons/icon_flag_green.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_orange {
+	background-image: url(../icons/icon_flag_orange.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_purple {
+	background-image: url(../icons/icon_flag_purple.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_red {
+	background-image: url(../icons/icon_flag_red.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_yellow {
+	background-image: url(../icons/icon_flag_yellow.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_flag_complete {
+	background-image: url(../icons/icon_flag_complete.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mark_all_read {
+	background-image: url(../icons/new/mail_read.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-reload {
+	background-image: url(../icons/new/refresh.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_rename {
+	background-image: url(../icons/new/folder_rename.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_delete {
+	background-image: url(../icons/new/trash.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_empty_trash {
+	background-image: url(../icons/new/trash.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_folder_add_favorite {
+	background-image: url(../icons/folder_star.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_store_close,
+.icon_folder_close {
+	background-image: url(../icons/icon_close_store.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Reusing extjs icons */
+.icon_progress_busy {
+	background-image: url(../../extjs/resources/images/default/tree/loading.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Reusing extjs icons */
+.icon_progress_done_ok {
+	background-image: url(../../extjs/resources/images/default/tree/drop-yes.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Reusing extjs icons */
+.icon_progress_done_fail {
+	background-image: url(../../extjs/resources/images/default/tree/drop-no.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.x-tbar-loading {
+	background-image: url(../icons_large/new/refresh.png) !important;
+}
+.view_icon {
+	background-image: url(../icons_large/new/view.png) !important;
+}

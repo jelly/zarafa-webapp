@@ -1,0 +1,22 @@
+# Prerequisites
+
+- Linux (we'll use Ubuntu)
+- Pandoc
+- Java 1.6
+- Ant
+- Prince
+
+First install all the stuff that is in the Ubuntu repos:
+
+	sudo apt-get install sun-java6-jdk ant pandoc
+
+Now you'll need to install Prince, which is available from www.princexml.com
+
+# Building
+
+Just run ant:
+
+	ant
+	
+If all goes well, you should now have a freshly build doc.pdf. Congratulations!
+

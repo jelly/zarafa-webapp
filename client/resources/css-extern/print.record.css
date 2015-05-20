@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  text-align: left;
+  font-size: 11px;
+  font-family: arial;
+  border-collapse: collapse;
+}
+
+table th {
+  width: 25%;
+  font-weight: bold;
+  /* top right bottom left */
+  padding: 2px 3px 2px 5px;
+  /* border: 1px solid #d0d0d0; */
+  /* border-left-color: #eee; */
+  /* background-color: #ededed; */
+}
+
+table td {
+  padding: 2px 3px 2px 5px;
+  /* border-style: none solid solid; */
+  /* border-width: 1px; */
+  /* border-color: #ededed; */
+}

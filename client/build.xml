@@ -1,0 +1,295 @@
+<project default="all">
+
+	<property name="root-folder" value="${basedir}/.."/>
+	<property name="target-folder" value="${root-folder}/deploy/client/"/>
+	<property name="tools-folder" value="${root-folder}/tools/"/>
+	<property name="doc-folder" value="${root-folder}/doc/client"/>
+
+	<import file="${tools-folder}/antutil.xml"/>
+
+	<typedef file="${tools-folder}/antlib.xml">
+		<classpath>
+			<pathelement location="${tools-folder}/tools.jar"/>
+		</classpath>
+	</typedef>
+
+	<!-- The ExtJs distribution files -->
+	<property name="extjs-folder" value="extjs"/>
+	<property name="extjs-base-debugfile" value="ext-base-debug.js"/>
+	<property name="extjs-base-file" value="ext-base.js"/>
+	<property name="extjs-all-debugfile" value="ext-all-debug.js"/>
+	<property name="extjs-all-file" value="ext-all.js"/>
+
+	<!-- The Ext-Ux distribution files -->
+	<property name="ux-folder" value="extjs/ux"/>
+	<property name="ux-all-debugfile" value="ux-all-debug.js"/>
+	<property name="ux-all-file" value="ux-all.js"/>
+
+	<!-- The Jquery distribution files -->
+	<property name="jquery-folder" value="jquery"/>
+	<property name="jquery-file" value="jquery-1.6.2.min.js"/>
+
+	<!-- The TinyMCE distribution files -->
+	<property name="tinymce-folder" value="tinymce"/>
+
+	<!-- The Ext-Mod distribution files -->
+	<property name="extjs-mod-folder" value="extjs-mod"/>
+	<property name="extjs-mod-debugfile" value="extjs-mod-debug.js"/>
+	<property name="extjs-mod-file" value="extjs-mod.js"/>
+
+	<!-- Third-party plugins for the Ext.ux namespace -->
+	<property name="thirdparty-folder" value="third-party"/>
+	<property name="thirdparty-debugfile" value="ux-thirdparty-debug.js"/>
+	<property name="thirdparty-file" value="ux-thirdparty.js"/>
+
+	<!-- Third-party plugins CSS files -->
+	<property name="thirdparty-css-folder" value="${thirdparty-folder}/resources/css"/>
+	<property name="thirdparty-css-file" value="ux-thirdparty.css"/>
+
+	<!-- The Zarafa distribution files -->
+	<property name="zarafa-folder" value=""/>
+	<property name="zarafa-debugfile" value="zarafa-debug.js"/>
+	<property name="zarafa-file" value="zarafa.js"/>
+
+	<!-- The Zarafa CSS files -->
+	<property name="zarafa-css-folder" value="resources/css"/>
+	<property name="zarafa-css-file" value="zarafa.css"/>
+
+	<!-- Meta target -->
+	<target name="all" depends="prepare, concat, compress"/>
+
+	<!-- Clean -->
+	<target name="clean">
+		<delete dir="${doc-folder}"/>
+
+		<delete includeemptydirs="true" failonerror="false">
+			<!-- Delete the ExtJs files -->
+			<fileset dir="${target-folder}/${extjs-folder}">
+				<include name="${extjs-base-file}"/>
+				<include name="${extjs-base-debugfile}"/>
+				<include name="${extjs-all-file}"/>
+				<include name="${extjs-all-debugfile}"/>
+			</fileset>
+			<!-- Delete the Ext-Ux files -->
+			<fileset dir="${target-folder}/${ux-folder}">
+				<include name="${ux-all-debugfile}"/>
+				<include name="${ux-all-file}"/>
+			</fileset>
+
+			<!-- Delete the Jquery files -->
+			<fileset dir="${target-folder}/${jquery-folder}">
+				<include name="${jquery-file}"/>
+			</fileset>
+
+			<!-- Delete the TinyMCE files -->
+			<fileset dir="${target-folder}/${tinymce-folder}">
+				<include name="**/*.*"/>
+			</fileset>
+
+			<!-- Delete the Extjs-mod files -->
+			<fileset dir="${target-folder}/${extjs-mod-folder}">
+				<include name="${extjs-mod-debugfile}"/>
+				<include name="${extjs-mod-file}"/>
+			</fileset>
+			<!-- Delete the third-party files -->
+			<fileset dir="${target-folder}/${thirdparty-folder}">
+				<include name="${thirdparty-file}"/>
+				<include name="${thirdparty-debugfile}"/>
+			</fileset>
+			<!-- Delete the Zarafa files -->
+			<fileset dir="${target-folder}/${zarafa-folder}">
+				<include name="${zarafa-file}"/>
+				<include name="${zarafa-debugfile}"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<!-- Prepare build, copy ExtJs files to target folder -->
+	<target name="prepare">
+		<mkdir dir="${target-folder}"/>
+		<!-- Copy files which will not be compiled, but are needed for compilation of the other components -->
+		<copy todir="${target-folder}/${extjs-folder}">
+			<fileset dir="${extjs-folder}">
+				<include name="${extjs-base-debugfile}"/>
+				<include name="${extjs-base-file}"/>
+				<include name="${extjs-all-debugfile}"/>
+				<include name="${extjs-all-file}"/>
+			</fileset>
+		</copy>
+		<copy todir="${target-folder}/${ux-folder}">
+			<fileset dir="${ux-folder}">
+				<include name="${ux-all-debugfile}"/>
+				<include name="${ux-all-file}"/>
+			</fileset>
+		</copy>
+		<copy todir="${target-folder}/${jquery-folder}">
+			<fileset dir="${jquery-folder}">
+				<include name="${jquery-file}"/>
+			</fileset>
+		</copy>
+		<copy todir="${target-folder}/${tinymce-folder}">
+			<fileset dir="${tinymce-folder}">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Concatenates JavaScript files with automatic dependency generation -->
+	<target name="concat" depends="prepare">
+		<!-- Concatenate Extjs-mod file -->
+		<mkdir dir="${target-folder}/${extjs-mod-folder}"/>
+		<echo message="Concatenating: ${extjs-mod-debugfile}"/>
+		<zConcat outputFolder="${target-folder}/${extjs-mod-folder}" outputFile="${extjs-mod-debugfile}">
+			<concatfiles>
+				<fileset dir="${extjs-mod-folder}" includes="**/*.js" />
+			</concatfiles>
+		</zConcat>
+
+		<!-- Concatenate third-party file -->
+		<mkdir dir="${target-folder}/${thirdparty-folder}"/>
+		<echo message="Concatenating: ${thirdparty-debugfile}"/>
+		<zConcat outputFolder="${target-folder}/${thirdparty-folder}" outputFile="${thirdparty-debugfile}">
+			<concatfiles>
+				<fileset dir="${thirdparty-folder}" includes="**/*.js" />
+			</concatfiles>
+		</zConcat>
+
+		<!-- Concatenate third-party CSS files -->
+		<mkdir dir="${target-folder}/${thirdparty-css-folder}"/>
+		<echo message="Concatenating: ${thirdparty-css-file}"/>
+		<zConcat outputFolder="${target-folder}/${thirdparty-css-folder}" outputFile="${thirdparty-css-file}">
+			<concatfiles>
+				<fileset dir="${thirdparty-css-folder}" includes="**/*.css" />
+			</concatfiles>
+		</zConcat>
+
+		<!-- Concatenate zarafa file -->
+		<mkdir dir="${target-folder}/${zarafa-folder}"/>
+		<echo message="Concatenating: ${zarafa-debugfile}"/>
+		<zConcat outputFolder="${target-folder}/${zarafa-folder}" outputFile="${zarafa-debugfile}" prioritize="\w+, Zarafa.core.*, Zarafa.common.*, Zarafa.*">
+			<concatfiles>
+				<fileset dir="zarafa" includes="**/*.js" />
+			</concatfiles>
+		</zConcat>
+
+		<!-- Concatenate zarafa CSS files -->
+		<mkdir dir="${target-folder}/${zarafa-css-folder}"/>
+		<echo message="Concatenating: ${zarafa-css-file}"/>
+		<zConcat outputFolder="${target-folder}/${zarafa-css-folder}" outputFile="${zarafa-css-file}">
+			<concatfiles>
+				<fileset dir="${zarafa-css-folder}" includes="**/*.css" />
+			</concatfiles>
+		</zConcat>
+	</target>
+
+	<!-- Preformat the Concatenated Javascript files to improve compilation -->
+	<target name="preformat" depends="concat">
+		<echo message="Preformatting: ${zarafa-debugfile}"/>
+		<replaceregexp byline="true">
+			<regexp pattern="(^[ ,\t]*\*[ ,\t]@.*)\{(.*)\[\]\}"/>
+			<substitution expression="\1{\2\|Array}"/>
+			<fileset dir="${target-folder}/${zarafa-folder}" includes="${zarafa-debugfile}"/>
+		</replaceregexp>
+	</target>
+
+	<!-- Compress JavaScript -->
+	<target name="compress" depends="preformat">
+		<echo message="Compiling: ${extjs-mod-file}" />
+		<zCompile inputFolder="${target-folder}/${extjs-mod-folder}" inputFile="${extjs-mod-debugfile}" outputFolder="${target-folder}/${extjs-mod-folder}" outputFile="${extjs-mod-file}">
+			<externs>
+				var Ext = {};
+				<!-- Zarafa is added as runtime dependency only,
+				     extjs-mod is not allowed to have a #dependsFile for Zarafa files
+				     but within functions it is allowed to call Zarafa
+				-->
+				var Zarafa = {};
+				var container = {};
+				var _ = function(key, domain) {};
+				var dgettext = function(domain, msgid) {};
+				var dngettext = function(domain, msgid, msgid_plural, count) {};
+				var dnpgettext = function(domain, msgctxt, msgid, msgid_plural, count) {};
+				var dpgettext = function(domain, msgctxt, msgid) {};
+				var ngettext = function(msgid, msgid_plural, count) {};
+				var npgettext = function(msgctxt, msgid, msgid_plural, count) {};
+				var pgettext = function(msgctxt, msgid) {};
+			</externs>
+		</zCompile>
+
+		<echo message="Compiling: ${thirdparty-file}" />
+		<zCompile inputFolder="${target-folder}/${thirdparty-folder}" inputFile="${thirdparty-debugfile}" outputFolder="${target-folder}/${thirdparty-folder}" outputFile="${thirdparty-file}" warningLevel="default">
+			<externs>
+				var Ext = {};
+				var console = {};
+			</externs>
+		</zCompile>
+
+		<echo message="Compiling: ${zarafa-file}" />
+		<zCompile inputFolder="${target-folder}/${zarafa-folder}" inputFile="${zarafa-debugfile}" outputFolder="${target-folder}/${zarafa-folder}" outputFile="${zarafa-file}">
+			<externs>
+				var FormData = {};
+				var Ext = {};
+				var Zarafa = {};
+				var container = {};
+				var settings = {};
+				var properties = {};
+				var languages = [];
+				var serverconfig = {};
+				var user = {};
+				var version = {};
+				var urlActionData = {};
+				var console = {};
+				var XRegExp = function(arg1, arg2) {};
+				var _ = function(key, domain) {};
+				var dgettext = function(domain, msgid) {};
+				var dngettext = function(domain, msgid, msgid_plural, count) {};
+				var dnpgettext = function(domain, msgctxt, msgid, msgid_plural, count) {};
+				var dpgettext = function(domain, msgctxt, msgid) {};
+				var ngettext = function(msgid, msgid_plural, count) {};
+				var npgettext = function(msgctxt, msgid, msgid_plural, count) {};
+				var pgettext = function(msgctxt, msgid) {};
+			</externs>
+		</zCompile>
+	</target>
+
+	<!-- Install all files into the target folder -->
+	<target name="deploy" depends="compress">
+		<mkdir dir="${target-folder}"/>
+
+		<!-- copy files -->
+		<copy todir="${target-folder}">
+			<fileset dir=".">
+				<include name="resources/**/*.*"/>
+				<include name="third-party/resources/**/*.*"/>
+				<!-- Don't copy the entire extjs resources folder,
+				     we want to loose all individual CSS files -->
+				<include name="extjs/resources/*.*"/>
+				<include name="extjs/resources/images/**/*.*"/>
+				<include name="extjs/resources/css/ext-all*.css"/>
+				<include name="extjs/ux/css/ux-all*.css"/>
+				<include name="extjs/ux/images/**/*.*"/>
+				<include name="*.php"/>
+				<!-- exclude the ant script -->
+				<exclude name="build.xml"/>
+				<!-- CSS is generated during build -->
+				<exclude name="resources/css/*.*"/>
+				<exclude name="third-party/resources/css/*.*"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Generate images for the calendar using imagegen -->
+	<target name="calendar-images">
+		<imagegen configfile="${tools-folder}/resources/imagegen/colors.cfg" outdir="resources/images/calendar" resourcedir="${tools-folder}/resources/imagegen/"/>
+	</target>
+
+	<!-- Generate documentation using ext-doc -->
+	<target name="doc">
+		<mkdir dir="${doc-folder}"/>
+		<java classpath="${tools-folder}/tools.jar" classname="extdoc.Main" fork="true">
+			<arg line="-o ${doc-folder}"/>
+			<arg line="-p ext-doc-project.xml"/>
+			<arg line="-t ${tools-folder}/resources/ext-doc/template/ext/template.xml"/>
+			<arg line="-c"/>
+		</java>
+	</target>
+</project>

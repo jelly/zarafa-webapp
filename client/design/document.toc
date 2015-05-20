@@ -1,0 +1,32 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {chapter}{\numberline {2}User interface}{3}
+\contentsline {section}{\numberline {2.1}Overview}{3}
+\contentsline {section}{\numberline {2.2}Plug-ins}{4}
+\contentsline {section}{\numberline {2.3}Contexts}{5}
+\contentsline {section}{\numberline {2.4}Insertion points}{5}
+\contentsline {subsection}{\numberline {2.4.1}Creating insertion points}{5}
+\contentsline {subsection}{\numberline {2.4.2}Using insertion points}{6}
+\contentsline {subsection}{\numberline {2.4.3}Parameters}{7}
+\contentsline {chapter}{\numberline {3}Communication}{8}
+\contentsline {section}{\numberline {3.1}Conceptual overview}{8}
+\contentsline {section}{\numberline {3.2}Protocol}{8}
+\contentsline {section}{\numberline {3.3}Submitting requests from Javascript}{9}
+\contentsline {subsection}{\numberline {3.3.1}Callbacks}{11}
+\contentsline {subsection}{\numberline {3.3.2}Events}{11}
+\contentsline {section}{\numberline {3.4}Stores}{12}
+\contentsline {chapter}{\numberline {4}Style guidelines}{13}
+\contentsline {section}{\numberline {4.1}Object oriented design}{13}
+\contentsline {section}{\numberline {4.2}Architectural style}{13}
+\contentsline {subsection}{\numberline {4.2.1}Namespaces}{13}
+\contentsline {subsection}{\numberline {4.2.2}Singletons}{14}
+\contentsline {subsection}{\numberline {4.2.3}Enums}{14}
+\contentsline {section}{\numberline {4.3}Code style}{14}
+\contentsline {subsection}{\numberline {4.3.1}Naming}{14}
+\contentsline {subsection}{\numberline {4.3.2}Method length}{15}
+\contentsline {section}{\numberline {4.4}Documentation}{15}
+\contentsline {subsection}{\numberline {4.4.1}Documenting classes}{15}
+\contentsline {subsection}{\numberline {4.4.2}Documenting methods}{15}
+\contentsline {subsection}{\numberline {4.4.3}Documenting insertion points}{16}
+\contentsline {chapter}{\numberline {5}Cookbook}{17}
+\contentsline {section}{\numberline {5.1}Folder details plugin}{17}
+\contentsline {section}{\numberline {5.2}A basic tasks context}{19}

@@ -1,0 +1,41 @@
+.icon_xmpp_away
+{
+	background-image: url(../icons/away.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_xmpp_busy
+{
+	background-image: url(../icons/busy.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_xmpp_offline
+{
+	background-image: url(../icons/offline.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_xmpp_online
+{
+	background-image: url(../icons/online.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_xmpp_privacy
+{
+	background-image: url(../icons/privacy.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_xmpp_chatbutton
+{
+	background-image: url(../icons/chatbutton.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}

@@ -1,0 +1,7 @@
+/* Icon image for contextmenu item and top menu icon */
+.icon_salesforce {
+	background-image:url(../icons/salesforce.ico) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+

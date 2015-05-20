@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.2</version>
+		<name>salesforce</name>
+		<title>Salesforce</title>
+		<author>Sushko Dmitriy - Dyachkov Vlad</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Allow the user to attach the files from DropBox to email.</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<files>
+				<server>
+					<!--<serverfile type="module" module="dropboxmodule">php/class.dropboxmodule.php</serverfile>-->
+					<serverfile>php/plugin.salesforce.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/salesforce.js</clientfile>
+					<clientfile load="debug">js/salesforce-debug.js</clientfile>
+					<clientfile load="source">js/SalesforcePlugin.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/salesforce.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

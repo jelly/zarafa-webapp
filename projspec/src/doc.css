@@ -1,0 +1,353 @@
+@page { 
+	size: A4;
+	
+    @top
+    {
+    	/*content : "Zarafa Web Access programming manual - " string(doctitle);*/
+    	/*color : #4f4f4f;*/
+    	content : string(doctitle);
+    	font-size : 12pt;
+    	vertical-align : bottom;
+    	border-bottom : 1pt solid #e0e0e0;
+    	margin-bottom : 0.8cm;
+    }
+    
+    @top-right
+    {
+    	margin-right : -1cm;
+    	content : url("../resources/logo_full.svg");
+    	border-bottom : 1pt solid #e0e0e0;
+    	margin-bottom : 0.8cm;
+    	margin-top : 0.8cm;
+    }
+
+    @top-left
+    {
+    	content : " ";
+    	border-bottom : 1pt solid #e0e0e0;
+    	margin-bottom : 0.8cm;
+    	margin-top : 0.8cm;
+    }
+    
+    @bottom-right
+    { 
+        content: counter(page);
+    	border-top : 1pt solid #e0e0e0;
+    	margin-top : 1cm;
+    }
+}
+
+@page:first { 
+
+	@top { content: normal }
+	@top-left { content: normal }
+	@top-right { content: normal }
+	@bottom-right { content: normal }
+	
+}
+
+chapter,section,subsection,subsubsection
+{
+	font-family : Helvetica;
+	display : block;
+	page-break-after: avoid;
+}
+
+chapter::before,section::before,subsection::before,subsubsection::before
+{
+	content : attr(ref) " ";
+}
+
+body chapter::before
+{
+	margin-right : 0.5cm;
+	font-size : 48pt;
+}
+
+body chapter
+{
+	font-size : 32pt;
+	page-break-before : always;
+}
+
+body section
+{
+	font-size : 18pt;
+	margin-top : 18pt;
+	margin-bottom : 12pt;
+}
+
+body subsection
+{
+	font-size : 14pt;
+	margin-top : 14pt;
+	margin-bottom : 8pt;
+}
+
+body subsubsection
+{
+	font-size : 12pt;
+	margin-top : 12pt;
+	margin-bottom : 6pt;
+}
+
+/* Table of contents */
+
+toc 
+{
+	display : block;
+	page-break-before: always;
+}
+
+toc chapter,section,subsection,subsubsection
+{
+	display : block;
+}
+
+toc chapter::after
+{
+	content : target-counter(attr(refid), page);
+	float : right;
+}
+
+toc section::before
+{
+	margin-left : 1cm;
+}
+
+toc section::after
+{
+	content : target-counter(attr(refid), page);
+	float : right;
+}
+
+toc subsection::before
+{
+	margin-left : 2cm;
+}
+
+toc subsection::after
+{
+	content : target-counter(attr(refid), page);
+	float : right;
+}
+
+toc subsubsection::before
+{
+	margin-left : 3cm;
+}
+
+toc subsubsection::after
+{
+	content : target-counter(attr(refid), page);
+	float : right;
+}
+
+body {
+	font-family : helvetica;
+	text-align : justify;
+	font-size : 10pt;
+}
+
+p
+{
+	margin-top: 8pt;
+	margin-bottom: 8pt;
+	display : block;
+}
+
+em
+{
+	font-style : italic;
+}
+
+b
+{
+	font-weight : bold;
+}
+
+strong
+{
+	font-weight : bold;
+}
+
+pre
+{
+	margin : 8pt;
+	padding : 8pt;
+	background-color : #e0e0e0;
+	display : block;
+	white-space : pre;
+	font-size : 8pt;
+}
+
+code
+{
+	font-family : monospace;
+}
+
+todo
+{
+	color : red;
+}
+
+todo::before
+{
+	content : "TODO";
+	display : inline-block;
+	margin-left : -1.5cm;
+	width : 1.5cm;
+	font-weight : bold;
+	color : red;
+}
+
+ul {
+    display: block;
+    margin-left: 20pt;
+    list-style-type: disc;
+    counter-reset: list-item
+}
+
+li { display: list-item }
+
+li[value] {
+    counter-reset: list-item attr(value);
+    counter-increment: list-item 0
+}
+
+li::marker {
+    padding-right: 8pt;
+    text-align: right
+}
+
+[type="disc"] { list-style-type: disc }
+[type="circle"] { list-style-type: circle }
+[type="square"] { list-style-type: square }
+[type="1"] { list-style-type: decimal }
+[type="a"] { list-style-type: lower-alpha }
+[type="A"] { list-style-type: upper-alpha }
+[type="i"] { list-style-type: lower-roman }
+[type="I"] { list-style-type: upper-roman } 
+
+a[href] {
+    color: prince-pseudo-attr(body-link, color, blue);
+    /* text-decoration: underline; */
+    prince-link: attr(href)
+}
+
+figure[float=top]
+{
+	float : top;
+}
+
+figure[float=bottom]
+{
+	float : bottom;
+}
+
+figure[float=left]
+{
+	float : left;
+}
+
+figure[float=right]
+{
+	float : right;
+}
+
+figure,subfigure
+{
+	display : block;
+}
+
+figure,subfigure img
+{
+	width : attr("width");
+	height : attr("height");
+}
+
+figure
+{
+	counter-increment : figure;
+	counter-reset : subfigure;
+	text-align: center;
+	font-size : 8pt;
+	margin : 0.5cm;
+}
+
+figure subfigure
+{
+	counter-increment : subfigure;
+	margin-right : 0.5cm;
+	margin-bottom : 0.3cm;
+	display : inline-block;
+}
+
+figure > subfigure:last-of-type
+{
+	margin-right : 0;
+}
+
+figure
+{
+	string-set : figref attr(ref);
+}
+
+subfigure
+{
+	string-set : subfigref attr(shortref);
+}
+
+figure title::before
+{
+	content : "Figure " string(figref) ": ";
+	font-weight : bold;
+}
+
+subfigure title::before
+{
+	content : string(subfigref) ") ";
+	font-weight : bold;
+}
+
+img
+{
+	width : attr("width");
+	height : attr("height");
+	content : attr("src", url);
+}
+
+title
+{
+	display : block;
+}
+
+titlepage 
+{
+	display : block;
+	text-align : left;
+}
+
+titlepage title
+{
+	display : block;
+	font-size : 48pt;
+}
+
+titlepage subtitle
+{
+	display : block;
+	font-size : 32pt;
+}
+
+titlepage subsubtitle
+{
+	display : block;
+	font-size : 12pt;
+}
+
+titlepage version
+{
+	display : block;
+	font-size : 24pt;
+}

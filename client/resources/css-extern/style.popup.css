@@ -1,0 +1,23 @@
+/**
+ * Override Tiny mce toolbar css to give look and feel of webapp
+ */
+#replaceBtn, #replaceAllBtn, #insert, #cancel, input.button, .updateButton {
+	background:none !important;
+	border-color: #AAAAAA !important;
+	border-radius: 2px !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+}
+
+#cancel {
+	float:right !important;
+}
+
+#replaceBtn {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+#insert:hover, #cancel:hover, #replaceBtn:hover, #replaceAllBtn:hover {
+	background-color : #E3E2E3 !important;
+}

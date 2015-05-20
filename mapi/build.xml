@@ -1,0 +1,34 @@
+<project default="all">
+
+	<property name="root-folder" value="${basedir}/.."/>
+	<property name="target-folder" value="${root-folder}/deploy/mapi/"/>
+	<property name="tools-folder" value="${root-folder}/tools/"/>
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		<classpath>
+			<pathelement location="${tools-folder}/lib/ant-contrib-1.0b3.jar"/>
+		</classpath>
+	</taskdef>
+
+	<!-- Meta target -->
+	<target name="all"/>
+
+	<!-- Clean -->
+	<target name="clean">
+	</target>
+
+	<!-- Install all files into the target folder -->
+	<target name="deploy">
+		<mkdir dir="${target-folder}"/>
+
+		<!-- copy files -->
+		<copy todir="${target-folder}">
+			<fileset dir=".">
+				<include name="**/*.*"/>
+				<include name="*.php"/>
+				<exclude name="build.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+</project>

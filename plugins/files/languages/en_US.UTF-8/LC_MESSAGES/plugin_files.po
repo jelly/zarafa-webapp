@@ -1,0 +1,638 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Files Plugin\n"
+"POT-Creation-Date: 2014-05-22 00:36+0100\n"
+"PO-Revision-Date: 2014-05-22 00:36+0100\n"
+"Last-Translator: Christoph Haas <c.haas@zarafa.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: dgettext:1c,2\n"
+"X-Poedit-Basepath: ..\\..\\..\\js\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: AttachFromFilesPlugin.js:52 data/Actions.js:66
+msgctxt "plugin_files"
+msgid "Add attachment from {0}"
+msgstr "Add attachment from {0}"
+
+#: AttachFromFilesPlugin.js:106 settings/SettingsFilesComponentsWidget.js:27
+msgctxt "plugin_files"
+msgid "Attach a file from {0}"
+msgstr "Attach a file from {0}"
+
+#: FilesPlugin.js:81
+msgctxt "plugin_files"
+msgid "{0} Plugin"
+msgstr "{0} Plugin"
+
+#: SaveToFilesPlugin.js:39
+msgctxt "plugin_files"
+msgid "Add attachment to {0}"
+msgstr "Add attachment to {0}"
+
+#: SaveToFilesPlugin.js:65
+msgctxt "plugin_files"
+msgid "Please wait"
+msgstr "Please wait"
+
+#: SaveToFilesPlugin.js:66
+msgctxt "plugin_files"
+msgid "Loading attachment"
+msgstr "Loading attachment"
+
+#: SaveToFilesPlugin.js:67
+msgctxt "plugin_files"
+msgid "Initializing"
+msgstr "Initializing"
+
+#: SaveToFilesPlugin.js:167 settings/SettingsFilesComponentsWidget.js:34
+msgctxt "plugin_files"
+msgid "Save received attachments to {0}"
+msgstr "Save received attachments to {0}"
+
+#: context/FilesContext.js:217 dialogs/FilesUploadContentPanel.js:29
+#: ui/UploadButton.js:47
+msgctxt "plugin_files"
+msgid "Upload file"
+msgstr "Upload file"
+
+#: context/FilesContext.js:235 context/FilesContext.js:267
+#: context/FilesContext.js:269
+msgctxt "plugin_files"
+msgid "Send file"
+msgstr "Send file"
+
+#: context/FilesContext.js:270
+msgctxt "plugin_files"
+msgid "Create a new email message with some files attached."
+msgstr "Create a new email message with some files attached."
+
+#: context/FilesContext.js:320 context/FilesContext.js:322
+msgctxt "plugin_files"
+msgid "No preview"
+msgstr "No preview"
+
+#: context/FilesContext.js:329 context/FilesContext.js:331
+msgctxt "plugin_files"
+msgid "Right preview"
+msgstr "Right preview"
+
+#: context/FilesContext.js:338 context/FilesContext.js:340
+msgctxt "plugin_files"
+msgid "Bottom preview"
+msgstr "Bottom preview"
+
+#: context/FilesContextModel.js:109 context/FilesContextModel.js:113
+#: ui/FilesMainPanel.js:92
+msgctxt "plugin_files"
+msgid "Files"
+msgstr "Files"
+
+#: data/Actions.js:193
+msgctxt "plugin_files"
+msgid "Folder name"
+msgstr "Folder name"
+
+#: data/Actions.js:193 dialogs/SaveToFilesTreePanel.js:150
+msgctxt "plugin_files"
+msgid "Please enter a foldername"
+msgstr "Please enter a foldername"
+
+#: data/Actions.js:199 data/Actions.js:224 data/Actions.js:278
+#: data/Actions.js:305 data/Actions.js:318 data/Actions.js:360
+#: dialogs/AttachFromFilesTreePanel.js:88
+#: dialogs/AttachFromFilesTreePanel.js:102
+#: dialogs/AttachFromFilesTreePanel.js:123 dialogs/SaveToFilesTreePanel.js:92
+#: dialogs/SaveToFilesTreePanel.js:114 dialogs/SaveToFilesTreePanel.js:144
+#: dialogs/SaveToFilesTreePanel.js:169 ui/FilesFileGridContextMenu.js:277
+#: ui/FilesPreviewPanelToolbarButtons.js:64
+#: ui/FilesPreviewPanelToolbarButtons.js:84
+msgctxt "plugin_files"
+msgid "Warning"
+msgstr "Warning"
+
+#: data/Actions.js:200
+msgctxt "plugin_files"
+msgid "Incorrect foldername"
+msgstr "Incorrect foldername"
+
+#: data/Actions.js:249
+msgctxt "plugin_files"
+msgid "Moving"
+msgstr "Moving"
+
+#: data/Actions.js:249
+msgctxt "plugin_files"
+msgid "Moving the selected records!"
+msgstr "Moving the selected records!"
+
+#: data/Actions.js:267 data/DirectoryLoader.js:92 data/ResponseHandler.js:116
+#: data/ResponseHandler.js:123 dialogs/FilesUploadContentPanel.js:162
+#: ui/UploadPanel.js:92
+msgctxt "plugin_files"
+msgid "Error"
+msgstr "Error"
+
+#: data/Actions.js:296 ui/FilesFileGridContextMenu.js:122
+#: ui/FilesPreviewPanelToolbarButtons.js:46
+#: ui/FilesPreviewPanelToolbarButtons.js:47
+msgctxt "plugin_files"
+msgid "Rename"
+msgstr "Rename"
+
+#: data/Actions.js:296
+msgctxt "plugin_files"
+msgid "Please enter a new name"
+msgstr "Please enter a new name"
+
+#: data/Actions.js:306
+msgctxt "plugin_files"
+msgid "Incorrect filename"
+msgstr "Incorrect filename"
+
+#: data/DirectoryLoader.js:33
+msgctxt "plugin_files"
+msgid "Loading failed"
+msgstr "Loading failed"
+
+#: data/Helper.js:201
+msgctxt "plugin_files"
+msgid "l d/m/Y G:i"
+msgstr "l d/m/Y G:i"
+
+#: data/Helper.js:201
+msgctxt "plugin_files"
+msgid "Never"
+msgstr "Never"
+
+#: data/Helper.js:216 data/Version.js:75
+msgctxt "plugin_files"
+msgid "Unknown"
+msgstr "Unknown"
+
+#: dialogs/AttachFromFilesContentPanel.js:26
+#: dialogs/SaveToFilesContentPanel.js:21
+msgctxt "plugin_files"
+msgid "{0} Attachment"
+msgstr "{0} Attachment"
+
+#: dialogs/AttachFromFilesTreePanel.js:57
+#: dialogs/AttachFromFilesTreePanel.js:59
+msgctxt "plugin_files"
+msgid "Add attachment"
+msgstr "Add attachment"
+
+#: dialogs/AttachFromFilesTreePanel.js:60
+msgctxt "plugin_files"
+msgid "Add selected attachment from files to email attachment."
+msgstr "Add selected attachment from files to email attachment."
+
+#: dialogs/AttachFromFilesTreePanel.js:89
+msgctxt "plugin_files"
+msgid "The file {0} is too large!"
+msgstr "The file {0} is too large!"
+
+#: dialogs/AttachFromFilesTreePanel.js:89
+msgctxt "plugin_files"
+msgid "max"
+msgstr "max"
+
+#: dialogs/AttachFromFilesTreePanel.js:103
+msgctxt "plugin_files"
+msgid "You have to choose at least one file!"
+msgstr "You have to choose at least one file!"
+
+#: dialogs/FilesUploadContentPanel.js:61
+msgctxt "plugin_files"
+msgid "Select a file"
+msgstr "Select a file"
+
+#: dialogs/FilesUploadContentPanel.js:90
+msgctxt "plugin_files"
+msgid "Select upload folder"
+msgstr "Select upload folder"
+
+#: dialogs/FilesUploadContentPanel.js:124 ui/UploadPanel.js:55
+msgctxt "plugin_files"
+msgid "Upload"
+msgstr "Upload"
+
+#: dialogs/FilesUploadContentPanel.js:126
+msgctxt "plugin_files"
+msgid "Store selected file"
+msgstr "Store selected file"
+
+#: dialogs/FilesUploadContentPanel.js:135
+#: dialogs/FilesUploadContentPanel.js:137 ui/UploadPanel.js:61
+msgctxt "plugin_files"
+msgid "Cancel"
+msgstr "Cancel"
+
+#: dialogs/FilesUploadContentPanel.js:138
+msgctxt "plugin_files"
+msgid "Close this window"
+msgstr "Close this window"
+
+#: dialogs/FilesUploadContentPanel.js:155 ui/UploadPanel.js:85
+msgctxt "plugin_files"
+msgid "Uploading files"
+msgstr "Uploading files"
+
+#: dialogs/SaveToFilesTreePanel.js:64 dialogs/SaveToFilesTreePanel.js:66
+msgctxt "plugin_files"
+msgid "New folder"
+msgstr "New folder"
+
+#: dialogs/SaveToFilesTreePanel.js:67
+msgctxt "plugin_files"
+msgid "Create a new folder"
+msgstr "Create a new folder"
+
+#: dialogs/SaveToFilesTreePanel.js:74
+msgctxt "plugin_files"
+msgid "Save"
+msgstr "Save"
+
+#: dialogs/SaveToFilesTreePanel.js:76
+msgctxt "plugin_files"
+msgid "Store attachment"
+msgstr "Store attachment"
+
+#: dialogs/SaveToFilesTreePanel.js:77
+msgctxt "plugin_files"
+msgid "Store attachment to the selected {0} folder."
+msgstr "Store attachment to the selected {0} folder."
+
+#: dialogs/SaveToFilesTreePanel.js:93 dialogs/SaveToFilesTreePanel.js:145
+msgctxt "plugin_files"
+msgid "You have to choose a folder!"
+msgstr "You have to choose a folder!"
+
+#: dialogs/SaveToFilesTreePanel.js:130
+msgctxt "plugin_files"
+msgid "Uploaded"
+msgstr "Uploaded"
+
+#: dialogs/SaveToFilesTreePanel.js:130
+msgctxt "plugin_files"
+msgid "Attachment successfully stored to {0}"
+msgstr "Attachment successfully stored to {0}"
+
+#: dialogs/SaveToFilesTreePanel.js:132
+msgctxt "plugin_files"
+msgid "Upload Failed"
+msgstr "Upload Failed"
+
+#: dialogs/SaveToFilesTreePanel.js:132
+msgctxt "plugin_files"
+msgid "Attachment could not be stored in {0}! Error:"
+msgstr "Attachment could not be stored in {0}! Error:"
+
+#: dialogs/SaveToFilesTreePanel.js:150
+msgctxt "plugin_files"
+msgid "Folder Name"
+msgstr "Folder Name"
+
+#: dialogs/SaveToFilesTreePanel.js:185
+msgctxt "plugin_files"
+msgid "Created"
+msgstr "Created"
+
+#: dialogs/SaveToFilesTreePanel.js:185
+msgctxt "plugin_files"
+msgid "Directory created!"
+msgstr "Directory created!"
+
+#: dialogs/SaveToFilesTreePanel.js:188
+msgctxt "plugin_files"
+msgid "Creation failed"
+msgstr "Creation failed"
+
+#: dialogs/SaveToFilesTreePanel.js:188
+msgctxt "plugin_files"
+msgid "Directory not created!"
+msgstr "Directory not created!"
+
+#: dialogs/ShowFilesFileContentPanel.js:23 ui/FilesFileInfo.js:92
+msgctxt "plugin_files"
+msgid "File information"
+msgstr "File information"
+
+#: settings/SettingsFilesComponentsWidget.js:21
+msgctxt "plugin_files"
+msgid "Enable/Disable {0} components"
+msgstr "Enable/Disable {0} components"
+
+#: settings/SettingsFilesComponentsWidget.js:41
+msgctxt "plugin_files"
+msgid "Enable file browser"
+msgstr "Enable file browser"
+
+#: settings/SettingsFilesVersionWidget.js:20
+msgctxt "plugin_files"
+msgid "Version information"
+msgstr "Version information"
+
+#: settings/SettingsFilesVersionWidget.js:24
+msgctxt "plugin_files"
+msgid "Files Backend"
+msgstr "Files Backend"
+
+#: settings/SettingsFilesVersionWidget.js:30
+msgctxt "plugin_files"
+msgid "Plugin"
+msgstr "Plugin"
+
+#: settings/SettingsFilesWidget.js:25
+msgid "Webdav"
+msgstr "Webdav"
+
+#: settings/SettingsFilesWidget.js:28
+msgid "FTP"
+msgstr "FTP"
+
+#: settings/SettingsFilesWidget.js:34
+msgctxt "plugin_files"
+msgid "General {0} settings"
+msgstr "General {0} settings"
+
+#: settings/SettingsFilesWidget.js:40
+msgctxt "plugin_files"
+msgid "Server address"
+msgstr "Server address"
+
+#: settings/SettingsFilesWidget.js:48
+msgctxt "plugin_files"
+msgid "Server port"
+msgstr "Server port"
+
+#: settings/SettingsFilesWidget.js:56
+msgctxt "plugin_files"
+msgid "Server SSL port"
+msgstr "Server SSL port"
+
+#: settings/SettingsFilesWidget.js:64
+msgctxt "plugin_files"
+msgid "Path to {0}"
+msgstr "Path to {0}"
+
+#: settings/SettingsFilesWidget.js:69
+msgctxt "plugin_files"
+msgid "No trailing slashes!"
+msgstr "No trailing slashes!"
+
+#: settings/SettingsFilesWidget.js:79
+msgctxt "plugin_files"
+msgid "Use Zarafa credentials for authentication"
+msgstr "Use Zarafa credentials for authentication"
+
+#: settings/SettingsFilesWidget.js:90
+msgctxt "plugin_files"
+msgid "Username"
+msgstr "Username"
+
+#: settings/SettingsFilesWidget.js:99
+msgctxt "plugin_files"
+msgid "Password"
+msgstr "Password"
+
+#: settings/SettingsFilesWidget.js:107
+msgctxt "plugin_files"
+msgid "Use SSL connections"
+msgstr "Use SSL connections"
+
+#: settings/SettingsFilesWidget.js:118
+msgctxt "plugin_files"
+msgid "Backend to use"
+msgstr "Backend to use"
+
+#: settings/SettingsFilesWidget.js:233
+msgctxt "plugin_files"
+msgid "Session updated!"
+msgstr "Session updated!"
+
+#: settings/SettingsFilesWidget.js:233
+msgctxt "plugin_files"
+msgid "Settings applied successfully."
+msgstr "Settings applied successfully."
+
+#: settings/SettingsFilesWidget.js:235
+msgctxt "plugin_files"
+msgid "Session update failed!"
+msgstr "Session update failed!"
+
+#: settings/SettingsFilesWidget.js:235
+msgctxt "plugin_files"
+msgid "Session update failed, please log in again."
+msgstr "Session update failed, please log in again."
+
+#: ui/FilesFileGrid.js:96
+msgctxt "plugin_files"
+msgid "Loading files"
+msgstr "Loading files"
+
+#: ui/FilesFileGridColumnModel.js:67 ui/FilesFileGridColumnModel.js:120
+msgctxt "plugin_files"
+msgid "Sort by: Type"
+msgstr "Sort by: Type"
+
+#: ui/FilesFileGridColumnModel.js:74
+msgctxt "plugin_files"
+msgid "Sort by: ID"
+msgstr "Sort by: ID"
+
+#: ui/FilesFileGridColumnModel.js:81
+msgctxt "plugin_files"
+msgid "Sort by: Path"
+msgstr "Sort by: Path"
+
+#: ui/FilesFileGridColumnModel.js:84 ui/FilesFileGridColumnModel.js:123
+#: ui/FilesFileInfo.js:100
+msgctxt "plugin_files"
+msgid "Filename"
+msgstr "Filename"
+
+#: ui/FilesFileGridColumnModel.js:87 ui/FilesFileGridColumnModel.js:126
+msgctxt "plugin_files"
+msgid "Sort by: Filename"
+msgstr "Sort by: Filename"
+
+#: ui/FilesFileGridColumnModel.js:90 ui/FilesFileGridColumnModel.js:129
+#: ui/FilesFileInfo.js:114
+msgctxt "plugin_files"
+msgid "Last modified"
+msgstr "Last modified"
+
+#: ui/FilesFileGridColumnModel.js:94 ui/FilesFileGridColumnModel.js:133
+msgctxt "plugin_files"
+msgid "Sort by: Last modified"
+msgstr "Sort by: Last modified"
+
+#: ui/FilesFileGridColumnModel.js:97
+msgctxt "plugin_files"
+msgid "Size"
+msgstr "Size"
+
+#: ui/FilesFileGridColumnModel.js:101
+msgctxt "plugin_files"
+msgid "Sort by: Size"
+msgstr "Sort by: Size"
+
+#: ui/FilesFileGridContextMenu.js:112
+msgctxt "plugin_files"
+msgid "Open"
+msgstr "Open"
+
+#: ui/FilesFileGridContextMenu.js:132
+msgctxt "plugin_files"
+msgid "Attach to mail"
+msgstr "Attach to mail"
+
+#: ui/FilesFileGridContextMenu.js:153 ui/FilesPreviewPanelToolbarButtons.js:37
+#: ui/FilesPreviewPanelToolbarButtons.js:38
+msgctxt "plugin_files"
+msgid "Delete"
+msgstr "Delete"
+
+#: ui/FilesFileGridContextMenu.js:163
+msgctxt "plugin_files"
+msgid "Info"
+msgstr "Info"
+
+#: ui/FilesFileGridContextMenu.js:201
+#: ui/FilesPreviewPanelToolbarButtons.js:100
+msgctxt "plugin_files"
+msgid "Confirm deletion"
+msgstr "Confirm deletion"
+
+#: ui/FilesFileGridContextMenu.js:201
+#: ui/FilesPreviewPanelToolbarButtons.js:100
+msgctxt "plugin_files"
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: ui/FilesFileGridContextMenu.js:259
+msgctxt "plugin_files"
+msgid "Attaching"
+msgstr "Attaching"
+
+#: ui/FilesFileGridContextMenu.js:259
+msgctxt "plugin_files"
+msgid "Creating email... Please wait!"
+msgstr "Creating email... Please wait!"
+
+#: ui/FilesFileInfo.js:107
+msgctxt "plugin_files"
+msgid "Filesize"
+msgstr "Filesize"
+
+#: ui/FilesFileInfo.js:121
+msgctxt "plugin_files"
+msgid "Type"
+msgstr "Type"
+
+#: ui/FilesFileInfo.js:151
+msgctxt "plugin_files"
+msgid "File preview"
+msgstr "File preview"
+
+#: ui/FilesFileInfo.js:201
+msgctxt "plugin_files"
+msgid "Sorry - no preview for this PDF file!"
+msgstr "Sorry - no preview for this PDF file!"
+
+#: ui/FilesFileInfo.js:236 ui/FilesFileInfo.js:265
+msgctxt "plugin_files"
+msgid "JW FLV Player is not installed/available."
+msgstr "JW FLV Player is not installed/available."
+
+#: ui/FilesFileInfo.js:308
+msgctxt "plugin_files"
+msgid "File ({0})"
+msgstr "File ({0})"
+
+#: ui/FilesFileInfo.js:308
+msgctxt "plugin_files"
+msgid "Folder"
+msgstr "Folder"
+
+#: ui/FilesPreviewPanelToolbarButtons.js:65
+msgctxt "plugin_files"
+msgid "You can only rename one file!"
+msgstr "You can only rename one file!"
+
+#: ui/FilesPreviewPanelToolbarButtons.js:85
+msgctxt "plugin_files"
+msgid "You can only delete one file!"
+msgstr "You can only delete one file!"
+
+#: ui/FilesToolbar.js:26
+msgctxt "plugin_files"
+msgid "Create something new"
+msgstr "Create something new"
+
+#: ui/FilesToolbar.js:28
+msgctxt "plugin_files"
+msgid "New"
+msgstr "New"
+
+#: ui/FilesToolbar.js:29
+msgctxt "plugin_files"
+msgid "Upload file / Create folder"
+msgstr "Upload file / Create folder"
+
+#: ui/FilesToolbar.js:38 ui/FilesToolbar.js:39
+msgctxt "plugin_files"
+msgid "Clear cache"
+msgstr "Clear cache"
+
+#: ui/UploadButton.js:55
+msgctxt "plugin_files"
+msgid "Create folder"
+msgstr "Create folder"
+
+#: ui/UploadPanel.js:35
+msgctxt "plugin_files"
+msgid "Select file"
+msgstr "Select file"
+
+#~ msgctxt "plugin_files"
+#~ msgid "Upload file to the selected {0} folder"
+#~ msgstr "Upload file to the selected {0} folder"
+
+#~ msgid "Browse"
+#~ msgstr "Browse"
+
+#~ msgid "Filename must not contain a slash!"
+#~ msgstr "Filename must not contain a slash!"
+
+#~ msgid "All text fields"
+#~ msgstr "All text fields"
+
+#~ msgid "Modificationdate"
+#~ msgstr "Modificationdate"
+
+#~ msgid "Filetype"
+#~ msgstr "Filetype"
+
+#~ msgid "The file"
+#~ msgstr "Die Datei"
+
+#~ msgid "Enable/Disable"
+#~ msgstr "Aktivieren/Deaktivieren von"
+
+#~ msgid "components"
+#~ msgstr "Komponenten"
+
+#~ msgid "General"
+#~ msgstr "Allgemeine"
+
+#~ msgid "settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Sorry"
+#~ msgstr "Entschuldigung, es gibt keine Vorschau für diese Datei!"

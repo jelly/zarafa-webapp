@@ -1,0 +1,8 @@
+<titlepage>
+	<title>Web Access 7.0</title>
+	<subtitle>Project Specification</subtitle>
+	<subsubtitle>Prepared by Andreas Gustafsson</subsubtitle>
+	<subsubtitle>Built []($date)</subsubtitle>
+</titlepage>
+
+<toc/>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+    <info>
+        <version>1.1</version>
+        <name>oauthlib</name>
+        <title>OAuth v2.0 protocol library</title>
+        <author>Zarafa</author>
+        <authorURL>http://www.zarafa.com</authorURL>
+        <description>Allows you to easily create your own API classes which utilizes the OAuth authentication.</description>
+    </info>
+    <components>
+        <component>
+            <files>
+                <server>
+                    <serverfile>php/OAuth2.inc</serverfile>
+                    <serverfile>php/OAuth2Client.inc</serverfile>
+                    <serverfile>php/OAuth2Exception.inc</serverfile>
+                </server>
+            </files>
+        </component>
+    </components>
+</plugin>

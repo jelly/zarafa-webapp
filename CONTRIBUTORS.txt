@@ -1,0 +1,17 @@
+Zarafa is grateful for the valuable contributions to ZCP and/or related components by the following persons and companies: 
+
+Bitbone AG
+Andreas Brodowski
+Catworkx GmbH
+Collax GmbH
+Andreas Dembach
+Julian Dohle
+ETES GmbH
+Jan Engelhardt
+Mel Flynn
+Michael Monnerie
+Robert Scheck
+Science + Computing AG
+Radik Usupov
+
+Please contact us if we have made an error or omission.

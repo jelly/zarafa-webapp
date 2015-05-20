@@ -1,0 +1,55 @@
+<?xml version = "1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version = "2">
+	<info>
+		<version>0.2</version>
+		<name>webodfbox</name>
+		<title>WebODF Documents attachment preview</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Shows the Attached WebODF Documents in webapp</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<info>
+				<name>webodf.js</name>
+				<title>webodf.js</title>
+				<author>2011 KO GmbH The Open Document Company</author>
+				<authorURL>https://gitorious.org/webodf/webodf</authorURL>
+				<description>WebODF is a JavaScript library that makes it easy to add Open Document Format (ODF) support to your website and to your mobile or desktop application. It uses HTML and CSS to display ODF documents.</description>
+			</info>
+			<files>
+				<client>
+					<clientfile load = "debug">lib/webodf-debug.js</clientfile>
+					<clientfile load = "release">lib/webodf.js</clientfile>
+				</client>
+			</files>
+		</component>
+		<component>
+			<info>
+				<name>webodfboxplugin</name>
+				<title>WebOdfPlugin</title>
+				<author>Zarafa</author>
+				<description>A Zarafa plugin enabling the use of WebOdfBox for opening ODT, ODP, ODS attachments in e-mails.</description>
+			</info>
+			<files>
+				<server>
+					<serverfile>php/plugin.webodfbox.php</serverfile>
+				</server>
+				<client>
+					<clientfile load = "release">js/webodf.js</clientfile>
+					<clientfile load = "debug">js/webodf-debug.js</clientfile>
+					<clientfile load = "source">js/WebOdfPlugin.js</clientfile>
+					<clientfile load = "source">js/ABOUT.js</clientfile>
+					<clientfile load = "source">js/WebOdfBox.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile>resources/css/webodf.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

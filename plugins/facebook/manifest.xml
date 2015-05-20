@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.2</version>
+		<name>facebook</name>
+		<title>Zarafa Facebook Integration</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Zarafa Facebook Integration, allows you to import your Facebook events to Zarafa calendar.</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile>php/plugin.facebook.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/facebook.js</clientfile>
+					<clientfile load="debug">js/facebook-debug.js</clientfile>
+					<clientfile load="source">js/FacebookEventsPlugin.js</clientfile>
+					<clientfile load="source">js/FbEventSelectionContentPanel.js</clientfile>
+					<clientfile load="source">js/FbIntegrationContentPanel.js</clientfile>
+					<clientfile load="source">js/FbEventSelectionGrid.js</clientfile>
+					<clientfile load="source">js/FbIntegrationPanel.js</clientfile>
+					<clientfile load="source">js/data/FbEventDataReader.js</clientfile>
+					<clientfile load="source">js/data/FbEventProxy.js</clientfile>
+					<clientfile load="source">js/data/FbEventRecord.js</clientfile>
+					<clientfile load="source">js/data/FbEventStore.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/facebook.css</resourcefile>
+					<resourcefile load="source">resources/css/plugin.facebookstyles.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

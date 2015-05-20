@@ -1,0 +1,223 @@
+/* Preview panel */
+
+.preview-header
+{
+	position : relative !important;
+	background-color : #F0F0F0;
+	padding: 5px;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+.preview-header-title
+{
+	/* The div also has the x-panel-header-noborder class applied,
+	 * which surprisingly sets a border on the div */
+	border: 0px !important;
+	padding-bottom: 2px;
+
+}
+
+.preview-header .x-panel-body
+{
+	background-color:transparent !important;
+}
+
+.preview-header-collapse
+{
+	width: 14px;
+	height: 10px;
+	cursor: pointer;
+	margin: 3px;
+}
+
+.preview-header-collapse-minus
+{
+	background-image: url(../images/folder_open.gif);
+	background-repeat: no-repeat;
+}
+
+.preview-header-collapse-plus
+{
+	background-image: url(../images/folder_close.gif);
+	background-repeat: no-repeat;
+}
+
+.preview-header-title .preview-title
+{
+	font-size: 11pt;
+	font-weight: bold;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+/* The special blocks containing recipients & attachments */
+
+.preview-header-recipients,
+.preview-header-meeting,
+.preview-header-attachments
+{
+	display : block;
+	margin-top : 5px;
+}
+
+.preview-header-sentinfo .preview-from
+{
+	display: inline;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.preview-header-sentinfo .preview-timestamp
+{
+	display: block;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.preview-header-sentinfo .preview-timestamp-title,
+.preview-header-recipients .preview-recipient-title,
+.preview-header-attachments .preview-attachment-title,
+.preview-header-meeting .preview-when .preview-when-title,
+.preview-header-meeting .preview-proposed .preview-proposed-title,
+.preview-header-meeting .preview-location .preview-location-title
+{
+	font-weight:bold;
+	color:#555;
+	font-size:8pt;
+	padding-right: 5px;
+}
+
+.preview-header-recipients .preview-recipient-title,
+.preview-header-attachments .preview-attachment-title
+{
+	float:left;
+}
+
+.preview-header-recipients .preview-recipient-data,
+.preview-header-attachments .preview-attachment-data
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+	border-width : 1px;
+}
+
+.preview-header-attachmentbox
+{
+	line-height:18px;
+	padding-top:2px;
+}
+
+.preview-header-attachments .zarafa-attachment-link
+{
+	font-weight: normal;
+	font-size: 8pt;
+	position: relative;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	o-border-radius: 4px;
+	khtml-border-radius: 4px;
+	border: 1px solid #d3d2d2;
+	background-color: #ebeaeb;
+	color: #00a;
+	padding: 1px 5px;
+	margin: 1px;
+	height:20px;
+	text-decoration:none;
+	box-shadow: 0 0 1px #ddd inset;
+	cursor: pointer;
+}
+
+.preview-header-attachments .zarafa-attachment-link-over
+{
+	background-color:#ddd;
+}
+
+.preview-body
+{
+	position : relative !important;
+	background:#fff;
+}
+
+.preview .x-panel-body
+{
+	background:#fff;
+	color:#222;
+	font:normal 12px tahoma,verdana,arial,sans-serif;
+}
+
+.preview .x-panel-body p {
+	line-height:18px;
+	margin:8px 0;
+}
+
+.preview .x-panel-body ul {
+	margin-left:18px;
+}
+
+.preview .x-panel-body ul li {
+	display:list-item;
+	list-style-image:none !important;
+	list-style-position:outside !important;
+	list-style-type:disc !important;
+	margin-left:18px;
+}
+
+/*remove panel decorations*/
+
+
+.preview .x-panel-body pre, #preview .x-panel-body code {
+	background:#f1f1f1;
+	display:block;
+}
+
+.preview-iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.preview-meetingrequest {
+	float: right;
+}
+
+.preview-title-label {
+	width:10%;
+}
+
+.preview-title-value {
+	width:90%;
+	float:right;
+}
+
+.preview-title-hr {
+	color:#DEDEDE;
+	margin : 2px 0;
+}
+
+span.zarafa-emailaddress-link {
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+span.zarafa-emailaddress-link:hover {
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+.preview-header-extrainfobox {
+	background-color: #D2E0F0;
+	color: #000000;
+	vertical-align: middle;
+	padding: 2px 0px;
+}
+
+.preview-header-extrainfobox-item-over {
+	background-color: #FFBD69;
+	cursor : pointer;
+}
+
+.preview-header-extrainfobox-item {
+	padding: 0px 8px;
+	color: #15428B;
+}

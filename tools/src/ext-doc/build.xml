@@ -1,0 +1,32 @@
+<project name="ImageGen" default="all">
+
+	<property name="lib" value="../../lib"/>
+	
+	<property name="outputdir" value="${basedir}"/>
+	<property name="jarfile" value="${outputdir}/ext-doc.jar"/>
+	
+	<target name="all" depends="compile, package"/>
+
+	<target name="compile">
+		<mkdir dir="build"/>
+		<javac srcdir="src" destdir="build" debug="true" includeantruntime="true">
+			<classpath>
+				<pathelement location="${lib}/commons-cli-1.1.jar"/>
+				<pathelement location="${lib}/jaxb-impl.jar"/>
+				<pathelement location="${lib}/jaxb-xjc.jar"/>
+			</classpath>
+    		</javac>
+	</target>
+
+	<target name="package" depends="compile">
+		<jar destfile="${jarfile}">
+			<fileset dir="build"/>
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete dir="build"/>
+		<delete file="${jarfile}"/>
+	</target>
+
+</project>

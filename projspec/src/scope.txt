@@ -1,0 +1,25 @@
+#Project Scope
+The scope of this project includes and excludes the following items.
+
+## In scope
+* Features
+* Requirements
+* Design Specification
+* Life Cycle Process, pre-study, analyse, architecture, design, testing
+* Organisation, Design, Quality Assurance
+
+## Out of scope
+* Business Analyze
+* Business Requirement
+* Organization, Business development, Support
+* Life Cycle Process, marketing, deployment, support
+
+## Deliverables
+*	Feature specification
+*	Requirement specification
+*	architecture/design specification
+*	Front-End web base UI
+*	Design documentation
+*	Test Case specification
+*	Project Status Reports, will be extracted from Jira with interval defined by the steering committee
+

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.2</version>
+		<name>SugarCRM</name>
+		<title>SugarCRM Webapp Archive</title>
+		<author>Sebastian Kummer</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Archive selected record to the SugarCRM</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile>php/plugin.sugarcrm.php</serverfile>
+					<serverfile type="module" module="sugarcrmmodule">php/class.sugarcrmmodule.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/sugarcrm.js</clientfile>
+					<clientfile load="debug">js/sugarcrm-debug.js</clientfile>
+					<clientfile load="source">js/SugarCRMPlugin.js</clientfile>
+					<clientfile load="source">js/data/SugarCRMResponseHandler.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/sugarcrm.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

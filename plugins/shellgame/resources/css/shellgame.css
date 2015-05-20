@@ -1,0 +1,33 @@
+.x-widget-shellgame-playfield {
+	background-image: url(../images/background.png);
+	position: relative;
+}
+
+.x-widget-shellgame-cup {
+	position: absolute;
+	background-image: url(../images/cup.png);
+	border: 0px;
+	width: 50px;
+	height: 75px;
+	z-index: 2;
+}
+
+.x-widget-shellgame-cup-logo {
+	width: 36px;
+	height: 36px;
+	top: 20px;
+	left: 7px;
+	position: absolute;
+	background-image: url(../images/logo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.x-widget-shellgame-ball {
+	position: absolute;
+	background-image: url(../images/ball.png);
+	border: 0px;
+	width: 22px;
+	height: 22px;
+	z-index: 1;
+}

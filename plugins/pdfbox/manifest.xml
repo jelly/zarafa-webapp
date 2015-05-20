@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.2</version>
+		<name>pdfbox</name>
+		<title>PDF attachments preview</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Default viewer for PDF document attachments, this will open the document in a lightbox</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<info>
+				<name>pdf.js</name>
+				<title>pdf.js</title>
+				<author>2011 Mozilla Foundation</author>
+				<authorURL>https://github.com/mozilla/pdf.js</authorURL>
+				<description>pdf.js is an HTML5 technology experiment that explores building a faithful and efficient Portable Document Format (PDF) renderer without native code assistance.</description>
+			</info>
+			<files>
+				<client>
+					<clientfile>pdfjs/compatibility.js</clientfile>
+					<clientfile>pdfjs/pdf.js</clientfile>
+				</client>
+			</files>
+		</component>
+		<component>
+			<info>
+				<name>pdfbox</name>
+				<title>PdfBox</title>
+				<author>Zarafa</author>
+				<authorURL>http://www.zarafa.com/</authorURL>
+				<description>Library for rendering PDFs in a lightbox. Based on Sencha's Lightbox plugin.</description>
+			</info>
+			<files>
+				<client>
+					<clientfile>pdfbox/pdfbox.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile>resources/css/pdfbox.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+		<component>
+			<info>
+				<name>pdfboxplugin</name>
+				<title>PdfBoxPlugin</title>
+				<author>Zarafa</author>
+				<description>A Zarafa plugin enabling the use of PdfBox for opening PDF attachments in e-mails.</description>
+			</info>
+			<files>
+				<server>
+					<serverfile>php/plugin.pdfbox.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/pdfbox.js</clientfile>
+					<clientfile load="debug">js/pdfbox-debug.js</clientfile>
+					<clientfile load="source">js/PdfBoxPlugin.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+			</files>
+		</component>
+	</components>
+</plugin>

@@ -1,0 +1,27 @@
+# Project Risks
+
+A risk analysis work-shop will be conducted.
+Involved parties  management and project team members will have a brainstorming session to provide the risks.
+
+Looking at the following areas as input:
+
+* Human -  individuals or organizations, geographic locations
+* Operational - disruption to supplies and operations, loss of access to essential assets
+* Reputational - loss of business partner or employee confidence, or damage to reputation in the market.
+* Project - risks of cost over-runs, taking to long
+* Financial -  business failure
+* Technical -  advances in technology, technical failure, etc.
+
+To be able to find out which risks the project are going to focus on,
+each participant in the work-shop will place 10 points as they wish on each identified risk 
+with a maximum of five points placed on identified risk.
+
+## Risk workshop outcome
+
+### Top five project risks
+
+### Measueres to take
+
+ 
+
+	

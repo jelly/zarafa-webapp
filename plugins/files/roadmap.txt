@@ -1,0 +1,16 @@
+1.4alpha
+ - files rest api connector
+ - sharing mechanism of files
+ - file versioning
+ - show trash/deleted items
+ 
+------------- FEATURE FREEZE -------------
+ 
+1.4beta:
+ - code cleanup
+ - bugfixing
+ - documentation
+ - testing
+ 
+1.4
+ - support...

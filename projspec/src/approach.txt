@@ -1,0 +1,17 @@
+#Project approach
+To be able to handle and track the vast amount of features and requirements also over geographically 
+split locations the track management system JIRA has been chosen. 
+
+Extended with plugins for agile project management this will help the design teams and management 
+to keep track of the different faces of the project. These tools will also make it possible for the 
+project to make more accurate time estimations.
+
+The Agile tools in JIRA are based on SCRUM and it is therefore convenient for the project to use an adaptation of the same.
+
+## Features and Requirements
+Feature wise it is easy to say that WA7 shall support the same features and functionality as the previous version. 
+But the problem is to be able to keep track on what we currently have and priorities them. 
+
+There is a need to rapidly being able to gather all those features and requirements in a 
+trackable system adding screen shots of how the features currently are implemented.
+

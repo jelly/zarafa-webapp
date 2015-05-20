@@ -1,0 +1,25 @@
+.zarafa-rules-add {
+	background-image: url(../icons/new/insert.gif);
+	background-size: 10px 10px;
+}
+
+.zarafa-rules-remove {
+	background-image: url(../icons/new/delete.png);
+	background-size: 10px 10px;
+}
+
+.zarafa-rules-sequence-up {
+	background-image: url(../icons/new/toggle.png);
+	background-size: 10px 10px;
+}
+
+.zarafa-rules-sequence-down {
+	background-image: url(../icons/new/toggle_down.png);
+	background-size: 10px 10px;
+}
+
+button.zarafa-rules-remove, button.zarafa-rules-add {
+	padding : 0px !important;
+	height: 20px !important;
+	width : 90% !important;
+}

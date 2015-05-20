@@ -1,0 +1,8 @@
+.icon_dropbox {
+	background-image:url(../icons/dropbox_icon.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+span.error_dropbox {
+	color: #CC3333 !important;
+}

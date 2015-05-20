@@ -1,0 +1,53 @@
+.zarafa-welcome-body {
+	border : 1px solid #b0b0b0;
+}
+
+.zarafa-welcome-body .zarafa-welcome-title {
+	font-size: xx-large;
+	border-bottom : 1px solid #b0b0b0;
+	padding : 10px 10px 10px 50px;
+	background-color : #00467A;
+	color : #eaeaea;
+	background : url(../images/zarafa_logo_notext.png) no-repeat 10px center,
+		-webkit-linear-gradient(top, #004579 0%, #0A4F88 75%, #3C78AA 100%);
+	background : url(../images/zarafa_logo_notext.png) no-repeat 10px center,
+		-ms-linear-gradient(top, #004579 0%, #0A4F88 75%, #3C78AA 100%);
+	background : url(../images/zarafa_logo_notext.png) no-repeat 10px center,
+		linear-gradient(to bottom, #004579 0%, #0A4F88 75%, #3C78AA 100%);
+	text-shadow : 0 1px 1px rgba(0,0,0,0.8);
+}
+
+.zarafa-welcome-body .x-panel-bwrap .x-panel-body, .zarafa-welcome-body .x-panel-bwrap .x-panel-footer {
+	background-color : #eaeaea !important;
+}
+
+.zarafa-welcome-body .zarafa-welcome-message {
+	font-size: small;
+	color : #444;
+	padding : 10px;
+}
+
+.zarafa-settings-widget-welcome {
+	margin: 0 10px 10px 10px;
+}
+
+.zarafa-settings-widget-welcome .x-panel-header {
+	background-color : #d0d0d0 !important;
+}
+
+.zarafa-settings-widget-welcome .x-panel-bwrap .x-panel-body {
+	padding : 10px;
+	background-color : #f4f4f4 !important;
+}
+
+.zarafa-settings-widget-welcome .x-panel-bwrap .x-panel-body-noheader {
+	padding:0;
+}
+
+/* Hide warning messages regarding reloading WebApp */
+.zarafa-settings-widget-welcome .zarafa-settings-reload-warning {
+	position: absolute !important;
+	left: -10000px;
+	top: -10000px;
+	visibility: hidden;
+}

@@ -1,0 +1,52 @@
+/* Icon image for top menu icon */
+.icon_spreed_setup_top_menu {
+	background-image:url(../icons/spreed_top_menu_icon.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Icon image for mail contextmenu item icon */
+.icon_spreed_setup_mail_context_menu {
+	background-image:url(../icons/spreed_mail_context_menu_icon.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Icon image for address book contextmenu item icon */
+.icon_spreed_setup_ab_context_menu {
+	background-image:url(../icons/spreed_ab_context_menu_icon.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Icon image for spreed setup meeting button icon */
+.icon_spreed_setup_button {
+	background-image:url(../icons/spreed_setup_button_icon.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.button_spreed_main_toolbar {
+	height: 32px !important;
+}
+/* Icon for Spreed moderator status  */
+.icon_spreed_mod {
+	background: url(../icons/moderator_icon.png) no-repeat !important;
+}
+
+/* Style for warning notification of too many participants*/
+.spreed-Warning {
+	background-color: #FFEDCC;
+	background-image: url("../icons/icon_note.png");
+	background-position: 3px center;
+	background-repeat: no-repeat;
+	border: 1px solid #FFB121;
+	color: #000000;
+	margin: 7px 1px 3px;
+	min-height: 18px;
+	padding: 3px 3px 3px 32px;
+	vertical-align: middle;
+	font-size: 8pt;
+}
+
+

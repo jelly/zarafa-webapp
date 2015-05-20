@@ -1,0 +1,50 @@
+/*
+ * Calendar grid (HTML & Canvas)
+ */
+.zarafa-calendar-grid-green2 .zarafa-calendar-grid-group-header
+{
+	border-color: #5aa673;
+}
+
+.zarafa-calendar-grid-green2 .zarafa-calendar-grid-group-title
+{
+	color: #5aa673;
+}
+
+.zarafa-calendar-grid-green2.zarafa-calendar-grid-row
+{
+	background-image: none ! important;
+	background-color: #a5cfb5 ! important;
+}
+
+/*
+ * Calendar (HTML & Canvas)
+ */
+.zarafa-calendar-header .zarafa-calendar-green2.zarafa-calendar-container-header
+{
+	background-color: #a5cfb5;
+}
+
+.zarafa-calendar-body .zarafa-calendar-green2.zarafa-calendar-border
+{
+	background-color: #8cc39c;
+	border-color: #5aa673;
+}
+
+/*
+ * Calendar Tabs (HTML & Canvas)
+ */
+.zarafa-calendar-tabarea .zarafa-calendar-green2.zarafa-calendar-tab-body
+{
+	background-image: url(../images/calendar/cs_green2_timestrip_tab_center.png);
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-green2.zarafa-calendar-tab-leftside
+{
+	background-image: url(../images/calendar/cs_green2_timestrip_tab_left.png);
+}
+
+.zarafa-calendar-tabarea .zarafa-calendar-green2.zarafa-calendar-tab-rightside
+{
+	background-image: url(../images/calendar/cs_green2_timestrip_tab_right.png);
+}

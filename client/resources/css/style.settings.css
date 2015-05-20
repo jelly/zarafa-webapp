@@ -1,0 +1,159 @@
+/** SETTINGS SCREEN **/
+/* tabs */
+.zarafa-settings-category-tab {
+	padding: 7px 7px 7px 25px;
+	cursor:pointer;
+	border:1px solid transparent;
+}
+.zarafa-settings-category-tab-over {
+	background-color:#DEDEDE;
+}
+.zarafa-settings-category-tab-active {
+ background-color:#F8D03F;	
+ border:1px dotted #D8AB0A;
+}
+
+/* widgets */
+.zarafa-settings-widget {
+	margin: 5px;
+}
+.zarafa-settings-widget .x-panel-header {
+	background-color:#d0d0d0 !important;
+}
+.zarafa-settings-widget .x-panel-bwrap .x-panel-body {
+	padding:10px;
+}
+.zarafa-settings-widget .x-panel-bwrap .x-panel-body-noheader {
+	padding:0;
+}
+.zarafa-settings-category-panel {
+	background-color:#EBEAEB !important;
+	margin-right:10px;
+}
+.zarafa-settings-widget-extrainfo
+{
+	padding: 0px 0px 20px 0px !important;
+}
+.x-mask-loading-combo, .x-mask-loading-combo div {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+/* favorite settings */
+.zarafa-settings-favorite-tab
+{
+	padding:7px 7px 7px 25px;
+	cursor:pointer;
+}
+.zarafa-settings-favorite-tab, .zarafa-settings-category-tab {
+	font-size: 9pt;
+}
+.zarafa-settings-favorite-tab-over
+{
+	background-color:#DEDEDE;
+}
+
+/* settings */
+.zarafa-settings-category-tab, .zarafa-settings-favorite-tab
+{
+	background-position: 2px center;
+	background-repeat: no-repeat;
+}
+.zarafa-settings-category-general
+{
+	background-image: url(../icons/new/cogwheel.png) !important;
+}
+.zarafa-settings-category-mail
+{
+	background-image: url(../icons/new/new_email2.png) !important;
+}
+.zarafa-settings-category-oof
+{
+	background-image: url(../icons/new/oof.png) !important;	
+}
+.zarafa-settings-category-rules
+{
+	background-image: url(../icons/new/funnel.png) !important;
+}
+.zarafa-settings-category-calendar
+{
+	background-image: url(../icons/new/calendar_today.png) !important;
+}
+.zarafa-settings-category-delegate
+{
+	background-image: url(../icons/new/delegates.png) !important;
+}
+.zarafa-settings-category-sendas
+{
+	background-image: url(../icons/new/sendas.png) !important;
+}
+.zarafa-settings-category-advanced
+{
+	background-image: url(../icons/new/spanner.png) !important;
+}
+.zarafa-settings-category-plugins
+{
+	background-image: url(../icons/new/plug.png) !important;
+}
+.zarafa-settings-category-copyright
+{
+	background-image: url(../icons/new/seal.png) !important;
+}
+.zarafa-settings-category-keyshortcut
+{
+	background-image: url(../icons/new/shortcuts.png) !important;
+}
+.zarafa-settings-favorite-signatures
+{
+	background-image: url(../icons/new/signature.png) !important;	
+}
+.zarafa-settings-favorite-oof
+{
+	background-image: url(../icons/new/oof.png) !important;	
+}
+.x-panel-inline-icon.zarafa-settings-favorite-oof, .x-panel-inline-icon.zarafa-settings-favorite-signatures
+{
+	width:20px;
+	height:20px;
+}
+
+/* Plugins Category */
+.zarafa-settings-pluginavailable .x-grid3-body .x-grid3-row-selected .x-grid3-td-checker {
+	background-color: inherit;
+}
+
+.zarafa-settings-pluginavailable .x-grid3-body .x-grid3-td-checker {
+	background-image: none;
+}
+
+.zarafa-settings-pluginavailable .x-grid3-body .zarafa-settings-pluginavailable-fixed .x-grid3-cell-inner {
+	white-space: normal;
+}
+
+.zarafa-settings-pluginavailable .x-grid3-body .zarafa-settings-pluginavailable-fixed span {
+	color: #777777;
+	float: right;
+}
+
+.zarafa-settings-pluginavailable .x-grid3-body .zarafa-settings-pluginavailable-fixed.x-grid3-td-checker {
+	display: none;
+}
+
+/* About Category */
+.zarafa-settings-about-text p
+{
+	padding-bottom: 1ex;
+}
+.zarafa-settings-about-text h1
+{
+	margin-bottom: 0.2em;
+	margin-top: 0.3em;
+	font-size: 1.2em;
+	border-bottom: 1px dotted;
+}
+
+/* Keyboard Shortcut*/
+.zarafa-settings-keyboard-shortcut-row
+{
+	background-color: #EBEAEB;
+}

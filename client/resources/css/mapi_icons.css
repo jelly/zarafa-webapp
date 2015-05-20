@@ -1,0 +1,456 @@
+.icon_message,
+.icon_mail.icon_message_read
+{
+	background-image: url(../icons/new/mail_read.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_stubbed
+{
+	background-image: url(../icons/new/stub.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail.icon_message_unread
+{
+	background-image: url(../icons/new/mail_unread.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_submitted
+{
+	background-image: url(../icons/mapi/mail_submitted.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_unsent
+{
+	background-image: url(../icons/mapi/mail_unsent.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_receipt
+{
+	background-image: url(../icons/mapi/mail_receipt.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_replied
+{
+	background-image: url(../icons/new/mail_replied.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_forwarded
+{
+	background-image: url(../icons/new/mail_forwarded.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_remote
+{
+	background-image: url(../icons/mapi/mail_remote.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_delivery_receipt
+{
+	background-image: url(../icons/mapi/mail_delivery_receipt.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_read_receipt
+{
+	background-image: url(../icons/mapi/mail_read_receipt.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_nondelivery_receipt
+{
+	background-image: url(../icons/mapi/mail_nondelivery_receipt.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_nonread_receipt
+{
+	background-image: url(../icons/mapi/mail_nonread_receipt.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_recall_s
+{
+	background-image: url(../icons/mapi/mail_recall_s.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_recall_f
+{
+	background-image: url(../icons/mapi/mail_recall_f.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_tracking
+{
+	background-image: url(../icons/mapi/mail_tracking.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_oof
+{
+	background-image: url(../icons/mapi/mail_oof.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_recall
+{
+	background-image: url(../icons/mapi/mail_recall.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_tracked
+{
+	background-image: url(../icons/mapi/mail_tracked.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_contact_user
+{
+	background-image: url(../icons/new/contact_card.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_new_contact
+{
+    background-image: url(../icons/new/new_contact.png) ! important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon_contact_distlist
+{
+	background-image: url(../icons/new/distlist.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_contact_equipment
+{
+	background-image: url(../icons/mapi/contact_equipment.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_contact_gab_user
+{
+	background-image: url(../icons/new/contact_smtp.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_contact_room
+{
+	background-image: url(../icons/mapi/contact_room.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_contact_company
+{
+	background-image: url(../icons/new/contact_company.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_note
+{
+	background-image: url(../icons/mapi/note.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.icon_appt_appointment
+{
+	background-image: url(../icons/new/calendar_blue.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_recurring
+{
+	background-image: url(../icons/new/calendar_appt_recurring.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_single
+{
+	background-image: url(../icons/new/calendar_mr.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_recurring
+{
+	background-image: url(../icons/new/calendar_appt_recurring.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_accept
+{
+	background-image: url(../icons/new/calendar_appt_accept.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_decline
+{
+	background-image: url(../icons/new/calendar_appt_cancelled.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_tentative
+{
+	background-image: url(../icons/new/calendar_appt_tentative.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon_appt_meeting_newtime
+{
+	background-image: url(../icons/new/calendar_appt_newtime.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+.icon_appt_meeting_cancel
+{
+	background-image: url(../icons/new/calendar_appt_cancelled.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_outofdate
+{
+	background-image: url(../icons/new/calendar_appt_outofdate.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_appt_meeting_forward
+{
+	background-image: url(../icons/mapi/appt_meeting_forward.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.icon_task_normal
+{
+	background-image: url(../icons/new/tasks.png) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_task_recurring
+{
+	background-image: url(../icons/mapi/task_recurring.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_task_assignee
+{
+	background-image: url(../icons/mapi/task_assignee.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_task_assigner
+{
+	background-image: url(../icons/mapi/task_assigner.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.icon_journal_conversation
+{
+	background-image: url(../icons/mapi/journal_conversation.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_document
+{
+	background-image: url(../icons/mapi/journal_document.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_email
+{
+	background-image: url(../icons/mapi/journal_email.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_fax
+{
+	background-image: url(../icons/mapi/journal_fax.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_letter
+{
+	background-image: url(../icons/mapi/journal_letter.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_meeting
+{
+	background-image: url(../icons/mapi/journal_meeting.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_meeting_cancel
+{
+	background-image: url(../icons/mapi/journal_meeting_cancel.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_meeting_request
+{
+	background-image: url(../icons/mapi/journal_meeting_request.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_meeting_response
+{
+	background-image: url(../icons/mapi/journal_meeting_response.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_access
+{
+	background-image: url(../icons/mapi/journal_access.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_excel
+{
+	background-image: url(../icons/mapi/journal_excel.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_powerpoint
+{
+	background-image: url(../icons/mapi/journal_powerpoint.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_word
+{
+	background-image: url(../icons/mapi/journal_word.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_note
+{
+	background-image: url(../icons/mapi/journal_note.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_phone_call
+{
+	background-image: url(../icons/mapi/journal_phone_call.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_remote_session
+{
+	background-image: url(../icons/mapi/journal_remote_session.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_task
+{
+	background-image: url(../icons/mapi/journal_task.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_task_request
+{
+	background-image: url(../icons/mapi/journal_task_request.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_task_response
+{
+	background-image: url(../icons/mapi/journal_task_response.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_journal_other
+{
+	background-image: url(../icons/mapi/journal_other.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_nondelivery_receipt
+{
+	background-image: url(../icons/mapi/mail_report_ndr.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_read_receipt
+{
+	background-image: url(../icons/mapi/mail_report_accept.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_mail_nonread_receipt
+{
+	background-image: url(../icons/mapi/mail_report_decline.gif) ! important;
+	background-repeat: no-repeat;
+	background-position: center;
+}

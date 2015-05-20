@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>1.2</version>
+		<name>dropboxattachment</name>
+		<title>Dropbox Attachment</title>
+		<author>Zarafa</author>
+		<authorURL>http://www.zarafa.com</authorURL>
+		<description>Allow the user to attach the files from Dropbox to email.</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile type="module" module="dropboxmodule">php/class.dropboxmodule.php</serverfile>
+					<serverfile>php/plugin.dropboxattachment.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/dropboxattachment.js</clientfile>
+					<clientfile load="debug">js/dropboxattachment-debug.js</clientfile>
+					<clientfile load="source">js/DropboxAttachmentPlugin.js</clientfile>
+					<clientfile load="source">js/dialogs/AttachmentContentPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/AttachmentTreePanel.js</clientfile>
+					<clientfile load="source">js/data/TreeLoader.js</clientfile>
+					<clientfile load="source">js/data/ResponseHandler.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/dropboxattachment.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

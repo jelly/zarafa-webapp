@@ -1,0 +1,107 @@
+#!/bin/sh
+set -x
+
+mkdir $1/debian
+
+m4 -DREVISION=${SVN_REVISION} -DWAVERSION=`cat version` -DDATE="`date -R`" > $1/debian/changelog << 'EOF'
+zarafa-webapp-source (1:WAVERSION-REVISION) lenny; urgency=low
+
+  * Current release
+
+ -- Zarafa Development Team <development@zarafa.com>  DATE
+
+zarafa-webapp-source (1:1.0-1) lenny; urgency=low
+
+  * Initial release
+
+ -- Zarafa Development Team <development@zarafa.com>  Thu, 14 Jun 2012 13:42:36 +0200
+EOF
+
+cat > $1/debian/compat <<EOF
+7
+EOF
+
+# required: see Makefile for define
+m4 -DZARAFA_VERSION_REQUIRED=${REQUIRED} -DREVISION=${SVN_REVISION} > $1/debian/control << 'EOF'
+Source: zarafa-webapp-source
+Section: non-free/mail
+Priority: optional
+Maintainer: Zarafa Development Team <development@zarafa.com>
+Build-Depends: debhelper (>= 7.0.0)
+Standards-Version: 3.7.3
+
+Package: zarafa-webapp-source
+Architecture: all
+Section: web
+Depends: ${misc:Depends}, php5-mapi (>= ZARAFA_VERSION_REQUIRED), zarafa-contacts (>= ZARAFA_VERSION_REQUIRED), php-gettext
+Description: Source files for the new and improved WebApp for the Zarafa Collaboration Platform
+ Uncompressed, uncombined and fully commented Javascript files for the WebApp.
+EOF
+
+cat > $1/debian/install << 'EOF'
+etc/zarafa/webapp/config-source.php
+etc/apache2/sites-available/zarafa-webapp-source.conf
+usr/share/zarafa-webapp-source
+var/lib/zarafa-webapp/tmp
+EOF
+
+cat > $1/debian/zarafa-webapp-source.postinst << 'EOF'
+#!/bin/sh
+
+set -e
+
+# enable zarafa-webapp-source for apache
+if [ -x "`which a2ensite`" ]; then
+  # no error, file may have been renamed
+  a2ensite zarafa-webapp-source || true
+fi
+
+#DEBHELPER#
+
+exit 0
+EOF
+
+cat > $1/debian/zarafa-webapp.prerm << 'EOF'
+#!/bin/sh
+
+set -e
+
+# disable zarafa-webapp-source for apache
+if [ -x "`which a2dissite`" ]; then
+  # no error, file may have been renamed
+  a2dissite zarafa-webapp-source || true
+fi
+
+#DEBHELPER#
+
+exit 0
+EOF
+
+cat > $1/debian/rules << 'EOF'
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+INSTDIR=$(CURDIR)/debian/tmp
+%:
+	dh $@
+override_dh_auto_install:
+	install -d -m 755 $(INSTDIR)/usr/share/zarafa-webapp-source
+	install -d -m 755 $(INSTDIR)/etc/apache2/sites-available
+	install -d -m 755 $(INSTDIR)/etc/zarafa/webapp
+	# user/group 33 is always www-data
+	install -d -m 755 -o 33 -g 33 $(INSTDIR)/var/lib/zarafa-webapp/tmp
+
+	cp -a source/* source/.htaccess $(INSTDIR)/usr/share/zarafa-webapp-source
+	rm -rf $(INSTDIR)/usr/share/zarafa-webapp-source/debian $(INSTDIR)/zarafa-webapp-source.spec
+
+	mv $(INSTDIR)/usr/share/zarafa-webapp-source/config.php.dist $(INSTDIR)/etc/zarafa/webapp/config-source.php
+	ln -sf /etc/zarafa/webapp/config-source.php $(INSTDIR)/usr/share/zarafa-webapp-source/config.php
+
+	mv $(INSTDIR)/usr/share/zarafa-webapp-source/debug.php.dist $(INSTDIR)/usr/share/zarafa-webapp-source/debug.php
+
+	mv $(INSTDIR)/usr/share/zarafa-webapp-source/zarafa-webapp.conf $(INSTDIR)/etc/apache2/sites-available/zarafa-webapp-source.conf
+	sed -i $(INSTDIR)/etc/apache2/sites-available/zarafa-webapp-source -e 's/webapp/webapp-source/g'
+EOF
+
+mv $1/AGPL-3 $1/debian/copyright
+
+cd $1 && dpkg-buildpackage -b -uc -us

@@ -1,0 +1,89 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{subfigure}
+
+\begin{document}
+
+% Colors used by js Builder 3.
+\definecolor{jspurple}{rgb}{0.55, 0.0, 0.55}
+\definecolor{jsred}{rgb}{0.65, 0.01, 0.01}
+\definecolor{jsgreen}{rgb}{0, 0.85, 0}
+\definecolor{jsgray}{rgb}{0.25, 0.37, 0.75}
+\definecolor{jsblue}{rgb}{0, 0.2, 1}
+\definecolor{jsfunction}{rgb}{0.2, 0.6, 0.4}
+\definecolor{jsvar}{rgb}{0.4, 0.6, 0.8}
+\definecolor{white}{rgb}{1, 1, 1}
+\definecolor{backgrnd}{rgb}{0.95, 0.95, 0.95}
+
+% Define new language for listings.
+\lstdefinelanguage{JavaScript}
+{
+	morekeywords={\colon},
+	keywordstyle=\color{red},
+	morekeywords={this, new, extends, implements, void, true, false, as, if, function, var},
+	keywordstyle=\color{jspurple}\textbf,
+	basicstyle=\ttfamily\scriptsize,
+	sensitive=true,
+	morecomment=[l][\color{jsgreen}\ttfamily]{//},
+	morecomment=[s][\color{jsgreen}\ttfamily]{/*}{*/},
+	morecomment=[s][\color{jsgray}\ttfamily]{/**}{*/},
+	morestring=[b]",
+	morestring=[b]',
+	stringstyle=\color{jsblue}\textbf,
+	commentstyle=\color{jsgreen},
+	showstringspaces=false,
+	numberstyle=\scriptsize,
+	numberblanklines=true,
+	showspaces=false,
+	breaklines=true,
+	showtabs=false,
+	numbers=left,
+	tabsize=2
+}
+
+\lstset {
+    basicstyle=\footnotesize,      % font size
+    numbers=none,                  % where to put line numbers
+    numberstyle=\footnotesize,     % numbers size
+    numbersep=5pt,                 % how far the line numbers are from the code
+    backgroundcolor=\color{backgrnd}, % background color
+    showspaces=false,                          % show spaces (with underscores)
+    showstringspaces=false,            % underline spaces within strings
+    showtabs=false,                            % show tabs using underscores
+    frame=single,                  % adds a frame around the code
+    tabsize=4,                     % default tabsize
+    breaklines=true,                  % automatic line breaking
+    columns=fullflexible,
+    breakautoindent=false,
+    framerule=1pt,
+    xleftmargin=0pt,
+    xrightmargin=0pt,
+    breakindent=0pt,
+    resetmargins=true
+}
+
+\lstset{language=JavaScript}
+
+\title{Zarafa Webaccess 7.0 Design Document}
+\date{November 18, 2009}
+\author{Niels Brouwers}
+	
+\maketitle
+\clearpage
+        
+\tableofcontents
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.1in}
+
+\include{chapters/introduction}
+\include{chapters/architecture}
+\include{chapters/communication}
+\include{chapters/style}
+\include{chapters/cookbook}
+	
+\end{document}
+
