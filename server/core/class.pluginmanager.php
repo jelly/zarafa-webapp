@@ -1,5 +1,4 @@
 <?php
-require_once("class.xmlparser.php");
 
 define('TYPE_PLUGIN', 1);
 define('TYPE_MODULE', 2);
@@ -824,56 +823,83 @@ class PluginManager
 	 */
 	function extractPluginDataFromXML($xml)
 	{
-		$this->xmlParser = new XMLParser(array('configfile', 'depends', 'component', 'serverfile', 'clientfile', 'resourcefile'));
-
 		$plugindata = Array(
 			'components' => Array(),
 			'dependencies' => null,
-			'translationsdir' => null
+			'translationsdir' => null,
+			'version' => null
 		);
 
 		// Parse all XML data
-		$data = $this->xmlParser->getData($xml);
+		$data = new SimpleXMLElement($xml);
 
 		// Parse the <plugin> attributes
-		if (isset($data['attributes'])) {
-			if (isset($data['attributes']['version']) && intval($data['attributes']['version']) !== 2) {
-				if (DEBUG_PLUGINS) {
-					dump('[PLUGIN ERROR] Plugin manifest uses version ' . $data['attributes']['version'] . ' while only version 2 is supported');
-				}
-				return false;
+		if(isset($data['version']) && (int) $data['version'] !== 2) {
+			if (DEBUG_PLUGINS) {
+				dump('[PLUGIN ERROR] Plugin manifest uses version ' . $data->attributes()->version . ' while only version 2 is supported');
 			}
+			return false;
 		}
 
+		// Parse the <info> element
+		if(isset($data->info->version)) {
+			$plugindata['version'] = (double) $data->info->version;
+		}else {
+			dump('[PLUGIN WARNING] '.$dirname.' Plugin has not specified version information in manifest.xml');
+		}
 
 		// Parse the <config> element
-		if (isset($data['config']) && isset($data['config']['configfile'])) {
-			// FIXME: For now we write the config info into the serverfiles array, this will change with WA-3351
-			$newfiles = $this->getConfigFileInfoFromXML($data['config']['configfile']);
+		if(isset($data->config) && isset($data->config->configfile)) {
+			$files = Array(
+				LOAD_SOURCE => Array(),
+				LOAD_DEBUG => Array(),
+				LOAD_RELEASE => Array()
+			);
+			foreach($data->config->configfile as $filename) {
+				$files[LOAD_RELEASE][] = Array(
+					'file' => (string) $filename,
+					// FIXME: Remove in WA-3351
+					'type' => TYPE_CONFIG,
+					'load' => LOAD_RELEASE,
+					'module' => null,
+				);
+			}
 			$plugindata['components'][] = Array(
-				'serverfiles' => $newfiles,
+				'serverfiles' => $files,
 				'clientfiles' => Array(),
 				'resourcefiles' => Array(),
 			);
+		} else {
+			dump('[PLUGIN ERROR] Plugin manifest contains empty configfile declaration');
 		}
 
 		// Parse the <dependencies> element
-		if (isset($data['dependencies']) && isset($data['dependencies']['depends'])) {
-			$dependencies = $this->getDependenciesInfoFromXML($data['dependencies']['depends']);
+		if (isset($data->dependencies) && isset($data->dependencies->depends)){
+			$dependencies = Array(
+				DEPEND_DEPENDS => Array(),
+				DEPEND_REQUIRES => Array(),
+				DEPEND_RECOMMENDS => Array(),
+				DEPEND_SUGGESTS => Array()
+			);
+			foreach($data->dependencies->depends as $depends){
+				$type = $this->dependMap[(string)$depends->attributes()->type];
+				$plugin = (string) $depends->dependsname;
+				$dependencies[$type][] = Array(
+					'plugin' => $plugin
+				);
+			}
 			$plugindata['dependencies'] = $dependencies;
 		}
 
-		// Parse the <translations> element
-		if (isset($data['translations']) && isset($data['translations']['translationsdir'])) {
-			$translations = $this->getTranslationsDirInfoFromXML($data['translations']['translationsdir']);
-			$plugindata['translationsdir'] = $translations;
+		if (isset($data->translations) && isset($data->translations->translationsdir)) {
+			$plugindata['translationsdir'] = Array(
+				'dir' => (string) $data->translations->translationsdir
+			);
 		}
 
 		// Parse the <components> element
-		if (isset($data['components']) && isset($data['components']['component'])) {
-			$components = $data['components']['component'];
-
-			foreach ($components as $index => &$component) {
+		if (isset($data->components) && isset($data->components->component)) {
+			foreach($data->components->component as $component){
 				$componentdata = array(
 					'serverfiles' => Array(
 						LOAD_SOURCE => Array(),
@@ -892,315 +918,121 @@ class PluginManager
 					),
 				);
 
-				if (isset($component['files'])) {
-					if (isset($component['files']['server']) && isset($component['files']['server']['serverfile'])) {
-						$newfiles = $this->getServerFileInfoFromXML($component['files']['server']['serverfile']);
-						$componentdata['serverfiles'][LOAD_SOURCE] = array_merge($componentdata['serverfiles'][LOAD_SOURCE], $newfiles[LOAD_SOURCE]);
-						$componentdata['serverfiles'][LOAD_DEBUG] = array_merge($componentdata['serverfiles'][LOAD_DEBUG], $newfiles[LOAD_DEBUG]);
-						$componentdata['serverfiles'][LOAD_RELEASE] = array_merge($componentdata['serverfiles'][LOAD_RELEASE], $newfiles[LOAD_RELEASE]);
-					}
-					if (isset($component['files']['client']) && isset($component['files']['client']['clientfile'])) {
-						$newfiles = $this->getClientFileInfoFromXML($component['files']['client']['clientfile']);
-						$componentdata['clientfiles'][LOAD_SOURCE] = array_merge($componentdata['clientfiles'][LOAD_SOURCE], $newfiles[LOAD_SOURCE]);
-						$componentdata['clientfiles'][LOAD_DEBUG] = array_merge($componentdata['clientfiles'][LOAD_DEBUG], $newfiles[LOAD_DEBUG]);
-						$componentdata['clientfiles'][LOAD_RELEASE] = array_merge($componentdata['clientfiles'][LOAD_RELEASE], $newfiles[LOAD_RELEASE]);
-					}
-					if (isset($component['files']['resources']) && isset($component['files']['resources']['resourcefile'])) {
-						$newfiles = $this->getResourceFileInfoFromXML($component['files']['resources']['resourcefile']);
-						$componentdata['resourcefiles'][LOAD_SOURCE] = array_merge($componentdata['resourcefiles'][LOAD_SOURCE], $newfiles[LOAD_SOURCE]);
-						$componentdata['resourcefiles'][LOAD_DEBUG] = array_merge($componentdata['resourcefiles'][LOAD_DEBUG], $newfiles[LOAD_DEBUG]);
-						$componentdata['resourcefiles'][LOAD_RELEASE] = array_merge($componentdata['resourcefiles'][LOAD_RELEASE], $newfiles[LOAD_RELEASE]);
-					}
-				}
+				if(isset($component->files)) {
+					if(isset($component->files->server) && isset($component->files->server->serverfile)) {
+						$files = Array(
+							LOAD_SOURCE => Array(),
+							LOAD_DEBUG => Array(),
+							LOAD_RELEASE => Array()
+						);
+						foreach($component->files->server->serverfile as $serverfile) {
+							$load = LOAD_RELEASE;
+							$type = TYPE_PLUGIN;
+							$module = null;
 
-				$plugindata['components'][] = $componentdata;
+							$filename = (string) $serverfile;
+							if(empty($filename)) {
+								dump('[PLUGIN ERROR] Plugin manifest contains empty serverfile declaration');
+							}
+							if(isset($serverfile['type'])) {
+								$type = $this->typeMap[(string)$serverfile['type']];
+							}
+							if(isset($serverfile['load'])) {
+								$load = $this->loadMap[(string)$serverfile['load']];
+							}
+							if(isset($serverfile['module'])) {
+								$module = (string) $serverfile['module'];
+							}
+
+							if($filename){
+								$files[$load][] = Array(
+									'file' => $filename,
+									'type' => $type,
+									'load' => $load,
+									'module' => $module
+								);
+							}
+						}
+						$componentdata['serverfiles'][LOAD_SOURCE] = array_merge($componentdata['serverfiles'][LOAD_SOURCE], $files[LOAD_SOURCE]);
+						$componentdata['serverfiles'][LOAD_DEBUG] = array_merge($componentdata['serverfiles'][LOAD_DEBUG], $files[LOAD_DEBUG]);
+						$componentdata['serverfiles'][LOAD_RELEASE] = array_merge($componentdata['serverfiles'][LOAD_RELEASE], $files[LOAD_RELEASE]);
+					}
+
+					if(isset($component->files->client) && isset($component->files->client->clientfile)) {
+						$files = Array(
+							LOAD_SOURCE => Array(),
+							LOAD_DEBUG => Array(),
+							LOAD_RELEASE => Array()
+						);
+
+						foreach($component->files->client->clientfile as $clientfile) {
+							$filename = False;
+							$load = LOAD_RELEASE;
+
+							$filename = (string) $clientfile;
+							if(isset($clientfile['load'])) {
+								$load = $this->loadMap[(string)$clientfile['load']];
+							}
+							if(empty($filename)) {
+								if (DEBUG_PLUGINS) {
+									dump('[PLUGIN ERROR] Plugin manifest contains empty clientfile declaration');
+								}
+							} else {
+								$files[$load][] = Array(
+									'file' => $filename,
+									'load' => $load,
+								);
+							}
+						}
+
+						$componentdata['clientfiles'][LOAD_SOURCE] = array_merge($componentdata['clientfiles'][LOAD_SOURCE], $files[LOAD_SOURCE]);
+						$componentdata['clientfiles'][LOAD_DEBUG] = array_merge($componentdata['clientfiles'][LOAD_DEBUG], $files[LOAD_DEBUG]);
+						$componentdata['clientfiles'][LOAD_RELEASE] = array_merge($componentdata['clientfiles'][LOAD_RELEASE], $files[LOAD_RELEASE]);
+					}
+
+					if(isset($component->files->resources) && isset($component->files->resources->resourcefile)) {
+						$files = Array(
+							LOAD_SOURCE => Array(),
+							LOAD_DEBUG => Array(),
+							LOAD_RELEASE => Array()
+						);
+
+						foreach($component->files->resources->resourcefile as $resourcefile) {
+							$filename = False;
+							$load = LOAD_RELEASE;
+
+							$filename = (string) $resourcefile;
+							if(isset($resourcefile['load'])) {
+								$load = $this->loadMap[(string)$resourcefile['load']];
+							}
+							if(empty($filename)) {
+								if (DEBUG_PLUGINS) {
+									dump('[PLUGIN ERROR] Plugin manifest contains empty resourcefile declaration');
+								}
+							} else {
+								$files[$load][] = Array(
+									'file' => $filename,
+									'load' => $load,
+								);
+							}
+						}
+
+						$componentdata['resourcefiles'][LOAD_SOURCE] = array_merge($componentdata['resourcefiles'][LOAD_SOURCE], $files[LOAD_SOURCE]);
+						$componentdata['resourcefiles'][LOAD_DEBUG] = array_merge($componentdata['resourcefiles'][LOAD_DEBUG], $files[LOAD_DEBUG]);
+						$componentdata['resourcefiles'][LOAD_RELEASE] = array_merge($componentdata['resourcefiles'][LOAD_RELEASE], $files[LOAD_RELEASE]);
+
+					}
+
+					$plugindata['components'][] = $componentdata;
+				}
 			}
-			unset($component);
 		} else {
 			if (DEBUG_PLUGINS) {
 				dump('[PLUGIN ERROR] Plugin manifest didn\t provide any components');
 			}
 			return false;
 		}
-
 		return $plugindata;
-	}
-
-	/**
-	 * getConfigFileInfoFromXML
-	 *
-	 * Transform the config files info from a manifest XML to an usable array.
-	 *
-	 * @param $fileData array Piece of manifest XML parsed into array.
-	 * @return array List of config files.
-	 */
-	function getConfigFileInfoFromXML($fileData) {
-		$files = Array(
-			LOAD_SOURCE => Array(),
-			LOAD_DEBUG => Array(),
-			LOAD_RELEASE => Array()
-		);
-
-		for ($i = 0, $len = count($fileData); $i < $len; $i++) {
-			$filename = false;
-
-			if (is_string($fileData[$i])) {
-				$filename = $fileData[$i];
-			} elseif(isset($fileData[$i]['_content'])) {
-				$filename = $fileData[$i]['_content'];
-			} else {
-				if (DEBUG_PLUGINS) {
-					dump('[PLUGIN ERROR] Plugin manifest contains empty configfile declaration');
-				}
-			}
-
-			if ($filename) {
-				$files[LOAD_RELEASE][] = Array(
-					'file' => $filename,
-					// FIXME: Remove in WA-3351
-					'type' => TYPE_CONFIG,
-					'load' => LOAD_RELEASE,
-					'module' => null,
-				);
-			}
-		}
-
-		return $files;
-	}
-
-	/**
-	 * getDependenciesInfoFromXML
-	 *
-	 * Transform the >depends> element array from the manifest XML to a usable object.
-	 * We support the 'type' attribute which indicates wat type of dependency
-	 * it is.
-	 *
-	 * @param $dependsData array Piece of manifest XML which represents all <depends> nodes
-	 * @return array List of dependency information
-	 */
-	function getDependenciesInfoFromXML($dependsData)
-	{
-		$dependencies = Array(
-			DEPEND_DEPENDS => Array(),
-			DEPEND_REQUIRES => Array(),
-			DEPEND_RECOMMENDS => Array(),
-			DEPEND_SUGGESTS => Array()
-		);
-
-		for ($i = 0, $len = count($dependsData); $i < $len; $i++) {
-			$plugin = false;
-			$type = DEPEND_DEPENDS;	// depends | requires | recommends | suggests
-
-			if (is_string($dependsData[$i])) {
-				$plugin = $dependsData[$i];
-			} elseif(isset($dependsData[$i]['dependsname'])) {
-				$plugin = $dependsData[$i]['dependsname'];
-				if (isset($dependsData[$i]['attributes'])) {
-					if (isset($dependsData[$i]['attributes']['type'])) {
-						$type = $dependsData[$i]['attributes']['type'];
-						$type = $this->dependMap[$type];
-					}
-				}
-			} else {
-				if (DEBUG_PLUGINS) {
-					dump('[PLUGIN ERROR] Plugin manifest contains empty depends declaration');
-				}
-			}
-
-			if ($plugin) {
-				$dependencies[$type][] = Array(
-					'plugin' => $plugin
-				);
-			}
-		}
-
-		return $dependencies;
-	}
-
-	/**
-	 * getServerFileInfoFromXML
-	 *
-	 * Transform the <serverfile> element array from the manifest into a useable array.
-	 * Each <serverfile> supports the 'load' attribute which needs to be saved into
-	 * the array as well. When this attribute is not provided, the value 'release'
-	 * is assumed.
-	 * Additionally the attributes 'type' and 'module' are available. The 'type' attribute
-	 * indicates if this a plugin file or a module file. A plugin file will be loaded into
-	 * the PHP at all times, while the module file will only be loaded on demand. The 'module'
-	 * attribute will only be useful when 'type' is module. If not provided, the 'type' attribute
-	 * will be set to plugin and the 'module' attribute will remain empty.
-	 *
-	 * @param $fileData array Piece of manifest XML which represents all <serverfile> nodes
-	 * @return array List of server files.
-	 */
-	function getServerFileInfoFromXML($fileData) {
-		$files = Array(
-			LOAD_SOURCE => Array(),
-			LOAD_DEBUG => Array(),
-			LOAD_RELEASE => Array()
-		);
-
-		for ($i = 0, $len = count($fileData); $i < $len; $i++) {
-			$filename = false;
-			$load = LOAD_RELEASE;	// release | debug | source
-			$type = TYPE_PLUGIN;	// plugin | module | notifier
-			$module = null;
-
-			if (is_string($fileData[$i])) {
-				$filename = $fileData[$i];
-			} elseif(isset($fileData[$i]['_content'])) {
-				$filename = $fileData[$i]['_content'];
-				if (isset($fileData[$i]['attributes'])) {
-					if (isset($fileData[$i]['attributes']['load'])) {
-						$load = $fileData[$i]['attributes']['load'];
-						$load = $this->loadMap[$load];
-					}
-					if (isset($fileData[$i]['attributes']['type'])) {
-						$type = $fileData[$i]['attributes']['type'];
-						$type = $this->typeMap[$type];
-					}
-					if (isset($fileData[$i]['attributes']['module'])) {
-						$module = $fileData[$i]['attributes']['module'];
-					}
-				}
-			} else {
-				if (DEBUG_PLUGINS) {
-					dump('[PLUGIN ERROR] Plugin manifest contains empty serverfile declaration');
-				}
-			}
-
-			if ($filename) {
-				$files[$load][] = Array(
-					'file' => $filename,
-					'type' => $type,
-					'load' => $load,
-					'module' => $module,
-				);
-			}
-		}
-
-		return $files;
-	}
-
-	/**
-	 * getClientFileInfoFromXML
-	 *
-	 * Transform the <clientfile> element array from the manifest into a useable array.
-	 * Each <clientfile> supports the 'load' attribute which needs to be saved into
-	 * the array as well. When this attribute is not provided, the value 'release'
-	 * is assumed.
-	 *
-	 * @param $fileData array Piece of manifest XML which represents all <clientfile> nodes
-	 * @return array List of client files.
-	 */
-	function getClientFileInfoFromXML($fileData){
-		$files = Array(
-			LOAD_SOURCE => Array(),
-			LOAD_DEBUG => Array(),
-			LOAD_RELEASE => Array()
-		);
-
-		for ($i = 0, $len = count($fileData); $i < $len; $i++) {
-			$filename = false;
-			$load = LOAD_RELEASE;   // release | debug | source
-
-			if (is_string($fileData[$i])) {
-				$filename = $fileData[$i];
-			} elseif(isset($fileData[$i]['_content'])) {
-				$filename = $fileData[$i]['_content'];
-				if (isset($fileData[$i]['attributes'])) {
-					if(isset($fileData[$i]['attributes']['load'])){
-						$load = $fileData[$i]['attributes']['load'];
-						$load = $this->loadMap[$load];
-					}
-				}
-			} else {
-				if (DEBUG_PLUGINS) {
-					dump('[PLUGIN ERROR] Plugin manifest contains empty clientfile declaration');
-				}
-			}
-
-			$files[$load][] = Array(
-				'file' => $filename,
-				'load' => $load,
-			);
-		}
-
-		return $files;
-	}
-
-	/**
-	 * getResourceFileInfoFromXML
-	 *
-	 * Transform the <resourcefile> element array from the manifest into a useable array.
-	 * Each <resourcefile> supports the 'load' attribute which needs to be saved into
-	 * the array as well. When this attribute is not provided, the value 'release'
-	 * is assumed.
-	 *
-	 * @param $fileData array Piece of manifest XML which represents all <resourcefile> nodes
-	 * @return array List of resource files.
-	 */
-	function getResourceFileInfoFromXML($fileData) {
-		$files = Array(
-			LOAD_SOURCE => Array(),
-			LOAD_DEBUG => Array(),
-			LOAD_RELEASE => Array()
-		);
-
-		for ($i = 0, $len = count($fileData); $i < $len; $i++) {
-			$filename = false;
-			$load = LOAD_RELEASE;   // release | debug | source
-
-			if (is_string($fileData[$i])) {
-				$filename = $fileData[$i];
-			} elseif(isset($fileData[$i]['_content'])) {
-				$filename = $fileData[$i]['_content'];
-				if (isset($fileData[$i]['attributes'])) {
-					if(isset($fileData[$i]['attributes']['load'])){
-						$load = $fileData[$i]['attributes']['load'];
-						$load = $this->loadMap[$load];
-					}
-				}
-			} else {
-				if (DEBUG_PLUGINS) {
-					dump('[PLUGIN ERROR] Plugin manifest contains empty resourcefile declaration');
-				}
-			}
-
-			$files[$load][] = Array(
-				'file' => $filename,
-				'load' => $load,
-			);
-		}
-
-		return $files;
-	}
-
-	/**
-	 * getTranslationsDirInfoFromXML
-	 *
-	 * Transform the <translationsdir> element array from the manifest into a usable array
-	 * The <translationsdir> doesn't support any attributes.
-	 *
-	 * @param $dirData array Piece of manifest XML which represents all <translationsdir> nodes
-	 * @return string Path to translations dir.
-	 */
-	function getTranslationsDirInfoFromXML($dirData){
-		if (is_string($dirData)) {
-			$dirname = $dirData;
-		} elseif(isset($dirData['_content'])) {
-			$dirname = $dirData['_content'];
-		} else {
-			if (DEBUG_PLUGINS) {
-				dump('[PLUGIN ERROR] Plugin manifest contains empty translationsdir declaration');
-			}
-
-			return false;
-		}
-
-		return Array(
-			'dir' => $dirname
-		);
 	}
 }
 ?>
