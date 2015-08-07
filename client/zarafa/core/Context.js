@@ -323,8 +323,11 @@ Zarafa.core.Context = Ext.extend(Zarafa.core.Plugin, {
 	initStateEvents : function()
 	{
 		Zarafa.core.Context.superclass.initStateEvents.call(this);
-		this.on('viewchange', this.saveState, this, {delay: 100});
-		this.on('viewmodechange', this.saveState, this, {delay: 100});
+		var me = this;
+		Ext.defer(function() {
+			me.on('viewchange', me.saveState, me);
+			me.on('viewmodechange', me.saveState, me);
+		}, 100);
 	},
 
 	/**

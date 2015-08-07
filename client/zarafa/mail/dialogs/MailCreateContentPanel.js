@@ -275,8 +275,10 @@ Zarafa.mail.dialogs.MailCreateContentPanel = Ext.extend(Zarafa.core.ui.MessageCo
 	{
 		Zarafa.mail.dialogs.MailCreateContentPanel.superclass.initStateEvents.call(this);
 
-		this.on('bcctoggle', this.saveState, this, {delay: 100});
-		this.on('fromtoggle', this.saveState, this, {delay: 100});
+		Ext.defer(function() {
+			this.on('bcctoggle', this.saveState, this);
+			this.on('fromtoggle', this.saveState, this);
+		}, 100, this);
 	},
 
 	/**

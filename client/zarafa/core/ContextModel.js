@@ -1037,8 +1037,10 @@ Zarafa.core.ContextModel = Ext.extend(Zarafa.core.data.StatefulObservable, {
 	initStateEvents : function()
 	{
 		Zarafa.core.ContextModel.superclass.initStateEvents.call(this);
-		this.on('datamodechange', this.saveState, this, { delay : 100 });
-		this.on('folderchange', this.saveState, this, { delay : 100 });
+		Ext.defer(function() {
+			this.on('datamodechange', this.saveState, this);
+			this.on('folderchange', this.saveState, this);
+		}, 100, this);
 	},
 
 	/**
