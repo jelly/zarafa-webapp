@@ -474,7 +474,9 @@ Zarafa.core.MultiFolderContextModel = Ext.extend(Zarafa.core.ContextModel, {
 	initStateEvents : function()
 	{
 		Zarafa.core.MultiFolderContextModel.superclass.initStateEvents.call(this);
-		this.on('foldergroupingchanged', this.saveState, this, { delay : 100 });
+		Ext.defer(function() {
+			this.on('foldergroupingchanged', this.saveState, this);
+		}, 100, this);
 	},
 
 	/**

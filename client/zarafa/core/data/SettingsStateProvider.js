@@ -152,8 +152,14 @@ Zarafa.core.data.SettingsStateProvider = Ext.extend(Ext.state.Provider, {
 	set : function(name, value)
 	{
 		var component = Ext.state.Manager.getComponent(name);
-		container.getSettingsModel().set(this.getStatePath(component), this.encodeValue(value, undefined, component));
-		this.fireEvent('statechange', this, name, value);
+		var statePath = this.getStatePath(component);
+		var settingsModel = container.getSettingsModel();
+
+		// Verify that the settings have changed, if so set them to the new value.
+		if (JSON.stringify(settingsModel.get(statePath, true)) !== JSON.stringify(value)) {
+			settingsModel.set(statePath, this.encodeValue(value, undefined, component));
+			this.fireEvent('statechange', this, name, value);
+		}
 	},
 
 	/**
